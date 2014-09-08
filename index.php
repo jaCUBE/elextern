@@ -43,6 +43,21 @@ $test = new TestTable();
   
 </table>
 
+<table class="test">
+  <thead>
+    <?php echo $test->tableHeader(); ?>
+  </thead>
+  
+  <tbody>
+    <?php 
+    echo $test->walkProperty('Reference Capacity', 'reference_capacity');
+    echo $test->walkProperty('Learning Exponent', 'learning_exponent');
+    echo $test->walkMethod('<strong>COSTS WITH MARGINAL EFFECTS</strong>', 'costMarginalEffect');
+    ?>
+  </tbody>
+  
+</table>
+
 
 <table class="test">
   <thead>

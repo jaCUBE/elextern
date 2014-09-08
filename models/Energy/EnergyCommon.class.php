@@ -491,6 +491,13 @@ class EnergyCommon {
   
   
   
+  public function costMarginalEffect(){
+    $result = $this->costTotal() * pow(($this->installed_capacity / $this->reference_capacity), $this->learning_exponent);
+    
+    return $result;
+  }
+  
+  
   public function gasImport(){
     return 0.0;
   }
