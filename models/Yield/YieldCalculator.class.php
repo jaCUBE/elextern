@@ -21,7 +21,7 @@ class YieldCalculator {
   public $yield_record = Array();
   
   
-  
+  public $highest;
   
   
   
@@ -37,6 +37,8 @@ class YieldCalculator {
   
   public function __construct() {
     $this->fetchYield();
+    
+    $this->highest = $this->yield_record[100];
   }
   
   
@@ -77,10 +79,14 @@ class YieldCalculator {
   * @return float Interpolated value for the first parameter
   */
   
-  public function interpolationYield($value, $time = 'day', $high = 'highest'){
+  public function interpolationYield($value, $time = 'year', $high = 'highest'){
+    if($value < 100){
+      $value *= 100;
+    }
+    
     $lower = $this->findLower($value); // Searching for YieldRecord lower than desired value
     $higher = $this->findHigher($value); // Searching for YieldRecord higher than desired value
-    
+
     if($lower->load_factor == $higher->load_factor){ // If load factors of both are same, it means desired value is in native YieldRecord table
       return $higher->getPrice($time, $high); // Returning desired price of higher (same as lower)
     }
@@ -90,7 +96,7 @@ class YieldCalculator {
 
     
     $result = $this->interpolation($lower->load_factor, $higher->load_factor, $lower_price, $higher_price, $value); // Interpolation with values as parameter
-
+    
     return round($result, 2); // Returning rounded interpolated price for desired value
   }
  

@@ -4,6 +4,8 @@ function exAutoload($class_name) {
   $path = 'models/'; // Defaultní složka s modely
 
   $folders = Array(
+    'Data',
+    'Energy',
     'Yield');
 
   foreach($folders as $folder){
