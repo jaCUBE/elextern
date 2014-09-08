@@ -23,4 +23,8 @@ class EnergyBiomass extends EnergyCommon {
   }
   
   
+  public function co2Emission() {
+    return 0.007;
+  }
+  
 }

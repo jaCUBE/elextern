@@ -12,12 +12,17 @@
  * @author jaCUBE
  */
 class DataInputImpact {
-  public $displaced_people = 100000;
+  public $displaced_redress = 100000;
   public $coal_price = 21;
   public $gas_price = 7;
-  public $health_respirator = 1107;
+  public $health_respiratory = 1107;
   public $health_cancer = 110700;
   public $health_mortality = 2000000;
+  
+  public $show_impact_environtmental = true;
+  public $show_impact_economic = true;
+  public $show_impact_social = true;  
+  
   
   
   

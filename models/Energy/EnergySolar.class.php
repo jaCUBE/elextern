@@ -15,4 +15,19 @@ class EnergySolar extends EnergyCommon {
   public function __construct($country = 'cz') {
     parent::__construct(9, $country);
   }
+  
+  
+  
+  public function conflictOfUse() {
+    global $_DATA_LOCAL;
+    
+    $result = 1000 / ($this->load_factor_used * $this->lifetime * $_DATA_LOCAL->pv_density);
+    
+    return $result;
+  }
+  
+  public function co2Emission() {
+    return 0.055;
+  }
+  
 }

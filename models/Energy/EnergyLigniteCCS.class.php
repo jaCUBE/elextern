@@ -11,28 +11,16 @@
  *
  * @author jaCUBE
  */
-class EnergyLigniteCCS extends EnergyCommon {
-  
-  public $toe = 3;
-  public $co2 = 3.96;
+class EnergyLigniteCCS extends EnergyLigniteIGCC {
   
   public function __construct($country = 'cz') {
-    parent::__construct(2, $country);
+    $this->technology_id = 2;
+    
+    parent::__construct($country);
   }
   
-  
-  public function coalDepletion(){
-    $result = $this->toe / $this->toe_thermal_mwh / $this->efficiency;
-    
-    return $result;
-  }
-  
-  public function fuel(){
-    global $_IN_IMPACT;
-    
-    $result = $_IN_IMPACT->coal_price * $this->coalDepletion();
-    
-    return $result;
+  public function co2Emission(){
+    return parent::co2Emission() * 0.1;
   }
   
 }

@@ -1,23 +1,22 @@
 <?php
 
 require 'autoloader.php'; // Including autoloader function for automatic loading classes
-require 'config.php'; // Config file with database credentials
+require 'config.php'; // Config file with database credentials and other important stuff
 
 date_default_timezone_set('Europe/Prague'); // Current time is current time
 
-global $_EX;
-global $_DB;
-global $_IN_COST;
-global $_IN_IMPACT;
-global $_DATA_GLOBAL;
-global $_DATA_LOCAL; // Creating important global variables
+global $_EX; // Global: main class with helping methods and connecting to db
+global $_DB; // Global: variable stores PDO connection to db
+global $_IN_COST; // Global: stores cost inputs of user
+global $_IN_IMPACT; // Global: stores impact inputs of user
+global $_DATA_GLOBAL; // Global: stores global data
+global $_DATA_LOCAL;
 global $_YIELD_CALC;
+
+
 
 $_EX = new Ex(); // Instance of main class of elextern
 $_EX->databaseConnect(); // Connecting to database via main class
-
-
-
 
 $_IN_COST = new DataInputCost();
 $_IN_IMPACT = new DataInputImpact();

@@ -21,4 +21,29 @@ class EnergyNuclear extends EnergyCommon {
   public function fuel(){
     return 7 * 0.68;
   }
+  
+  
+  public function conflictOfUse() {
+    global $_DATA_GLOBAL, $_IN_COST;
+    
+    $result_one = pow($_DATA_GLOBAL->nuclear_exclusion, 2) * pi() / $_DATA_GLOBAL->nuclear_accident;
+    $result_two = $_IN_COST->climate_horizon / $this->lifetime;
+    $result = $result_one * $result_two;
+    
+    return $result;    
+  }
+  
+  public function displacedPeople() {
+    global $_DATA_GLOBAL, $_DATA_LOCAL;
+    
+    $result = pow($_DATA_GLOBAL->nuclear_exclusion, 2) * pi() / $_DATA_GLOBAL->nuclear_accident / 1000000 * $_DATA_LOCAL->population_density;
+    
+    return $result;    
+  }
+  
+  
+  public function co2Emission() {
+    return 0.006;
+  }
+  
 }

@@ -13,17 +13,22 @@
  */
 class EnergyLigniteIGCC extends EnergyCommon {
   
-  public $toe = 3;
-  public $co2 = 3.96;
   
-  public function __construct($country = 'cz') {
-    parent::__construct(1, $country);
+  public $toe = 3;
+  public $toe_co2 = 3.96;
+  
+  public function __construct($country = 'cz') {    
+    if(empty($this->technology_id)){
+      parent::__construct(1, $country);
+    }else{
+      parent::__construct(2, $country);
+    }
   }
   
   
   public function coalDepletion(){
     $result = $this->toe / $this->toe_thermal_mwh / $this->efficiency;
-
+    
     return $result;
   }
   
@@ -35,4 +40,19 @@ class EnergyLigniteIGCC extends EnergyCommon {
     return $result;
   }
   
+  public function co2Emission(){
+    global $_IN_COST;
+
+    $result = $this->toe_co2 / $this->toe * $this->coalDepletion();
+    
+    return $result;    
+  }
+  
+  public function conflictOfUse() {
+    global $_DATA_LOCAL;
+    
+    $result = $this->coalDepletion() / $_DATA_LOCAL->lignite_density;
+    
+    return $result;
+  }
 }

@@ -11,6 +11,7 @@
  *
  * @author jaCUBE
  */
+
 class DataInputCost {
   public $discount_rate = 1;
   public $impact_environment = true;
@@ -19,7 +20,10 @@ class DataInputCost {
   public $climate_horizon = 200;
   public $climate_start = 50;
   public $climate_change = 5;
-  public $climate_nuclear_fuel = 10;  
+  public $climate_nuclear_fuel = 10;
+  
+  public $show_cost_net = true;
+  public $show_cost_externality = true;
   
   
   public function __construct() {

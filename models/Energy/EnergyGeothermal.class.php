@@ -14,9 +14,14 @@
 class EnergyGeothermal extends EnergyCommon {
   
   public $toe = 11.7;
-  public $co2 = 0;
+  public $toe_co2 = 0;
   
   public function __construct($country = 'cz') {
     parent::__construct(7, $country);
   }
+  
+  public function co2Emission() {
+    return 0.007;
+  }
+  
 }

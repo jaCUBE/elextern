@@ -15,4 +15,9 @@ class EnergyHydro extends EnergyCommon {
    public function __construct($country = 'cz') {
     parent::__construct(5, $country);
   }
+  
+  public function co2Emission() {
+    return 0.006;
+  }
+  
 }

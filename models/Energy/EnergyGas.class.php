@@ -14,7 +14,7 @@
 class EnergyGas extends EnergyCommon {
   
   public $toe = 40;
-  public $co2 = 2.35;
+  public $toe_co2 = 2.35;
   
   public function __construct($country = 'cz') {
     parent::__construct(3, $country);
@@ -31,6 +31,13 @@ class EnergyGas extends EnergyCommon {
     global $_IN_IMPACT;
     
     $result = $_IN_IMPACT->gas_price * $this->gasImport();
+    
+    return $result;
+  }
+  
+  
+  public function co2Emission() {
+    $result = $this->toe_co2 / $this->toe * $this->gasImport();
     
     return $result;
   }
