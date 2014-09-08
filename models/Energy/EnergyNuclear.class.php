@@ -46,4 +46,15 @@ class EnergyNuclear extends EnergyCommon {
     return 0.006;
   }
   
+  public function nuclearFuelPostTreatment() {
+    global $_IN_COST;
+    
+    $result_one = $this->fuel() * $_IN_COST->climate_nuclear_fuel;
+    $result_two = 1 - pow(1 - $_IN_COST->getDiscountRate(), $_IN_COST->climate_horizon + 1);
+    $result = $result_one * $result_two / $_IN_COST->getDiscountRate();
+    
+    return $result;
+    
+  }
+  
 }

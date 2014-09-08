@@ -26,6 +26,7 @@ $test = new TestTable();
     echo $test->walkProperty('Share of foreign purchases', 'foreign_purchases');
     echo $test->walkProperty('Operation (OPEX% = % of CAPEX)', 'opex');
     echo $test->walkMethod('Fuel', 'fuel');
+    echo $test->walkMethod('Nuclear Fuel Post-Treatment', 'nuclearFuelPostTreatment');
     echo $test->walkMethod('Actual CAPEX', 'capexActual');
     echo $test->walkMethod('Actual OPEX', 'opexActual');
     echo $test->walkMethod('LCOE', 'lcoe');
