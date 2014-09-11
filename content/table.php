@@ -67,11 +67,11 @@ $main = new Table();
     <?php
     
     if($_IN_IMPACT->impact_environtmental){
-      require 'tables_impact_environtmental.php';
+      require 'table_impact_environtmental.php';
     }
     
     if($_IN_IMPACT->impact_economic){
-      require 'tables_impact_economic.php';
+      require 'table_impact_economic.php';
     }
     
     
