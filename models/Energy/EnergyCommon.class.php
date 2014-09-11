@@ -396,7 +396,10 @@ class EnergyCommon {
    */
   
   public function techImport(){
+    global $_IN_IMPACT;
+    
     $result = $this->capexActual() * $this->foreign_purchases;
+    $result *= $_IN_IMPACT->technology_import_weight;
     
     return $result;
   }
@@ -408,7 +411,7 @@ class EnergyCommon {
   public function impactSocial(){
     global $_IN_IMPACT;
     
-    if(!$_IN_IMPACT->show_impact_social){
+    if(!$_IN_IMPACT->impact_social){
       return 0.0;
     }
     
@@ -446,7 +449,7 @@ class EnergyCommon {
   public function impactEconomic(){
     global $_IN_IMPACT;
     
-    if(!$_IN_IMPACT->show_impact_economic){
+    if(!$_IN_IMPACT->impact_economic){
       return 0.0;
     }
     
@@ -458,17 +461,37 @@ class EnergyCommon {
   public function impactEnvirontmental(){
     global $_IN_IMPACT;
     
-    if(!$_IN_IMPACT->show_impact_environtmental){
+    if(!$_IN_IMPACT->impact_environtmental){
       return 0.0;
     }
     
-    $land_usage = $_IN_IMPACT->landUsage() * $this->conflictOfUse();
-    $displaced_people = $_IN_IMPACT->displaced_redress * $this->displacedPeople();
-    
-    $result = $land_usage + $displaced_people;
+    $result = $this->conflictOfUse() + $this->displacedPeopleCompensation();
     
     return $result;    
   }
+  
+  
+  public function displacedPeopleCompensation(){
+    global $_IN_IMPACT;
+    
+    $result = $_IN_IMPACT->displaced_redress * $this->displacedPeople();
+    
+    return $result;
+  }
+  
+  
+  public function conflictOfUse(){
+    global $_IN_IMPACT;
+    
+    $result = $_IN_IMPACT->landUsage() * $this->landUsage();
+    
+    return $result;
+  }
+  
+  
+  
+  
+  
   
   public function costExternality(){
     global $_IN_COST;
@@ -502,9 +525,7 @@ class EnergyCommon {
     return 0.0;
   }
   
-  
-  
-  
+
   
   
   public function co2Emission(){
@@ -515,7 +536,7 @@ class EnergyCommon {
   
   
   
-  public function conflictOfUse(){
+  public function landUsage(){
     return 0.0;
   }
   
@@ -549,6 +570,18 @@ class EnergyCommon {
   
   public function fuel(){
     return 0.0;
+  }
+
+  
+  
+  public function makeHtml($name, $method = false){
+    if($method){
+      $value = $this->$name();
+    }else{
+      $value = $this->$name;
+    }
+    
+    return number_format($value, 2, ',', ' ');
   }
   
   

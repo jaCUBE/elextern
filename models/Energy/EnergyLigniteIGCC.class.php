@@ -48,7 +48,7 @@ class EnergyLigniteIGCC extends EnergyCommon {
     return $result;    
   }
   
-  public function conflictOfUse() {
+  public function landUsage() {
     global $_DATA_LOCAL;
     
     $result = $this->coalDepletion() / $_DATA_LOCAL->lignite_density;

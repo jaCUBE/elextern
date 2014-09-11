@@ -12,7 +12,7 @@
  * @author jaCUBE
  */
 
-class DataInputCost {
+class DataInputCost extends DataInput {
   public $discount_rate = 1;
   public $impact_environment = true;
   public $impact_economic = true;
@@ -27,14 +27,22 @@ class DataInputCost {
   
   
   public function __construct() {
+    
+    $this->getInput();
+    
     $this->discount_rate /= 100;
     $this->climate_change /= 100;
     $this->climate_nuclear_fuel /= 100;
   }
   
+  public function getInput(){
+    $this->checkInput('discount_rate');
+    $this->checkInput('climate_horizon');
+  }
   
   public function getDiscountRate(){
     return $this->discount_rate;
   }
+
   
 }

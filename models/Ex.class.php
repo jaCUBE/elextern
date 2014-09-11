@@ -25,4 +25,15 @@ class Ex {
       }
     }
     
+    
+    public function htmlUnit($unit){
+      $unit = str_replace('EUR', '€', $unit);
+      $unit = str_replace('^2', '<sup>2</sup>', $unit);
+      
+      $output = '<div class="unit">'.$unit.'</div>';
+      
+      
+      return $output;
+    }
+    
 }

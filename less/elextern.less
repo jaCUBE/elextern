@@ -1,5 +1,21 @@
 * {
-  font-family: 'Roboto Slab';
+  font-family: 'Ubuntu';
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.full-width {
+  width: 100%;
 }
 
 #container {
@@ -16,11 +32,86 @@
   background: url('../images/footer.png');
 }
 
+.form-control {
+  width: fit-content !important;
+  padding: 3px 5px !important;
+  height: 34px !important;
+}
 
 
 
 
 
+#table-sources {
+  margin: 30px 0px;
+  font-size: 10pt;
+  width: 100%;
+  
+  td, th {
+    border: 1px solid #BBBBBB;
+    padding: 5px;
+  }
+  
+  th {
+    text-align: center;
+    background: #ADCEED;
+  }
+  
+  .child {
+    display: none;
+  }
+  
+  .parent {
+    cursor: hand;
+    font-weight: bold;
+  }
+  
+  .attribute {
+    width: 250px;
+    background: #DDDDDD;
+  }
+  
+  .value {
+    width: 83px;
+  }
+  
+  .unit {
+    font-size: 7pt;
+    color: #888888;
+  }
+  
+  #environtmental {
+    td {
+      background: #B8F2D2;
+    }
+  }
+  
+  .child-environtmental {
+    td {
+      background: #D9F7E6;
+    }
+  } 
+  
+  #economic {
+    td {
+      background: #EFDAB8;
+    }
+  }
+  
+  .child-economic {
+    td {
+      background: #F4E4D7;
+    }
+  } 
+  
+}
+
+
+.user-input {
+  td {
+    padding: 0px 5px;
+  }
+}
 
 
 
@@ -38,10 +129,13 @@
 
 .test {
   
+
+  
   td, th {
     border: 1px solid #888888;
     padding: 5px;
   }
+  
   
   th {
     background: #000000;

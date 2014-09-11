@@ -8,7 +8,7 @@ require 'template/header.php';
 ?>
 
 
-
+<?php require 'content/table.php'; ?>
 
 
 

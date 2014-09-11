@@ -23,7 +23,7 @@ class EnergyNuclear extends EnergyCommon {
   }
   
   
-  public function conflictOfUse() {
+  public function landUsage() {
     global $_DATA_GLOBAL, $_IN_COST;
     
     $result_one = pow($_DATA_GLOBAL->nuclear_exclusion, 2) * pi() / $_DATA_GLOBAL->nuclear_accident;

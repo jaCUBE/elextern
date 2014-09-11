@@ -11,7 +11,9 @@
  *
  * @author jaCUBE
  */
-class DataInputImpact {
+
+class DataInputImpact extends DataInput {
+  public $technology_import_weight = 100;
   public $displaced_redress = 100000;
   public $coal_price = 21;
   public $gas_price = 7;
@@ -19,11 +21,22 @@ class DataInputImpact {
   public $health_cancer = 110700;
   public $health_mortality = 2000000;
   
-  public $show_impact_environtmental = true;
-  public $show_impact_economic = true;
-  public $show_impact_social = true;  
+  public $impact_environtmental = true;
+  public $impact_economic = true;
+  public $impact_social = true;  
   
+  public function __construct(){
+    $this->getInput();     
+    
+    $this->technology_import_weight /= 100;
+  }
   
+  public function getInput(){
+    $this->checkCheckbox('impact_environtmental');
+    $this->checkCheckbox('impact_social');
+    $this->checkCheckbox('impact_economic');
+    
+  }
   
   
   public function landUsage(){

@@ -14,9 +14,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
-<link rel='stylesheet' id='sparkling-fonts-css'href='//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=3.9.1' type='text/css' media='all' />
+    <script src="<?php echo URL; ?>/libraries/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css">
+    
+    <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+    
+    <link href="//fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
+
+    <script src="<?php echo URL; ?>/js/elextern-basic.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern-chart.js" type="text/javascript"></script>
     
   </head>
   

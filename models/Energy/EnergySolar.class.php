@@ -18,7 +18,7 @@ class EnergySolar extends EnergyCommon {
   
   
   
-  public function conflictOfUse() {
+  public function landUsage() {
     global $_DATA_LOCAL;
     
     $result = 1000 / ($this->load_factor_used * $this->lifetime * $_DATA_LOCAL->pv_density);

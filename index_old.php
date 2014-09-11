@@ -1,8 +1,5 @@
 <?php
 
-require 'bootstrap.php';
-require 'html_header.php';
-
 $test = new TestTable();
 
 ?>
