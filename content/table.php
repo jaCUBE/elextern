@@ -2,9 +2,11 @@
 
 require 'form_basic.php';
 
-$main = new Table();
+$main = new TechList();
 
 ?>
+
+
 
 
 <table id="table-sources">
@@ -36,7 +38,7 @@ $main = new Table();
       <td class="attribute">Uses Fossil Fuel?</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
-        <?php if($tech->fossil_fuel){ ?>
+        <?php if($tech->eco_fossil_fuel){ ?>
         <i class="fa fa-check"></i>
         <?php } ?>
       </td>
@@ -66,11 +68,11 @@ $main = new Table();
     
     <?php
     
-    if($_IN_IMPACT->impact_environtmental){
+    if($_DATA_IMPACT->impact_environtmental){
       require 'table_impact_environtmental.php';
     }
     
-    if($_IN_IMPACT->impact_economic){
+    if($_DATA_IMPACT->impact_economic){
       require 'table_impact_economic.php';
     }
     

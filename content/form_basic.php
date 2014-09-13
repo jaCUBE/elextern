@@ -27,19 +27,19 @@
   
   <tr>
     <td>
-      <input type="text" name="discount_rate" id="discount-rate" value="<?php echo $_IN_COST->discount_rate*100; ?>">
+      <input type="text" name="discount_rate" id="discount-rate" value="<?php echo $_DATA_MAIN->discount_rate*100; ?>">
     </td>
     <td>
-      <input type="text" name="climate_horizon" id="climate-horizon" value="<?php echo $_IN_COST->climate_horizon; ?>">
+      <input type="text" name="climate_horizon" id="climate-horizon" value="<?php echo $_DATA_MAIN->climate_horizon; ?>">
     </td> 
     <td>
-      <input type="checkbox" name="impact_environtmental" id="impact-environtmental" class="bootstrap-switch" value="true" <?php if($_IN_IMPACT->impact_environtmental){ ?> checked <?php } ?> />
+      <input type="checkbox" name="impact_environtmental" id="impact-environtmental" class="bootstrap-switch" value="true" <?php if($_DATA_IMPACT->impact_environtmental){ ?> checked <?php } ?> />
     </td>
     <td>
-      <input type="checkbox" name="impact_economic" id="impact-economic" class="bootstrap-switch" value="true" <?php if($_IN_IMPACT->impact_economic){ ?> checked <?php } ?> />
+      <input type="checkbox" name="impact_economic" id="impact-economic" class="bootstrap-switch" value="true" <?php if($_DATA_IMPACT->impact_economic){ ?> checked <?php } ?> />
     </td>
     <td>
-      <input type="checkbox" name="impact_social" id="impact-social" class="bootstrap-switch" value="true" <?php if($_IN_IMPACT->impact_social){ ?> checked <?php } ?> />
+      <input type="checkbox" name="impact_social" id="impact-social" class="bootstrap-switch" value="true" <?php if($_DATA_IMPACT->impact_social){ ?> checked <?php } ?> />
     </td>
     <td>
       <button class="btn btn-default">

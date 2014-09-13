@@ -1,30 +1,38 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    Energy 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * 
+ * @class EnergyBiomass
+ * @brief Shared parent for all biomass types of energy sources.
  */
 
-/**
- * Description of EnergyBiomass
- *
- * @author jaCUBE
- */
-class EnergyBiomass extends EnergyCommon {
- 
-  public function __construct($country = 'cz') {
-    parent::__construct(4, $country);
+class EnergyBiomass extends Energy {
+  
+  /**
+   * @brief Constructor calls parent's constructor.
+   * @return void
+   */
+  
+  public function __construct() {
+    parent::__construct(); // Calling parent constructor
   }
   
+  
+  
+  
+  
+  /**
+   * @brief Overriden calculation of fuel for all biomass technology.
+   * @return float Cost of biomass fuel
+   */
   
   public function fuel(){
-    return 27.11 * 0.68;    
-  }
-  
-  
-  public function co2Emission() {
-    return 0.007;
+    return 27.11 * 0.68; // Hard-coded value for biomass
   }
   
 }

@@ -1,26 +1,55 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    Energy 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * 
+ * @class EnergyLigniteCCS
+ * @brief Class for lignite CCS type of energy sources.
  */
 
-/**
- * Description of EnergyLigniteCCS
- *
- * @author jaCUBE
- */
-class EnergyLigniteCCS extends EnergyLigniteIGCC {
+class EnergyLigniteCCS extends EnergyLignite {
   
-  public function __construct($country = 'cz') {
-    $this->technology_id = 2;
-    
-    parent::__construct($country);
+  /**
+   * @brief Name of this technology
+   * @var string $technology
+   */  
+  public $technology = 'Lignite + CCS';
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /**
+   * @brief Constructor calls parent's constructor.
+   * @return void
+   */
+  
+  public function __construct() {    
+    parent::__construct(); // Calling parent's method
   }
+  
+  
+  
+  
+  
+  /**
+   * @brief Overriden method. Lignite CCS produces only 10 % of CO2 emissions against lignite at all.
+   * @return float CO2 emissions of lignite CCS
+   */
   
   public function co2Emission(){
-    return parent::co2Emission() * 0.1;
+    $result = parent::co2Emission() * 0.1; // 10 % of shared lignite CO2 via parent's method
+    
+    return $result; // Returning result
   }
-  
 }

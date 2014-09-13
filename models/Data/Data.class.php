@@ -11,7 +11,7 @@
  *
  * @author jaCUBE
  */
-class DataInput {
+class Data {
     
   public function checkInput($name){
     if(!empty($_POST[$name])){
@@ -27,8 +27,5 @@ class DataInput {
       $this->$name = true;
       return true;
     }
-    
-    $this->$name = false;
-    return false;
   }
 }

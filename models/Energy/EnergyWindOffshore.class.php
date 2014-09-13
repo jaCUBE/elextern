@@ -1,24 +1,25 @@
 <?php
 
-/*
+/* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+
 /**
- * Description of EnergyWindOnshore
+ * Description of EnergyWindOffshore
  *
  * @author jaCUBE
  */
-class EnergyWindOnshore extends EnergyWind {
+class EnergyWindOffshore extends EnergyWind {
     
   /**
    * @brief Name of this technology
    * @var string $technology
    */
   
-  public $technology = 'Onshore Wind';
+  public $technology = 'Offshore Wind';
   
   
   
@@ -37,5 +38,5 @@ class EnergyWindOnshore extends EnergyWind {
   
   public function __construct() {    
     parent::__construct();
-  }  
+  } 
 }

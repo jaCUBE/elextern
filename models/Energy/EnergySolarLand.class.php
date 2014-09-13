@@ -7,18 +7,17 @@
  */
 
 /**
- * Description of EnergyWindOnshore
+ * Description of EnergySolarLand
  *
  * @author jaCUBE
  */
-class EnergyWindOnshore extends EnergyWind {
-    
+class EnergySolarLand extends EnergySolar {
   /**
    * @brief Name of this technology
    * @var string $technology
    */
   
-  public $technology = 'Onshore Wind';
+  public $technology = 'Solar Land';
   
   
   
@@ -37,5 +36,13 @@ class EnergyWindOnshore extends EnergyWind {
   
   public function __construct() {    
     parent::__construct();
-  }  
+  } 
+  
+  
+  public function extendedLandUse() {
+    $result = 1000 / (LOCAL_DENSITY_SOLAR * $this->lifetime * $this->load_factor) * $this->discounting() / DISCOUNT_RATE;
+    
+    return $result;
+  }
+  
 }

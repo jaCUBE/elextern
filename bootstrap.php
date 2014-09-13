@@ -7,21 +7,16 @@ date_default_timezone_set('Europe/Prague'); // Current time is current time
 
 global $_EX; // Global: main class with helping methods and connecting to db
 global $_DB; // Global: variable stores PDO connection to db
-global $_IN_COST; // Global: stores cost inputs of user
-global $_IN_IMPACT; // Global: stores impact inputs of user
-global $_DATA_GLOBAL; // Global: stores global data
-global $_DATA_LOCAL;
 global $_YIELD_CALC;
-
 
 
 $_EX = new Ex(); // Instance of main class of elextern
 $_EX->databaseConnect(); // Connecting to database via main class
-
-$_IN_COST = new DataInputCost();
-$_IN_IMPACT = new DataInputImpact();
-$_DATA_GLOBAL = new DataGlobal();
-$_DATA_LOCAL = new DataLocal();
 $_YIELD_CALC = new YieldCalculator();
+
+new DataMain();
+new DataEnergyUnit();
+new DataAdditional();
+new DataImpact();
 
 ?>

@@ -16,15 +16,32 @@ class TestTable {
   
   
   public function __construct() {
-    $this->tech['Lignite IGCC'] = new EnergyLigniteIGCC();
+    /*$this->tech['Lignite IGCC'] = new EnergyLigniteIGCC();
+    $this->tech['Lignite PCC'] = new EnergyLignitePCC();
+    $this->tech['Lignite FBC'] = new EnergyLigniteFBC();
+    $this->tech['Lignite CHP'] = new EnergyLigniteCHP();
     $this->tech['Lignite + CCS'] = new EnergyLigniteCCS();
-    $this->tech['Gas CCGT'] = new EnergyGas();
-    $this->tech['Biomass'] = new EnergyBiomass();
-    $this->tech['Small hydro'] = new EnergyHydro();
-    $this->tech['Nuclear'] = new EnergyNuclear();
-    $this->tech['Geothermal'] = new EnergyGeothermal();
-    $this->tech['Wind Onshore'] = new EnergyWindOnshore();
-    $this->tech['Solar'] = new EnergySolar();
+    
+    $this->tech['Gas CCGT'] = new EnergyGasCCGT();
+    $this->tech['Gas CHP'] = new EnergyGasCHP();
+    
+    $this->tech['FBC Biomass'] = new EnergyBiomassFBC();
+    
+    $this->tech['Nuclear Gen II'] = new EnergyNuclearGen2();
+    $this->tech['Nuclear EPR'] = new EnergyNuclearEPR();
+    
+    $this->tech['Geothermal'] = new EnergyGeothermal();*/
+    
+    $this->tech['Large Hydro'] = new EnergyHydroLarge();
+    $this->tech['Pumped Hydro'] = new EnergyHydroPumped();
+    $this->tech['Small Hydro'] = new EnergyHydroSmall();
+    
+    $this->tech['Onshore Wind'] = new EnergyWindOnshore();
+    $this->tech['Offshore Wind'] = new EnergyWindOffshore();
+    
+    $this->tech['Solar Roof'] = new EnergySolarRoof();
+    $this->tech['Solar Land'] = new EnergySolarLand();
+
   }
   
   

@@ -7,18 +7,18 @@
  * @author Jakub Rychecký <jakub@rychecky.cz>
  * @copyright Centrum výzkumu Řež s.r.o., © 2014
  * 
- * @class EnergyGeothermal
- * @brief Shared parent for all geothermal types of energy sources.
+ * @class EnergyLigniteFBC
+ * @brief Class for lignite FBC type of energy sources.
  */
 
-class EnergyGeothermal extends Energy {
-    
+class EnergyLigniteFBC extends EnergyLignite {
+  
   /**
    * @brief Name of this technology
    * @var string $technology
    */
   
-  public $technology = 'Geothermal';
+  public $technology = 'Lignite FBC';
   
   
   
@@ -36,6 +36,6 @@ class EnergyGeothermal extends Energy {
    */
   
   public function __construct() {    
-    parent::__construct(); // Calling parent's constructor
-  }  
+    parent::__construct();
+  }
 }

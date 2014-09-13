@@ -7,18 +7,17 @@
  * @author Jakub Rychecký <jakub@rychecky.cz>
  * @copyright Centrum výzkumu Řež s.r.o., © 2014
  * 
- * @class EnergyGeothermal
- * @brief Shared parent for all geothermal types of energy sources.
+ * @class EnergyGasCCGT
+ * @brief Class for gas CCGT type of energy sources.
  */
 
-class EnergyGeothermal extends Energy {
-    
+class EnergyGasCCGT extends EnergyGas {
+
   /**
    * @brief Name of this technology
    * @var string $technology
    */
-  
-  public $technology = 'Geothermal';
+  public $technology = 'Gas CCGT';
   
   
   
@@ -35,7 +34,7 @@ class EnergyGeothermal extends Energy {
    * @return void
    */
   
-  public function __construct() {    
+  public function __construct() {
     parent::__construct(); // Calling parent's constructor
-  }  
+  }
 }

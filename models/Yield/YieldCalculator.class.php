@@ -20,8 +20,15 @@ class YieldCalculator {
   
   public $yield_record = Array();
   
+  /**
+   * @brief One highest yield record for 100 % load factor
+   * @var YieldRecord $highest
+   */
   
   public $highest;
+  
+  
+  
   
   
   
@@ -36,9 +43,9 @@ class YieldCalculator {
    */
   
   public function __construct() {
-    $this->fetchYield();
+    $this->fetchYield(); // Fetch yield table from database
     
-    $this->highest = $this->yield_record[100];
+    $this->highest = $this->yield_record[100]; // Yield record with 100 % load factor is the highest
   }
   
   

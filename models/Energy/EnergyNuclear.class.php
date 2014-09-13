@@ -11,10 +11,10 @@
  *
  * @author jaCUBE
  */
-class EnergyNuclear extends EnergyCommon {
+class EnergyNuclear extends Energy {
   
-  public function __construct($country = 'cz') {
-    parent::__construct(6, $country);
+  public function __construct() {
+    parent::__construct();
   }
   
   
@@ -23,38 +23,27 @@ class EnergyNuclear extends EnergyCommon {
   }
   
   
-  public function landUsage() {
-    global $_DATA_GLOBAL, $_IN_COST;
-    
-    $result_one = pow($_DATA_GLOBAL->nuclear_exclusion, 2) * pi() / $_DATA_GLOBAL->nuclear_accident;
-    $result_two = $_IN_COST->climate_horizon / $this->lifetime;
-    $result = $result_one * $result_two;
+  public function extendedLandUse() {
+    $result_one = pow(NUCLEAR_EXCLUSION, 2) * pi() / NUCLEAR_ACCIDENT;
+    $result_two = 1 - pow(1 + DISCOUNT_RATE, -TIME_HORIZON);
+    $result = $result_one * $result_two / DISCOUNT_RATE;
     
     return $result;    
   }
   
   public function displacedPeople() {
-    global $_DATA_GLOBAL, $_DATA_LOCAL;
-    
-    $result = pow($_DATA_GLOBAL->nuclear_exclusion, 2) * pi() / $_DATA_GLOBAL->nuclear_accident / 1000000 * $_DATA_LOCAL->population_density;
-    
+    $result = pow(NUCLEAR_EXCLUSION, 2) * pi() / NUCLEAR_ACCIDENT * LOCAL_DENSITY_POPULATION / 1000000;
+
     return $result;    
   }
   
-  
-  public function co2Emission() {
-    return 0.006;
-  }
-  
-  public function nuclearFuelPostTreatment() {
-    global $_IN_COST;
-    
-    $result_one = $this->fuel() * $_IN_COST->climate_nuclear_fuel;
-    $result_two = 1 - pow(1 - $_IN_COST->getDiscountRate(), $_IN_COST->climate_horizon + 1);
-    $result = $result_one * $result_two / $_IN_COST->getDiscountRate();
+
+  public function nuclearFuelPostTreatment() {    
+    $result_one = $this->fuel() * LT_NUCLEAR_WASTE_TREATMENT;
+    $result_two = 1 - pow(1 + DISCOUNT_RATE, -TIME_HORIZON);
+    $result = $result_one * $result_two / DISCOUNT_RATE;
     
     return $result;
-    
   }
   
 }

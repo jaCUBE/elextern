@@ -7,11 +7,11 @@
  */
 
 /**
- * Description of EnergySolar
+ * Description of EnergyWind
  *
  * @author jaCUBE
  */
-class EnergySolar extends Energy {
+class EnergyWind extends Energy {
   
   public function __construct() {
     parent::__construct();

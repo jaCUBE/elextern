@@ -7,18 +7,18 @@
  */
 
 /**
- * Description of EnergyWindOnshore
+ * Description of EnergyNuclearEPR
  *
  * @author jaCUBE
  */
-class EnergyWindOnshore extends EnergyWind {
+class EnergyNuclearEPR extends EnergyNuclear {
     
   /**
    * @brief Name of this technology
    * @var string $technology
    */
   
-  public $technology = 'Onshore Wind';
+  public $technology = 'Nuclear EPR';
   
   
   
@@ -37,5 +37,5 @@ class EnergyWindOnshore extends EnergyWind {
   
   public function __construct() {    
     parent::__construct();
-  }  
+  }
 }

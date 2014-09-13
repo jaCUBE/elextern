@@ -1,45 +1,52 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    Energy 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * 
+ * @class EnergyGas
+ * @brief Shared parent for all gas types of energy sources.
  */
 
-/**
- * Description of EnergyGas
- *
- * @author jaCUBE
- */
-class EnergyGas extends EnergyCommon {
+class EnergyGas extends Energy {
   
-  public $toe = 40;
-  public $toe_co2 = 2.35;
+  /**
+   * @brief Constructor calls parent's constructor.
+   * @return void
+   */
   
-  public function __construct($country = 'cz') {
-    parent::__construct(3, $country);
+  public function __construct() {
+    parent::__construct(); // Calling parent constructor
   }
+
   
-  public function gasImport(){
-    $result = $this->toe / $this->toe_thermal_mwh / $this->efficiency;
-    
-    return $result;
-  }
   
+  
+  
+  /**
+   * @brief Overriden calculation of fuel for all gas technology.
+   * @return float Cost of gas fuel
+   */
   
   public function fuel(){
-    global $_IN_IMPACT;
+    $result = GAS_TOE / MWH_TOE / $this->eco_efficiency * GAS_PRICE; // Calculation by formula
     
-    $result = $_IN_IMPACT->gas_price * $this->gasImport();
-    
-    return $result;
+    return $result; // Returning result
   }
   
   
+  /**
+   * @brief Overriden calculation of average CO2 emissions per MWh due to fossil fuel burning and construction works
+   * @return float Average CO2 gas emission
+   */
+  
   public function co2Emission() {
-    $result = $this->toe_co2 / $this->toe * $this->gasImport();
+    $result = GAS_CO2 / MWH_TOE / $this->eco_efficiency; // Calculation by formula
     
-    return $result;
+    return $result; // Returning result
   }
   
 }

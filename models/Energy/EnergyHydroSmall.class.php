@@ -7,18 +7,19 @@
  */
 
 /**
- * Description of EnergyWindOnshore
+ * Description of EnergyHydroSmall
  *
  * @author jaCUBE
  */
-class EnergyWindOnshore extends EnergyWind {
+
+class EnergyHydroSmall extends EnergyHydro {
     
   /**
    * @brief Name of this technology
    * @var string $technology
    */
   
-  public $technology = 'Onshore Wind';
+  public $technology = 'Small Hydro';
   
   
   
@@ -37,5 +38,5 @@ class EnergyWindOnshore extends EnergyWind {
   
   public function __construct() {    
     parent::__construct();
-  }  
+  }
 }

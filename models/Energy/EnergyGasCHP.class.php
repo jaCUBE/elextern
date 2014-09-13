@@ -7,18 +7,17 @@
  * @author Jakub Rychecký <jakub@rychecky.cz>
  * @copyright Centrum výzkumu Řež s.r.o., © 2014
  * 
- * @class EnergyGeothermal
- * @brief Shared parent for all geothermal types of energy sources.
+ * @class EnergyGasCHP
+ * @brief Class for gas CHP type of energy sources.
  */
 
-class EnergyGeothermal extends Energy {
-    
+class EnergyGasCHP extends EnergyGas {
+
   /**
    * @brief Name of this technology
    * @var string $technology
    */
-  
-  public $technology = 'Geothermal';
+  public $technology = 'Gas CHP';
   
   
   
@@ -35,7 +34,8 @@ class EnergyGeothermal extends Energy {
    * @return void
    */
   
-  public function __construct() {    
+  public function __construct() {
     parent::__construct(); // Calling parent's constructor
-  }  
+  }
+  
 }

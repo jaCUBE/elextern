@@ -1,23 +1,26 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    Energy 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * 
+ * @class EnergyHydro
+ * @brief Shared parent for all hydro types of energy sources.
  */
 
-/**
- * Description of EnergyHydro
- *
- * @author jaCUBE
- */
-class EnergyHydro extends EnergyCommon {
-   public function __construct($country = 'cz') {
-    parent::__construct(5, $country);
-  }
+class EnergyHydro extends Energy {
   
-  public function co2Emission() {
-    return 0.006;
+  /**
+   * @brief Constructor calls parent's constructor.
+   * @return void
+   */
+  
+  public function __construct() {
+    parent::__construct(); // Calling parent's constructor
   }
+
   
 }
