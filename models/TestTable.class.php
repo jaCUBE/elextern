@@ -16,7 +16,7 @@ class TestTable {
   
   
   public function __construct() {
-    /*$this->tech['Lignite IGCC'] = new EnergyLigniteIGCC();
+    $this->tech['Lignite IGCC'] = new EnergyLigniteIGCC();
     $this->tech['Lignite PCC'] = new EnergyLignitePCC();
     $this->tech['Lignite FBC'] = new EnergyLigniteFBC();
     $this->tech['Lignite CHP'] = new EnergyLigniteCHP();
@@ -30,7 +30,7 @@ class TestTable {
     $this->tech['Nuclear Gen II'] = new EnergyNuclearGen2();
     $this->tech['Nuclear EPR'] = new EnergyNuclearEPR();
     
-    $this->tech['Geothermal'] = new EnergyGeothermal();*/
+    $this->tech['Geothermal'] = new EnergyGeothermal();
     
     $this->tech['Large Hydro'] = new EnergyHydroLarge();
     $this->tech['Pumped Hydro'] = new EnergyHydroPumped();

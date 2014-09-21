@@ -40,7 +40,7 @@ class EnergySolarLand extends EnergySolar {
   
   
   public function extendedLandUse() {
-    $result = 1000 / (LOCAL_DENSITY_SOLAR * $this->lifetime * $this->load_factor) * $this->discounting() / DISCOUNT_RATE;
+    $result = 1000 / (LOCAL_DENSITY_SOLAR * $this->load_factor);
     
     return $result;
   }

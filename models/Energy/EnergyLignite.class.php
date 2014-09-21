@@ -41,8 +41,7 @@ class EnergyLignite extends Energy {
   
   
   public function extendedLandUse(){
-    $result_one = (1 - pow(1 + DISCOUNT_RATE, -$this->lifetime));
-    $result = LIGNITE_TOE / MWH_TOE / $this->eco_efficiency / LOCAL_DENSITY_LIGNITE * $result_one / DISCOUNT_RATE;
+    $result = LIGNITE_TOE / MWH_TOE / $this->eco_efficiency / LOCAL_DENSITY_LIGNITE * $this->lifetime;
     
     return $result;
   }

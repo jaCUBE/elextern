@@ -48,7 +48,7 @@ class EnergyHydroLarge extends EnergyHydro {
    */
   
   public function extendedLandUse() {
-    $result = 27300000 / 300000 / $this->lifetime * $this->discounting() / DISCOUNT_RATE; // Calculating extended land use value according to formula
+    $result = 27300000 / 300000; // Calculating extended land use value
     
     return $result; // Returning result
   }

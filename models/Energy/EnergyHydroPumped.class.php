@@ -48,7 +48,7 @@ class EnergyHydroPumped extends EnergyHydro {
    */
   
   public function extendedLandUse() {
-    $result = 5100000 / 762000 / $this->lifetime * $this->discounting() / DISCOUNT_RATE; // Calculating extended land use value according to formula
+    $result = 5100000 / 762000; // Calculating extended land use value
     
     return $result; // Returning result
   }

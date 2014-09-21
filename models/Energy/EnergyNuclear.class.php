@@ -24,9 +24,9 @@ class EnergyNuclear extends Energy {
   
   
   public function extendedLandUse() {
-    $result_one = pow(NUCLEAR_EXCLUSION, 2) * pi() / NUCLEAR_ACCIDENT;
-    $result_two = 1 - pow(1 + DISCOUNT_RATE, -TIME_HORIZON);
-    $result = $result_one * $result_two / DISCOUNT_RATE;
+    
+    
+    $result = pow(NUCLEAR_EXCLUSION, 2) * pi() / NUCLEAR_ACCIDENT * TIME_HORIZON;
     
     return $result;    
   }
