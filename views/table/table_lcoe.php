@@ -41,7 +41,7 @@
 
 
 <tr class="opex-actual child child-lcoe" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given R and Load Factor.">
-  <td class="attribute">Actual CAPEX</td>
+  <td class="attribute">Actual OPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexActual', true); ?>
