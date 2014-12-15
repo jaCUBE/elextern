@@ -85,7 +85,7 @@ $main = new TechList();
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
         <?php echo $tech->makeHtml('capex'); ?>
-        <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
+        <?php echo $_EX->htmlUnit('EUR/kW'); ?>
       </td>
       <?php } ?>
     </tr>
@@ -93,12 +93,39 @@ $main = new TechList();
     
     
     
-    <tr class="lcoe" data-placement="left" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
-      <td class="attribute">LCOE</td>
+    
+    <tr class="capex-idr" data-placement="left" data-original-title="CAPEX IDR" data-content="Assuming Investment costs are linearly spent during the power plant construction time, CAPEX IDC represents CAPEX Including Discount Rate.">
+      <td class="attribute">CAPEX IDR</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
-        <?php echo $tech->makeHtml('lcoe', true); ?>
-        <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
+        <?php echo $tech->makeHtml('capexIdr', true); ?>
+        <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+      </td>
+      <?php } ?>
+    </tr>
+    
+    
+    
+    
+    <tr class="grid-connection" data-placement="left" data-original-title="Grid Connection" data-content="Costs for connecting the power plant to the grid.">
+      <td class="attribute">Grid Connection</td>
+      <?php foreach($main->tech as $tech){ ?>
+      <td class="right">
+        <?php echo $tech->makeHtml('grid_connection'); ?>
+        <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+      </td>
+      <?php } ?>
+    </tr>
+    
+    
+    
+    
+    <tr class="opex" data-placement="left" data-original-title="Operation OPEX%" data-content="Share of CAPEX costs that are due every year for maintenance (fixed costs even without production).">
+      <td class="attribute">Operation OPEX%</td>
+      <?php foreach($main->tech as $tech){ ?>
+      <td class="right">
+        <?php echo $tech->makeHtml('grid_connection'); ?>
+        <?php echo $_EX->htmlUnit('% CAPEX'); ?>
       </td>
       <?php } ?>
     </tr>
@@ -107,6 +134,8 @@ $main = new TechList();
     
     
     <?php
+    
+    require 'table_lcoe.php';
     
     if(SHOW_IMPACT_ENVIRONMENT){
       require 'table_impact_environment.php';

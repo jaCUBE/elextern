@@ -2,6 +2,8 @@
 
 <html>
   <head>
+    <title>ELEXTERN: Tech Demo</title>
+    
     <meta charset="UTF-8" />
     
     <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less" />
