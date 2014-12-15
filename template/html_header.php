@@ -7,6 +7,8 @@
     <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less" />
     <script src="<?php echo URL; ?>/libraries/less.js/less-1.7.5.min.js" type="text/javascript"></script>
     
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
@@ -22,8 +24,12 @@
     <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
     
+    <script src="<?php echo URL; ?>/libraries/jquery-mousewheel/jquery.mousewheel.min.js" type="text/javascript"></script>
+    
     <link href="//fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
-
+    
+    <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
+    
     <script src="<?php echo URL; ?>/js/elextern-basic.js" type="text/javascript"></script>
     <script src="<?php echo URL; ?>/js/elextern-chart.js" type="text/javascript"></script>
     

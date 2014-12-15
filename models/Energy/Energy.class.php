@@ -413,35 +413,61 @@ class Energy {
       return 0.0; // ...if not, retuning 0.
     }
     
-    $result = SOC_SICK_LEAVE * $this->soc_sick_leave; // Costs for sick leaves multiplied by input value
-    $result += SOC_RESPIRATORY * $this->soc_respiratory; // Costs for respiratory diseases multiplied by input value
-    $result += SOC_CANCER * $this->soc_cancer; // Costs for cancer multiplied by input value
-    $result += SOC_MORTALITY * $this->soc_mortality; // Costs for mortality multiplied by input value
+    $result = $this->impactSocialSickLeave(); // Costs for sick leaves multiplied by input value
+    $result += $this->impactSocialRespiratoryDisease(); // Costs for respiratory diseases multiplied by input value
+    $result += $this->impactSocialCancer(); // Costs for cancer multiplied by input value
+    $result += $this->impactSocialMortality(); // Costs for mortality multiplied by input value
     
     return $result; // Returning result    
   }
   
   
   
+  public function impactSocialSickLeave(){
+    return SOC_SICK_LEAVE * $this->soc_sick_leave;
+  }
+  
+  public function impactSocialRespiratoryDisease(){
+    return SOC_RESPIRATORY * $this->soc_respiratory;
+  }
+  
+  public function impactSocialCancer(){
+    return SOC_CANCER * $this->soc_cancer;
+  }
+  
+  public function impactSocialMortality(){
+    return SOC_MORTALITY * $this->soc_mortality;
+  }
   
   
   /**
-   * @brief Calculating of all environtmental impacts together.
-   * @return float Cost of all environtmental impacts [€/MWh]
+   * @brief Calculating of all ENVIRONMental impacts together.
+   * @return float Cost of all ENVIRONMental impacts [€/MWh]
    */
   
-  public function impactEnvirontment(){
-    if(!SHOW_IMPACT_ENVIRONTMENT){ // Check if environtmental impact shouldn't be calculated...
+  public function impactENVIRONMent(){
+    if(!SHOW_IMPACT_ENVIRONMENT){ // Check if ENVIRONMental impact shouldn't be calculated...
       return 0.0; // ...if not, retuning 0.
     }
     
-    $result = ENV_LAND_CONFLICT * $this->extendedLandUse(); // Costs for extended land use multiplied by input value
-    $result += ENV_COMPENSATION * $this->displacedPeople(); // Costs for compensation for displaced people multiplied by input value
+    $result = $this->impactEnvironmentLandUse(); // Costs for extended land use multiplied by input value
+    $result += $this->impactEnvironmentDisplacedPeople(); // Costs for compensation for displaced people multiplied by input value
     
     return $result; // Returning result    
   }
   
   
+  
+  
+  
+  public function impactEnvironmentLandUse(){
+    return ENV_LAND_CONFLICT * $this->extendedLandUse();
+  }
+  
+  
+  public function impactEnvironmentDisplacedPeople(){
+    return ENV_COMPENSATION * $this->displacedPeople();
+  }
   
   
   
@@ -475,7 +501,7 @@ class Energy {
       return 0.0; // ...if not, retuning 0.
     }
     
-    $result = $this->impactEnvirontment(); // Result is costs of environtmental impacts...
+    $result = $this->impactENVIRONMent(); // Result is costs of ENVIRONMental impacts...
     $result += $this->impactEconomic(); // ...added economic impacts...
     $result += $this->impactSocial(); // ...added social impacts...
     $result += $this->impactLongterm(); // ...added longterm impacts.
@@ -517,7 +543,7 @@ class Energy {
       $value = $this->$name; // ...value is property
     }
     
-    return number_format($value, 2, ',', ' '); // Returning formatted number; rounded and with decimal comma instead of point
+    return number_format($value, 2, ',', '&nbsp;'); // Returning formatted number; rounded and with decimal comma instead of point
   }
   
   
@@ -594,6 +620,22 @@ class Energy {
   
   public function co2Emission(){
     return $this->lt_co2; // Default: value of this source taken from database record
+  }
+  
+  
+  
+  public function cssClass(){
+    $class = Array();
+    
+    if($this->eco_fossil_fuel){
+      $class[] = 'fossil';
+    }
+    
+    if($this->dispatchable){
+      $class[] = 'dispatchable';
+    }
+    
+    return implode(' ', $class);
   }
   
 }

@@ -7,12 +7,14 @@ require 'template/header.php';
 
 ?>
 
-
-<div id="table">
-
-  <?php require 'views/table/table.php'; ?>
-
+<div id="chart">
+  
+  <?php require 'views/chart/chart.php'; ?>
+  
 </div>
+
+
+
 
 
 

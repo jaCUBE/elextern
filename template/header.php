@@ -9,9 +9,9 @@
 
 <div class="collapse navbar-collapse" id="menu">
   <ul class="nav navbar-nav">
-    <li class="active"><a href="#">Charts</a></li>
-    <li><a href="#">Tables</a></li>
-    <li><a href="#">Map</a></li>
+    <li class="active"><a href="index.php">Table</a></li>
+    <li><a href="chart.php">Charts</a></li>
+    <li><a href="map.php">Map</a></li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Others <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">

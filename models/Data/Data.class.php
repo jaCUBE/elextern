@@ -22,10 +22,13 @@ class Data {
   }
   
   
-  public function checkCheckbox($name){
+  public function checkCheckbox($name){    
     if(!empty($_POST[$name])){
       $this->$name = true;
       return true;
+    }else{
+      $this->$name = false;
+      return false;
     }
   }
 }

@@ -26,7 +26,7 @@ $(function() {
     postfix: '%'
   });
   
-  $('#climate-horizon').TouchSpin({
+  $('#time-horizon').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',
     verticaldownclass: 'glyphicon glyphicon-minus',
@@ -39,4 +39,43 @@ $(function() {
     postfix: 'years'
   });
   
+  $('#table #form-basic').click(function(){
+    $('#form-basic').submit();    
+  });
+  
+  $('#chart #form-basic').keyup(function(){
+    elextern_chart();
+  });
+  
+  $('#chart #form-basic').change(function(){
+    elextern_chart();
+  });
+  
+  $('#chart #form-basic .bootstrap-switch').click(function(){
+    elextern_chart();
+  });
+  
+  $('#chart .btn-submit').hide();
+  
+  
+  
+  
 });
+
+
+function filter_table(selector){
+  $('#table-sources td, #table-sources th').hide();
+  
+  $('#table-sources .legend').show();
+  
+  if(selector == 'all'){
+   $('#table-sources td, #table-sources th').show(); 
+  }
+  
+  $(selector).each(function (){
+    var index = $(this).index() + 1;
+    
+    $("#table-sources td:nth-child("+ index +"), th:nth-child("+ index +")").show();
+    $("#table-sources td:nth-child(1), th:nth-child(1)").show();
+  });  
+}

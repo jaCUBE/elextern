@@ -24,41 +24,53 @@ class TechList {
   
   
   private function prepareTech(){
-    $temp[] = new EnergyLigniteIGCC();
-    $temp[] = EnergyLignitePCC();
-    $temp[] = new EnergyLigniteFBC();
-    $temp[] = new EnergyLigniteCHP();
-    $temp[] = new EnergyLigniteCCS();
+    $this->tech[] = new EnergyLigniteIGCC();
+    $this->tech[] = new EnergyLignitePCC();
+    $this->tech[] = new EnergyLigniteFBC();
+    $this->tech[] = new EnergyLigniteCHP();
+    $this->tech[] = new EnergyLigniteCCS();
     
-    $temp[] = new EnergyGasCCGT();
-    $temp[] = new EnergyGasCHP();
+    $this->tech[] = new EnergyGasCCGT();
+    $this->tech[] = new EnergyGasCHP();
     
-    $temp[] = new EnergyNuclearGen2();
-    $temp[] = new EnergyNuclearEPR();
+    $this->tech[] = new EnergyNuclearGen2();
+    $this->tech[] = new EnergyNuclearEPR();
     
-    $temp[] = new EnergyHydroLarge();
-    $temp[] = new EnergyHydroPumped();
-    $temp[] = new EnergyHydroSmall();
+    $this->tech[] = new EnergyHydroLarge();
+    $this->tech[] = new EnergyHydroPumped();
+    $this->tech[] = new EnergyHydroSmall();
     
-    $temp[] = new EnergyWindOffshore();
-    $temp[] = new EnergyWindOnshore();
+    $this->tech[] = new EnergyWindOffshore();
+    $this->tech[] = new EnergyWindOnshore();
     
-    $temp[] = new EnergySolarRoof();
-    $temp[] = new EnergySolarLand();
+    $this->tech[] = new EnergySolarRoof();
+    $this->tech[] = new EnergySolarLand();
     
-    $temp[] =  new EnergyBiomassFBC();
-    $temp[] = new EnergyGeothermal();
+    $this->tech[] =  new EnergyBiomassFBC();
+    $this->tech[] = new EnergyGeothermal();
+  }
+  
+  
+  public function htmlTableHeader(){
     
-    foreach($temp as $tech){
-      if($tech->fossil_fuel){
-        $type = 'Fossil fuel sources';
-      }else{
-        $type = 'Renewable sources';
-      }
-      
-      $this->tech[$type][$tech->technology] = $tech;
-      
-    }
+    ob_start(); ?>
+
+    <thead>
+      <tr>
+        <th class="legend">Value</th>
+        
+        <?php foreach($this->tech as $tech){ ?>
+        <th class="<?php echo $tech->cssClass(); ?>">
+          <?php echo $tech->technology; ?>
+        </th>
+        <?php } ?>
+        
+      </tr>
+    </thead>
+
+
+    <?php return ob_get_clean();
+    
   }
   
 }

@@ -33,7 +33,7 @@ $test = new TestTable();
     echo $test->walkMethod('<strong>NET COST</strong>', 'costNet');
     echo $test->walkMethod('<em>Economic impact</em>', 'impactEconomic');
     echo $test->walkMethod('<em>Social impact</em>', 'impactSocial');
-    echo $test->walkMethod('<em>Environmental impact</em>', 'impactEnvirontment');
+    echo $test->walkMethod('<em>Environmental impact</em>', 'impactENVIRONMent');
     echo $test->walkMethod('<em>Longterm</em>', 'impactLongterm');
     echo $test->walkMethod('<strong>EXTERNALITIES COST</strong>', 'costExternality');
     echo $test->walkMethod('<strong>TOTAL REFERENCE VALUE</strong>', 'costReference');

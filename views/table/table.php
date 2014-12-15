@@ -1,6 +1,6 @@
 <?php 
 
-require 'form_basic.php';
+require 'views/form_basic.php';
 
 $main = new TechList();
 
@@ -8,18 +8,25 @@ $main = new TechList();
 
 
 
+<strong>Filter:</strong><br />
+<span class="btn btn-xs btn-info" onclick="filter_table('all');">All</span>
+
+<span class="btn-group">
+  <span class="btn btn-xs btn-default" onclick="filter_table('.fossil');">Fossil only</span>
+  <span class="btn btn-xs btn-default" onclick="filter_table('.dispatchable');">Dispatchable only</span>
+</span>
+
+
 
 <table id="table-sources">
-  <thead>
-    <?php echo $main->tableHeader(); ?>
-  </thead>
+  <?php echo $main->htmlTableHeader(); ?>
   
   <tbody>
     
     <tr class="efficiency" data-placement="left" data-original-title="Local Economic Impact" data-content="Efficiency of energy production.">
       <td class="attribute">Efficiency</td>
       <?php foreach($main->tech as $tech){ ?>
-      <td class="center"><?php echo $tech->efficiency * 100; ?>&nbsp;%</td>
+      <td class="center"><?php echo $tech->eco_efficiency * 100; ?>&nbsp;%</td>
       <?php } ?>
     </tr>
     
@@ -27,7 +34,7 @@ $main = new TechList();
       <td class="attribute">Dispatchable Source?</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
-        <?php if($tech->dispatchability){ ?>
+        <?php if($tech->dispatchable){ ?>
         <i class="fa fa-check"></i>
         <?php } ?>
       </td>
@@ -68,12 +75,16 @@ $main = new TechList();
     
     <?php
     
-    if($_DATA_IMPACT->impact_environtmental){
-      require 'table_impact_environtmental.php';
+    if(SHOW_IMPACT_ENVIRONMENT){
+      require 'table_impact_environment.php';
     }
     
-    if($_DATA_IMPACT->impact_economic){
+    if(SHOW_IMPACT_ECONOMIC){
       require 'table_impact_economic.php';
+    }
+    
+    if(SHOW_IMPACT_SOCIAL){
+      require 'table_impact_social.php';
     }
     
     

@@ -41,7 +41,7 @@ class DataMain extends Data {
     define('DISCOUNT_RATE', $this->discount_rate);
     define('SHOW_COST_NET', $this->show_cost_net);
     define('SHOW_COST_EXTERNALITY', $this->show_cost_externality);
-    define('SHOW_IMPACT_ENVIRONTMENT', $this->impact_environment);
+    define('SHOW_IMPACT_ENVIRONMENT', $this->impact_environment);
     define('SHOW_IMPACT_ECONOMIC', $this->impact_economic);
     define('SHOW_IMPACT_SOCIAL', $this->impact_social);
     define('SHOW_IMPACT_LONGTERM', $this->impact_longterm);
@@ -49,12 +49,17 @@ class DataMain extends Data {
   
   
   public function getInput(){
-    $this->checkInput('discount_rate');
-    $this->checkInput('climate_horizon');
+    if(empty($_POST)){
+      return false;
+    }
     
-    $this->checkCheckbox('impact_environtmental');
+    $this->checkInput('discount_rate');
+    $this->checkInput('time_horizon');
+    
+    $this->checkCheckbox('impact_environment');
     $this->checkCheckbox('impact_social');
     $this->checkCheckbox('impact_economic');
+    $this->checkCheckbox('impact_longterm');
   }
 
   

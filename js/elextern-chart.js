@@ -1,7 +1,47 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$(function() {
+  $('#chart').ready(elextern_chart);
+});
 
 
+
+
+
+
+google.load("visualization", "1", {packages:["corechart"]});
+
+function elextern_chart() {
+
+  $.ajax({
+    type: "POST",
+    data: $('#form-basic').serialize(),
+    url: 'ajax_chart.php',
+    datatype: 'json',
+    success: function(data, textStatus, xhr) {      
+      var data = new google.visualization.DataTable(data);
+      
+      var options = {
+        width: '100%',
+        height: '450',
+        hAxis: {showTextEvery: 1, slantedText:true,  slantedTextAngle:90, title: 'Energy Sources'},
+        vAxis: {title: 'Costs', showTextEvery: 4, format: '# €/MWh', 
+          viewWindow: {min: 0, max: 'auto'}
+        },
+        legend: { position: 'top', maxLines: 3 },
+	bar: { groupWidth: '50%' },
+        backgroundColor: { fill:'transparent' },
+        chartArea: {
+            left: 100,
+            top: 40,
+            width: '100%',
+            height: '300'
+        },
+        isStacked: true
+      };
+      
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+
+    }
+  });
+}
