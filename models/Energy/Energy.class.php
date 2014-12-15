@@ -445,7 +445,7 @@ class Energy {
    * @return float Cost of all ENVIRONMental impacts [€/MWh]
    */
   
-  public function impactENVIRONMent(){
+  public function impactEnvironment(){
     if(!SHOW_IMPACT_ENVIRONMENT){ // Check if ENVIRONMental impact shouldn't be calculated...
       return 0.0; // ...if not, retuning 0.
     }
@@ -481,14 +481,23 @@ class Energy {
       return 0.0; // ...if not, retuning 0.
     }
     
-    $result = LT_CO2_EMISSION * $this->co2Emission(); // Costs for CO2 emissions multiplied by input value
-    $result += LT_NUCLEAR_WASTE_TREATMENT * $this->nuclearFuelPostTreatment(); // Costs for nuclear waste treatment multiplied by input value
+    $result = $this->impactLongtermCO2();
+    $result += $this->impactLongtermNuclearWaste();
     
     return $result; // Returning result   
   }
   
   
   
+  public function impactLongtermCO2(){
+    return LT_CO2_EMISSION * $this->co2Emission(); // Costs for CO2 emissions multiplied by input value
+  }
+  
+  
+  
+  public function impactLongtermNuclearWaste(){
+    return LT_NUCLEAR_WASTE_TREATMENT * $this->nuclearFuelPostTreatment(); // Costs for nuclear waste treatment multiplied by input value
+  }
   
   
   /**

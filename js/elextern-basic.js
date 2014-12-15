@@ -1,7 +1,7 @@
 $(function() {
   $('.bootstrap-switch').bootstrapSwitch();
 
-  $('#table-sources tr').popover({ trigger: "hover" });
+  $('#table-sources tr, #legend span').popover({ trigger: "hover" });
 
   $('tr.parent')
           .css("cursor","pointer")

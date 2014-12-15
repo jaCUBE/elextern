@@ -22,11 +22,12 @@ function elextern_chart() {
       var options = {
         width: '100%',
         height: '450',
+        colors: ['#7A7A7A', '#57A87A', '#EA9000', '#864B96', '#C10300'],
         hAxis: {showTextEvery: 1, slantedText:true,  slantedTextAngle:90, title: 'Energy Sources'},
         vAxis: {title: 'Costs', showTextEvery: 4, format: '# €/MWh', 
           viewWindow: {min: 0, max: 'auto'}
         },
-        legend: { position: 'top', maxLines: 3 },
+        legend: { position: 'none', maxLines: 3 },
 	bar: { groupWidth: '50%' },
         backgroundColor: { fill:'transparent' },
         chartArea: {
