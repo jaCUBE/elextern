@@ -1,6 +1,6 @@
 <?php 
 
-require 'views/form_basic.php';
+require 'views/form.php';
 
 ?>
 

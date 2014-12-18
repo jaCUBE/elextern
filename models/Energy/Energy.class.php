@@ -552,7 +552,9 @@ class Energy {
       $value = $this->$name; // ...value is property
     }
     
-    return number_format($value, 2, ',', '&nbsp;'); // Returning formatted number; rounded and with decimal comma instead of point
+    $value = number_format($value, 2, ',', ' '); // Returning formatted number; rounded and with decimal comma instead of point
+    
+    return str_replace(' ', '&nbsp;', $value); // Returning formatted number; rounded and with decimal comma instead of point
   }
   
   

@@ -1,7 +1,5 @@
 <?php 
 
-require 'views/form_basic.php';
-
 $main = new TechList();
 
 ?>

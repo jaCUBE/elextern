@@ -10,7 +10,12 @@ require 'template/header.php';
 
 <div id="table">
 
-  <?php require 'views/table/table.php'; ?>
+  <?php require 'views/form.php'; ?>
+  
+  <div id="table-content">
+    
+  </div>
+
 
 </div>
 

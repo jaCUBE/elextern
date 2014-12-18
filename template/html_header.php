@@ -23,6 +23,9 @@
     <script src="<?php echo URL; ?>/libraries/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css">
     
+    <script src="<?php echo URL; ?>/libraries/jquery-chosen/chosen.jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/jquery-chosen/chosen.min.css">
+    
     <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
     
@@ -32,8 +35,9 @@
     
     <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
     
-    <script src="<?php echo URL; ?>/js/elextern-basic.js" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern-chart.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_basic.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_touchspin.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_chart.js" type="text/javascript"></script>
     
   </head>
   

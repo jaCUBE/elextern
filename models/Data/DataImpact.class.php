@@ -38,16 +38,31 @@ class DataImpact extends Data {
   
   
   public function __construct(){
+    $this->getInput();
+    
     $this->eco_decomissioning_weight /= 100;
     $this->eco_technology_import_weight /= 100;
     $this->eco_fossil_fuel_weight /= 100;
     
     $this->lt_nuclear_waste_treatment /= 100;    
     $this->lt_climate_cost /= 100;
-
-    
     
     $this->defineConstant();
+
+  }
+  
+  
+  public function getInput(){    
+    $this->checkInput('env_compensation');
+    
+    $this->checkInput('soc_sick_leave');
+    $this->checkInput('soc_respiratory');
+    $this->checkInput('soc_cancer');
+    $this->checkInput('soc_mortality');
+    
+    $this->checkInput('lt_nuclear_waste_treatment');
+    $this->checkInput('lt_climate_start');
+    $this->checkInput('lt_climate_cost');
   }
   
   public function defineConstant(){

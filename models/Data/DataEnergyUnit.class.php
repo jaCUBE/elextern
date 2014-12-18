@@ -32,8 +32,19 @@ class DataEnergyUnit extends Data {
   
   
   public function __construct() {
+    $this->getInput();
+    
     $this->defineConstant();
   }
+  
+  
+  public function getInput(){    
+    $this->checkInput('oil_price');
+    $this->checkInput('gas_price');
+    $this->checkInput('coal_price');
+    $this->checkInput('lignite_price');
+  }
+  
   
   public function defineConstant(){
     define('OIL_PRICE', $this->oil_price);
