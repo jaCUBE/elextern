@@ -48,6 +48,17 @@ class TechList {
     
     $this->tech[] =  new EnergyBiomassFBC();
     $this->tech[] = new EnergyGeothermal();
+    
+    $this->checkFull();
+  }
+  
+  
+  public function checkFull(){
+    foreach($this->tech as $index => $tech){
+      if(!$tech->isFull()){
+        unset($this->tech[$index]);
+      }
+    }
   }
   
   

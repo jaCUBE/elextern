@@ -633,6 +633,16 @@ class Energy {
   
   
   
+  public function isFull(){
+    if(!empty($this->row_id)){
+      return true;
+    }
+    
+    return false;
+  }
+  
+  
+  
   public function cssClass(){
     $class = Array();
     
