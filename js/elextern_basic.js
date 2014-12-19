@@ -6,6 +6,7 @@ $(function() {
   $('.jquery-chosen').chosen();
   
 
+
   show_another_input();
   $('#another-input-select').change(show_another_input);
 
