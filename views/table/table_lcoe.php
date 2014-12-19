@@ -27,7 +27,7 @@
 
 
 
-<tr class="capex-actual child child-lcoe" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
+<tr class="capex-actual child child-lcoe" data-placement="left" data-original-title="Actual CAPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor">
   <td class="attribute">Actual CAPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
@@ -40,7 +40,7 @@
 
 
 
-<tr class="opex-actual child child-lcoe" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor.">
+<tr class="opex-actual child child-lcoe" data-placement="left" data-original-title="Actual OPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
   <td class="attribute">Actual OPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">

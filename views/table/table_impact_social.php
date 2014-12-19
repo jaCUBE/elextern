@@ -1,4 +1,4 @@
-<tr class="impact-social parent" id="social" data-placement="left" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the first polluer, these costs must appear clearly">
+<tr class="impact-social parent" id="social" data-placement="left" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the primary polluter, these costs must appear clearly">
   <td class="attribute">
     Social Impact
     <?php echo $_EX->htmlUnit('Click to expand'); ?>

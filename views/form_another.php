@@ -1,5 +1,5 @@
 <td style="vertical-align: top;">
-  <strong>Tune impact value:</strong><br />
+  <strong><i class="fa fa-gears"></i> Tune impact value:</strong><br />
   <div style="visibility: hidden; height: 7px;"></div>
   <select name="input_visible" id="another-input-select" class="jquery-chosen">
 

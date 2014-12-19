@@ -7,11 +7,11 @@ require 'views/form.php';
 <strong>Click on legend for show/hide costs or impacts:</strong>
   
 <div id="legend">
-  <span class="label hand toggle-checkbox capex-actual"  data-checkbox="show-capex" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor.">
+  <span class="label hand toggle-checkbox capex-actual"  data-checkbox="show-capex" data-placement="left" data-original-title="Actual CAPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor.">
     CAPEX
   </span>
   
-  <span class="label hand toggle-checkbox opex-actual"  data-checkbox="show-opex" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given R and Load Factor.">
+  <span class="label hand toggle-checkbox opex-actual"  data-checkbox="show-opex" data-placement="left" data-original-title="Actual OPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
     OPEX
   </span>
   
@@ -28,7 +28,7 @@ require 'views/form.php';
     Economic Impact
   </span>
   
-  <span class="label hand toggle-checkbox social" data-checkbox="impact-social" data-placement="left" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the first polluer, these costs must appear clearly">
+  <span class="label hand toggle-checkbox social" data-checkbox="impact-social" data-placement="left" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the primary polluter, these costs must appear clearly">
     Social Impact
   </span>
   

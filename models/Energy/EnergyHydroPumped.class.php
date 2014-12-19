@@ -68,6 +68,6 @@ class EnergyHydroPumped extends EnergyHydro {
     $result = $_YIELD_CALC->interpolationYield($this->load_factor / $this->eco_efficiency, 'day', 'lowest'); // Interpolation of lowest daily price for load factor / efficiency
     $result /= $this->eco_efficiency; // Previous result divided by efficiency
     
-    return $result; // Returning result
+    return $result; // Returning fuel value
   }
 }

@@ -8,14 +8,9 @@ require 'template/header.php';
 ?>
 
 
-<div id="table">
+<div id="contact">
   
-  <?php require 'views/form.php'; ?>
-  
-  <div id="table-content">
-    
-  </div>
-
+  <?php require 'views/contact.php'; ?>
 
 </div>
 

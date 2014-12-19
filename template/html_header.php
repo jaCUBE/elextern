@@ -6,6 +6,8 @@
     
     <meta charset="UTF-8" />
     
+    <link rel="SHORTCUT ICON" href="favicon.ico" />
+    
     <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
     <script src="<?php echo URL; ?>/libraries/less.js/less-1.7.5.min.js" type="text/javascript"></script>
     

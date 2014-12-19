@@ -9,10 +9,6 @@ require 'template/header.php';
 
 <div id="chart">
   
-  <h2>
-    ELEXTERN Chart
-  </h2>
-  
   
   <?php require 'views/chart/chart.php'; ?>
   
