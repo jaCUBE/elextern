@@ -6,11 +6,11 @@ $main = new TechList();
 
 $cols = Array(
   Array('id' => "", 'label' => 'Energy Type', 'pattern' => "", 'type' => 'string'), 
-  Array('id' => "", 'label' => 'Actual CAPEX', 'pattern' => "", 'type' => 'number'), 
-  Array('id' => "", 'label' => 'Actual OPEX', 'pattern' => "", 'type' => 'number'), 
+  Array('id' => "", 'label' => 'CAPEX', 'pattern' => "", 'type' => 'number'), 
+  Array('id' => "", 'label' => 'OPEX', 'pattern' => "", 'type' => 'number'), 
   Array('id' => "", 'label' => 'Fuel', 'pattern' => "", 'type' => 'number'),   
   Array('id' => "", 'label' => 'Environtmental Impact', 'pattern' => "", 'type' => 'number'),
-  Array('id' => "", 'label' => 'Local Economic Impact', 'pattern' => "", 'type' => 'number'), 
+  Array('id' => "", 'label' => 'Economic Impact', 'pattern' => "", 'type' => 'number'), 
   Array('id' => "", 'label' => 'Social Impact', 'pattern' => "", 'type' => 'number'),   
   Array('id' => "", 'label' => 'Longterm Impact', 'pattern' => "", 'type' => 'number')
 ); 

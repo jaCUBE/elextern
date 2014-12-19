@@ -6,7 +6,7 @@
     
     <meta charset="UTF-8" />
     
-    <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less" />
+    <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
     <script src="<?php echo URL; ?>/libraries/less.js/less-1.7.5.min.js" type="text/javascript"></script>
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -35,9 +35,9 @@
     
     <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
     
-    <script src="<?php echo URL; ?>/js/elextern_basic.js" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_touchspin.js" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_chart.js" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_basic.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_touchspin.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_chart.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     
   </head>
   

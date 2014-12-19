@@ -8,11 +8,11 @@ require 'views/form.php';
   
 <div id="legend">
   <span class="label help capex-actual" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor.">
-    Actual CAPEX
+    CAPEX
   </span>
   
   <span class="label help opex-actual" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor.">
-    Actual OPEX
+    OPEX
   </span>
   
   <span class="label help fuel" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
@@ -25,7 +25,7 @@ require 'views/form.php';
   </span>
   
   <span class="label hand toggle-checkbox economic" data-checkbox="impact-economic" data-placement="left" data-original-title="Local Economic Impact" data-content="Computes all kind of monetary losses for the local economy: Technology and/or fuel imports from abroad since they don't benefit local population (no jobs). Also fossil fuel depletion is a loss, and future decomissionning costs are a burden for future generations.">
-    Local Economic Impact
+    Economic Impact
   </span>
   
   <span class="label hand toggle-checkbox social" data-checkbox="impact-social" data-placement="left" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the first polluer, these costs must appear clearly">
