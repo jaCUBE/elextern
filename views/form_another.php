@@ -36,7 +36,7 @@
   
   
   <div class="another-input env-compensation">
-    <strong>Compensation not-planned evacuation:</strong><br />
+    <strong>Unplanned evacuations compensation:</strong><br />
     <input type="text" name="env_compensation" id="env-compensation" value="<?php echo ENV_COMPENSATION; ?>">
   </div>
   
@@ -45,22 +45,22 @@
   
   
   <div class="another-input soc-sick-leave">
-    <strong>Lost working days on sickleaves:</strong><br />
+    <strong>Lost working days cost:</strong><br />
     <input type="text" name="soc_sick_leave" id="soc-sick-leave" value="<?php echo SOC_SICK_LEAVE; ?>">
   </div>
   
   <div class="another-input soc-respiratory">
-    <strong>Respiratory diseases due to air pollution:</strong><br />
+    <strong>Air pollution cost:</strong><br />
     <input type="text" name="soc_respiratory" id="soc-respiratory" value="<?php echo SOC_RESPIRATORY; ?>">
   </div>
   
   <div class="another-input soc-cancer">
-    <strong>Cancers due to irradiation:</strong><br />
+    <strong>Irradiation cost:</strong><br />
     <input type="text" name="soc_cancer" id="soc-cancer" value="<?php echo SOC_CANCER; ?>">
   </div>
   
   <div class="another-input soc-mortality">
-    <strong>Average deaths:</strong><br />
+    <strong>Value of Statistical Life:</strong><br />
     <input type="text" name="soc_mortality" id="soc-mortality" value="<?php echo SOC_MORTALITY; ?>">
   </div>
   
@@ -70,17 +70,17 @@
   
   
   <div class="another-input lt-nuclear-waste-treatment">
-    <strong>Nuclear Wastes Treatment Pre- and Post-Treatment:</strong><br />
+    <strong>Post-treatment and storage cost:</strong><br />
     <input type="text" name="lt_nuclear_waste_treatment" id="lt-nuclear-waste-treatment" value="<?php echo LT_NUCLEAR_WASTE_TREATMENT*100; ?>">
   </div>
   
   <div class="another-input lt-climate-start">
-    <strong>Expecting of climate changing our lifes:</strong><br />
+    <strong>Climate change effects start:</strong><br />
     <input type="text" name="lt_climate_start" id="lt-climate-start" value="<?php echo LT_CLIMATE_START; ?>">
   </div>
   
   <div class="another-input lt-climate-cost">
-    <strong>Day-to-day climate adaptation in %GDP:</strong><br />
+    <strong>Yearly adaptation cost:</strong><br />
     <input type="text" name="lt_climate_cost" id="lt-climate-cost" value="<?php echo LT_CLIMATE_COST*100; ?>">
   </div>
   

@@ -56,7 +56,18 @@ class EnergyHydroPumped extends EnergyHydro {
   
   
   
+  
+  /**
+   * @brief Overriden calculation for fost of fuel used in the power plant for producing electricity (variable cost during production only).
+   * @return float Cost of fuel used in the power plant 
+   */
+  
   public function fuel(){
-    return 23.77;
+    global $_YIELD_CALC;
+    
+    $result = $_YIELD_CALC->interpolationYield($this->load_factor / $this->eco_efficiency, 'day', 'lowest'); // Interpolation of lowest daily price for load factor / efficiency
+    $result /= $this->eco_efficiency; // Previous result divided by efficiency
+    
+    return $result; // Returning result
   }
 }

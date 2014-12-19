@@ -4,18 +4,18 @@ require 'views/form.php';
 
 ?>
 
-<strong>Click on legend label for hide selected impact:</strong>
+<strong>Click on legend for show/hide costs or impacts:</strong>
   
 <div id="legend">
-  <span class="label help capex-actual" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor.">
+  <span class="label hand toggle-checkbox capex-actual"  data-checkbox="show-capex" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor.">
     CAPEX
   </span>
   
-  <span class="label help opex-actual" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor.">
+  <span class="label hand toggle-checkbox opex-actual"  data-checkbox="show-opex" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given R and Load Factor.">
     OPEX
   </span>
   
-  <span class="label help fuel" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
+  <span class="label hand toggle-checkbox fuel" data-checkbox="show-fuel" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
     Fuel
   </span>
   

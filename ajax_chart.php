@@ -19,11 +19,29 @@ $cols = Array(
 
 
 foreach($main->tech as $energy){
+  if(SHOW_CAPEX){
+    $capex = $energy->capexActual();
+  }else{
+    $capex = 0;
+  }
+  
+  if(SHOW_OPEX){
+    $opex = $energy->opexActual();
+  }else{
+    $opex = 0;
+  }
+  
+  if(SHOW_FUEL){
+    $fuel = $energy->fuel();
+  }else{
+    $fuel = 0;
+  }
+  
   $row_temp = Array();
   $row_temp[] = Array('v' => $energy->technology, 'f' => NULL);
-  $row_temp[] = Array('v' => round($energy->capexActual(), 2), 'f' => NULL);
-  $row_temp[] = Array('v' => round($energy->opexActual(), 2), 'f' => NULL);
-  $row_temp[] = Array('v' => round($energy->fuel(), 2), 'f' => NULL);
+  $row_temp[] = Array('v' => round($capex, 2), 'f' => NULL);
+  $row_temp[] = Array('v' => round($opex, 2), 'f' => NULL);
+  $row_temp[] = Array('v' => round($fuel, 2), 'f' => NULL);
   $row_temp[] = Array('v' => round($energy->impactEnvironment(), 2), 'f' => NULL); 
   $row_temp[] = Array('v' => round($energy->impactEconomic(), 2), 'f' => NULL); 
   $row_temp[] = Array('v' => round($energy->impactSocial(), 2), 'f' => NULL);       

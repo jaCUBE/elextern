@@ -24,6 +24,11 @@ class DataMain extends Data {
   public $impact_social = true;
   public $impact_longterm = true;
   
+  public $show_capex = true;
+  public $show_opex = true;
+  public $show_fuel = true;
+  
+  
   
   public function __construct() {
     
@@ -45,6 +50,10 @@ class DataMain extends Data {
     define('SHOW_IMPACT_ECONOMIC', $this->impact_economic);
     define('SHOW_IMPACT_SOCIAL', $this->impact_social);
     define('SHOW_IMPACT_LONGTERM', $this->impact_longterm);
+    
+    define('SHOW_CAPEX', $this->show_capex);
+    define('SHOW_OPEX', $this->show_opex);
+    define('SHOW_FUEL', $this->show_fuel);
   }
   
   
@@ -60,6 +69,10 @@ class DataMain extends Data {
     $this->checkCheckbox('impact_social');
     $this->checkCheckbox('impact_economic');
     $this->checkCheckbox('impact_longterm');
+    
+    $this->checkCheckbox('show_capex');
+    $this->checkCheckbox('show_opex');
+    $this->checkCheckbox('show_fuel');
   }
 
   

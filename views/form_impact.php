@@ -30,3 +30,10 @@
   </tr>
 
 </table>
+
+
+<div style="display: none;">
+  <input type="checkbox" name="show_capex" id="show-capex" value="true" checked />
+  <input type="checkbox" name="show_opex" id="show-opex" value="true" checked />
+  <input type="checkbox" name="show_fuel" id="show-fuel" value="true" checked />
+</div>
