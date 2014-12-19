@@ -6,9 +6,18 @@ require 'views/form.php';
 
 
 <div id="legend">
-  <span class="label lcoe" data-placement="left" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
-    LCOE
+  <span class="label fuel" data-placement="left" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
+    Fuel
   </span>
+  
+  <span class="label capex-actual" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor.">
+    Actual CAPEX
+  </span>
+  
+  <span class="label opex-actual" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given R and Load Factor.">
+    Actual OPEX
+  </span>
+  
   
   <span class="label environmental" data-placement="left" data-original-title="Environmental Impact" data-content="Computes the ecological footprint of technologies based on Life cycle assessment: land lost for mining and installing facilities, no man's land from nuclear incidents, and all related expulsions. Value of the inhabitable land depends on the discount rate. Since there is no economy without Earth, GDP can be considered as the 'return on investments' from the Earth capital, i.e. the fraction (discount rate) of its value.">
     Environmental Impact

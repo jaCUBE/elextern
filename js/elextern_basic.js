@@ -13,16 +13,18 @@ $(function() {
     elextern_chart();
     $('#chart input').keyup(elextern_chart);
     $('#chart input').change(elextern_chart);
+    $('.bootstrap-switch').click(elextern_chart);
   }
   
   if($('#table').length > 0){
     ajax_table();
     $('#table input').keyup(ajax_table);
     $('#table input').change(ajax_table);
+    $('.bootstrap-switch').click(ajax_table);
   }
   
   
-  
+  reinitialize();
 });
 
 
