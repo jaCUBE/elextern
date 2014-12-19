@@ -1,4 +1,4 @@
-<table class="full-width" style="margin-top: 15px;">
+<table class="full-width table-impact" style="margin-top: 15px;">
   
   <tr>
     

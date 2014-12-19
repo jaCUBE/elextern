@@ -22,7 +22,7 @@ function elextern_chart() {
       var options = {
         width: '100%',
         height: '450',
-        colors: ['#7A7A7A', '#69ACBF', '#9BC15E', '#57A87A', '#EA9000', '#864B96', '#C10300'],
+        colors: ['#009AC7', '#0054A4', '#103E68', '#57A87A', '#EA9000', '#864B96', '#C10300'],
         hAxis: {showTextEvery: 1, slantedText:true,  slantedTextAngle:90, title: 'Energy Sources'},
         vAxis: {title: 'Costs', showTextEvery: 4, format: '# €/MWh', 
           viewWindow: {min: 0, max: 'auto'}

@@ -7,20 +7,22 @@
 
   
 
-<div class="collapse navbar-collapse" id="menu">
-  <ul class="nav navbar-nav">
-    <li class="active"><a href="index.php">Table</a></li>
-    <li><a href="chart.php">Charts</a></li>
-    <li><a href="map.php">Map</a></li>
-    <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Others <span class="caret"></span></a>
-      <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Contact</a></li>
+<nav class="navbar navbar-default" role="navigation" style="margin-top: 20px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">ELEXTERN</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'index.php') echo 'active'; ?>"><a href="index.php">Chart <span class="sr-only">(current)</span></a></li>
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'table.php') echo 'active'; ?>"><a href="table.php">Table</a></li>
+        <li><a href="">Contact</a></li>
       </ul>
-    </li>
-  </ul>
-</div>
-  
-  
-  
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 </div>

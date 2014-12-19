@@ -23,6 +23,10 @@ $(function() {
     $('.bootstrap-switch').click(ajax_table);
   }
   
+  $('#chart .table-impact').hide();
+  
+  $('.toggle-checkbox').click(toggle_checkbox);
+  
   
   reinitialize();
 });
@@ -84,4 +88,13 @@ function reinitialize(){
                   $(this).siblings('.child-'+this.id).toggle();
           });
   $('tr[class=child-]').hide().children('td');
+}
+
+
+function toggle_checkbox(){
+  var checkbox_selector = '#' + $(this).data('checkbox');
+  
+  $(checkbox_selector).trigger('click');
+  
+  $(this).toggleClass('disabled-legend');
 }

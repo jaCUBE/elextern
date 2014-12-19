@@ -7,14 +7,21 @@ require 'template/header.php';
 
 ?>
 
-<div id="chart">
+
+<div id="table">
+
+  <h2>
+    ELEXTERN Table
+  </h2>
   
-  <?php require 'views/chart/chart.php'; ?>
+  <?php require 'views/form.php'; ?>
   
+  <div id="table-content">
+    
+  </div>
+
+
 </div>
-
-
-
 
 
 

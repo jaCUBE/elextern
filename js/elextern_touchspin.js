@@ -41,7 +41,7 @@ $(function(){
     decimals: 0,
     boostat: 5,
     maxboostedstep: 10,
-    postfix: 'people'
+    postfix: '€/people'
   });
   
   
@@ -124,7 +124,7 @@ $(function(){
     decimals: 0,
     boostat: 5,
     maxboostedstep: 10,
-    postfix: 'fuel/year%'
+    postfix: '%/year pre-treatment'
   });
   
   $('#lt-climate-start').TouchSpin({
@@ -146,11 +146,11 @@ $(function(){
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 0,
     max: 100,
-    step: 1,
-    decimals: 0,
+    step: 0.5,
+    decimals: 1,
     boostat: 5,
     maxboostedstep: 10,
-    postfix: 'GDP%'
+    postfix: '%GDP/year'
   });
   
   

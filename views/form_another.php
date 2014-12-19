@@ -1,8 +1,14 @@
 <td style="vertical-align: top;">
-  <strong>Select another input:</strong><br />
+  <strong>Tune impact value:</strong><br />
   <div style="visibility: hidden; height: 7px;"></div>
   <select name="input_visible" id="another-input-select" class="jquery-chosen">
 
+    <optgroup label="Longterm Impact">
+      <option value=".lt-climate-cost">Climate Change Cost</option>
+      <option value=".lt-climate-start">Climate Change Start</option>
+      <option value=".lt-nuclear-waste-treatment">Nuclear Wastes Treatment</option>
+    </optgroup>
+    
     <optgroup label="Environmental Impact">
       <option value=".env-compensation">Compensations for Expulsions</option>
     </optgroup>
@@ -12,12 +18,6 @@
       <option value=".soc-respiratory">Respiratory Diseases</option>
       <option value=".soc-cancer">Cancer</option>
       <option value=".soc-mortality">Mortality</option>
-    </optgroup>
-
-    <optgroup label="Longterm Impact">
-      <option value=".lt-nuclear-waste-treatment">Nuclear Wastes Treatment</option>
-      <option value=".lt-climate-start">Climate Change Start</option>
-      <option value=".lt-climate-cost">Climate Change Cost</option>
     </optgroup>
 
     <optgroup label="Fuel Prices">
@@ -81,7 +81,7 @@
   
   <div class="another-input lt-climate-cost">
     <strong>Day-to-day climate adaptation in %GDP:</strong><br />
-    <input type="text" name="lt_climate_cost" id="lt-climate-cost" value="<?php echo LT_CLIMATE_COST; ?>">
+    <input type="text" name="lt_climate_cost" id="lt-climate-cost" value="<?php echo LT_CLIMATE_COST*100; ?>">
   </div>
   
   
