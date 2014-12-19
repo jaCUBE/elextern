@@ -11,16 +11,16 @@ require 'views/form.php';
     Actual CAPEX
   </span>
   
-  <span class="label help opex-actual" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given R and Load Factor.">
+  <span class="label help opex-actual" data-placement="left" data-original-title="Actual OPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor.">
     Actual OPEX
   </span>
   
-  <span class="label help fuel" data-placement="left" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
+  <span class="label help fuel" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
     Fuel
   </span>
   
   
-  <span class="label hand toggle-checkbox environmental" data-checkbox="impact-environment" data-placement="left" data-original-title="Environmental Impact" data-content="Computes the ecological footprint of technologies based on Life cycle assessment: land lost for mining and installing facilities, no man's land from nuclear incidents, and all related expulsions. Value of the inhabitable land depends on the discount rate. Since there is no economy without Earth, GDP can be considered as the 'return on investments' from the Earth capital, i.e. the fraction (discount rate) of its value.">
+  <span class="label hand toggle-checkbox environmental" data-checkbox="impact-environment" data-placement="left" data-original-title="Environmental Impact" data-content="Computes the ecological footprint of technologies based on Life cycle assessment: land lost per year of operation for mining and installing facilities, no man's land from nuclear incidents, and all related expulsions. Since there is no economy without Earth, Every destroyed land destroyed its surface share on GDP.">
     Environmental Impact
   </span>
   

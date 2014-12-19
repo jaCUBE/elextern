@@ -1,4 +1,4 @@
-<tr class="impact-environmental parent" id="environmental" data-placement="left" data-original-title="Environmental Impact" data-content="Computes the ecological footprint of technologies based on Life cycle assessment: land lost for mining and installing facilities, no man's land from nuclear incidents, and all related expulsions. Value of the inhabitable land depends on the discount rate. Since there is no economy without Earth, GDP can be considered as the 'return on investments' from the Earth capital, i.e. the fraction (discount rate) of its value.">
+<tr class="impact-environmental parent" id="environmental" data-placement="left" data-original-title="Environmental Impact" data-content="Computes the ecological footprint of technologies based on Life cycle assessment: land lost per year of operation for mining and installing facilities, no man's land from nuclear incidents, and all related expulsions. Since there is no economy without Earth, Every destroyed land destroyed its surface share on GDP.">
   <td class="attribute">
     Environmental Impacts
     <?php echo $_EX->htmlUnit('Click to expand'); ?>
