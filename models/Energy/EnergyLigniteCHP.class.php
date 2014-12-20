@@ -12,24 +12,7 @@
  */
 
 class EnergyLigniteCHP extends EnergyLignite {
-  
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'lignite_chp';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

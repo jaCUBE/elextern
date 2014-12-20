@@ -12,20 +12,7 @@
  */
 
 class EnergyLignite extends Energy {
-  
-  /**
-   * @brief Constructor calls parent's constructor.
-   * @return void
-   */
-  
-  public function __construct() {    
-    parent::__construct();
-  }
-  
-  
-  
-  
-  
+
   /**
    * @brief Calculates fuel value for all lignite type of energy sources.
    * @return float Value of fuel for lignite source type

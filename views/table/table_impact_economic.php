@@ -34,7 +34,6 @@
 </tr> 
 
 
-
 <tr class="fuel child child-economic" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
   <td class="attribute">Fossil Fuel Depletion</td>
   <?php foreach($main->tech as $tech){ ?>

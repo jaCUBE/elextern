@@ -138,6 +138,20 @@ $main = new TechList();
     </tr>
     
     
+
+
+
+    <tr class="flexibility-yield" data-placement="left" data-original-title="Flexibility Yield" data-content="Interpolated according to ELIX index (Electricity spot price for France-Germany-Austria-Switzerland market)">
+      <td class="attribute">Flexiblity Yield</td>
+      <?php foreach($main->tech as $tech){ ?>
+      <td class="right">
+        <?php echo $tech->makeHtml('yieldFlexibility', true); ?>
+        <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
+      </td>
+      <?php } ?>
+    </tr> 
+
+    
     
     
     <tr class="opex" data-placement="left" data-original-title="Operation OPEX%" data-content="Share of CAPEX costs that are due every year for maintenance (fixed costs even without production).">

@@ -14,23 +14,6 @@
 class EnergyLigniteIGCC extends EnergyLignite {
   
   /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'lignite_igcc';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /**
    * @brief Constructor calls parent's constructor.
    * @return void
    */

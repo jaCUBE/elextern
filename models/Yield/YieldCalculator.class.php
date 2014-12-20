@@ -145,6 +145,8 @@ class YieldCalculator {
         return $yield_record; // ...is returned.
       }
     }
+    
+    return end($this->yield_record);
   }
   
   
@@ -165,6 +167,8 @@ class YieldCalculator {
         return $yield_record; // ...is returned.
       }
     }
+    
+    return $this->yield_record[0];
   }
   
 }

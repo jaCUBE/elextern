@@ -14,22 +14,6 @@
 class EnergyGasCHP extends EnergyGas {
 
   /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  public $technology_id = 'gas_chp';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /**
    * @brief Constructor calls parent's constructor.
    * @return void
    */

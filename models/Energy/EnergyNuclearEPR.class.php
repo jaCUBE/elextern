@@ -12,24 +12,7 @@
  * @author jaCUBE
  */
 class EnergyNuclearEPR extends EnergyNuclear {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'nuclear_epr';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

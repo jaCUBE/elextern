@@ -12,23 +12,7 @@
  * @author jaCUBE
  */
 class EnergySolarLand extends EnergySolar {
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'solar_land';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

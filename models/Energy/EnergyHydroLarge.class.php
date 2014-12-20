@@ -12,23 +12,7 @@
  */
 
 class EnergyHydroLarge extends EnergyHydro {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  public $technology_id = 'hydro_large';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

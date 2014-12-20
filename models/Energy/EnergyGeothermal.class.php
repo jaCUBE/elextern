@@ -12,24 +12,7 @@
  */
 
 class EnergyGeothermal extends Energy {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology
-   */
-  
-  public $technology_id = 'geothermal';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

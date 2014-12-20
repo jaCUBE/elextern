@@ -12,24 +12,7 @@
  */
 
 class EnergyLigniteFBC extends EnergyLignite {
-  
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'lignite_fbc';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

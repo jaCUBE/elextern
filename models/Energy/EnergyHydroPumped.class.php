@@ -12,22 +12,6 @@
  */
 
 class EnergyHydroPumped extends EnergyHydro {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  public $technology_id = 'hydro_pumped';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   /**
    * @brief Constructor calls parent's constructor.

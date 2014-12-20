@@ -24,32 +24,30 @@ class TechList {
   
   
   private function prepareTech(){
-    $this->tech[] = new EnergyLigniteIGCC();
-    $this->tech[] = new EnergyLignitePCC();
-    $this->tech[] = new EnergyLigniteFBC();
-    $this->tech[] = new EnergyLigniteCHP();
-    $this->tech[] = new EnergyLigniteCCS();
-    
-    $this->tech[] = new EnergyGasCCGT();
-    $this->tech[] = new EnergyGasCHP();
-    
-    $this->tech[] = new EnergyNuclearGen2();
-    $this->tech[] = new EnergyNuclearEPR();
-    
-    $this->tech[] = new EnergyHydroLarge();
-    $this->tech[] = new EnergyHydroPumped();
-    $this->tech[] = new EnergyHydroSmall();
-    
-    $this->tech[] = new EnergyWindOffshore();
-    $this->tech[] = new EnergyWindOnshore();
-    
-    $this->tech[] = new EnergySolarRoof();
-    $this->tech[] = new EnergySolarLand();
-    
-    $this->tech[] =  new EnergyBiomassFBC();
-    $this->tech[] = new EnergyGeothermal();
+    $this->fetchTechList();
     
     $this->checkFull();
+  }
+  
+  
+  private function fetchTechList(){
+    global $_EX, $_DB;
+    
+    $sql = '
+      SELECT *
+      FROM energy
+      WHERE visible = 1
+      ORDER BY show_order ASC';
+    
+    $STH = $_DB->prepare($sql);
+    $STH->setFetchMode(PDO::FETCH_OBJ);
+    $STH->execute();
+    
+    while($obj = $STH->fetch()){
+      $energy = $_EX->cloneObject($obj, $obj->model);
+      $this->tech[] = $energy;
+    }
+    
   }
   
   

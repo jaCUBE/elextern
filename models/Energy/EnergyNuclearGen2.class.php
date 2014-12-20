@@ -12,24 +12,7 @@
  * @author jaCUBE
  */
 class EnergyNuclearGen2 extends EnergyNuclear {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'nuclear2';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   /**
    * @brief Constructor calls parent's constructor.
    * @return void

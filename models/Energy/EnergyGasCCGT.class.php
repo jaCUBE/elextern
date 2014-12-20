@@ -14,22 +14,6 @@
 class EnergyGasCCGT extends EnergyGas {
 
   /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  public $technology_id = 'gas_ccgt';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /**
    * @brief Constructor calls parent's constructor.
    * @return void
    */

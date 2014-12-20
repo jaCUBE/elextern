@@ -12,23 +12,6 @@
  */
 
 class EnergyBiomassFBC extends EnergyBiomass {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'biomass';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   /**
    * @brief Constructor calls parent's constructor.

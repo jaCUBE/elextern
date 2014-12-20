@@ -36,4 +36,19 @@ class Ex {
       return $output;
     }
     
+    
+    public function cloneObject($object, $class)
+    {
+         $new = new $class();
+         foreach ($object as $key => $value)
+         {
+              $new->$key = $value;
+         }
+         
+         $new->__construct();
+         
+         return $new;
+    }
+    
+    
 }

@@ -12,23 +12,6 @@
  * @author jaCUBE
  */
 class EnergyWindOnshore extends EnergyWind {
-    
-  /**
-   * @brief ID of this technology
-   * @var string $technology_id
-   */
-  
-  public $technology_id = 'wind_onshore';
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   /**
    * @brief Constructor calls parent's constructor.

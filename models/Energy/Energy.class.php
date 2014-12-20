@@ -176,43 +176,12 @@ class Energy {
    */
   
   
-  public function __construct() {    
-    if(!empty($this->technology_id)){ // If technology name is filled...
-      $this->fetchTechnology(); // ...fetch technologies into this instance of class
-    }
-    
+  public function __construct() {        
     $this->opex /= 100;
     $this->eco_decomissionning /= 100;
     $this->eco_foreign_purchases /= 100;
     $this->eco_efficiency /= 100;
     $this->load_factor /= 100;
-  }
-  
-  
-  
-  
-  
-  /**
-   * @brief Fetches technology data from database into this instance of class.
-   * @return void
-   */
-  
-  private function fetchTechnology(){
-    global $_DB;
-
-    $sql = '
-      SELECT *
-      FROM energy
-      WHERE technology_id = :technology_id
-        AND visible = 1
-      LIMIT 1'; // SQL query for selecting all data for technology ID of country_code from database
-    
-    $STH = $_DB->prepare($sql);
-    $STH->bindParam(':technology_id', $this->technology_id); // Binding technology_id into SQL
-    $STH->setFetchMode(PDO::FETCH_INTO, $this);
-    $STH->execute();
-    
-    $STH->fetch(); // Fetching into this instance   
   }
   
   
@@ -347,7 +316,7 @@ class Energy {
     }
     
     $result = $this->lcoe() + $this->yieldFlexibility(); // Calculating net cost according to formula
-    
+        
     return $result; // Returning result
   }
 
