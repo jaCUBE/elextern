@@ -3,7 +3,7 @@
   <div style="visibility: hidden; height: 7px;"></div>
   <select name="input_visible" id="another-input-select" class="jquery-chosen">
 
-    <optgroup label="Longterm Impact">
+    <optgroup label="Long-term Impact">
       <option value=".lt-climate-cost">Climate Change Cost</option>
       <option value=".lt-climate-start">Climate Change Start</option>
       <option value=".lt-nuclear-waste-treatment">Nuclear Wastes Treatment</option>

@@ -27,7 +27,7 @@ $main = new TechList();
     
     
     
-    <tr class="efficiency" data-placement="left" data-original-title="Local Economic Impact" data-content="Efficiency of energy production.">
+    <tr class="efficiency" data-placement="left" data-original-title="Economic Impact" data-content="Efficiency of energy production.">
       <td class="attribute">Efficiency</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center"><?php echo $tech->eco_efficiency * 100; ?>&nbsp;%</td>
@@ -75,6 +75,16 @@ $main = new TechList();
     </tr>
     
     
+    <tr class="construction_time" data-placement="left" data-original-title="Life Time" data-content="Time during which the power plant can produce electricity.">
+      <td class="attribute">Life Time</td>
+      <?php foreach($main->tech as $tech){ ?>
+      <td class="center">
+        <?php echo $tech->lifetime; ?>
+        <?php echo $_EX->htmlUnit('year'); ?>
+      </td>
+      <?php } ?>
+    </tr>
+    
     
     
     <tr class="construction_time" data-placement="left" data-original-title="Construction Time" data-content="Time before the power plant operates.">
@@ -104,7 +114,7 @@ $main = new TechList();
     
     
     
-    <tr class="capex-idr" data-placement="left" data-original-title="CAPEX IDR" data-content="Assuming Investment costs are linearly spent during the power plant construction time, CAPEX IDC represents CAPEX Including Discount Rate.">
+    <tr class="capex-idr" data-placement="left" data-original-title="CAPEX IDR" data-content="Assuming Investment costs are linearly spent during the power plant construction time, CAPEX IDR represents CAPEX Including Discount Rate.">
       <td class="attribute">CAPEX IDR</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
@@ -134,7 +144,7 @@ $main = new TechList();
       <td class="attribute">Operation OPEX%</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
-        <?php echo $tech->makeHtml('grid_connection'); ?>
+        <?php echo $tech->makeHtml('opexOfCapex', true); ?>
         <?php echo $_EX->htmlUnit('% CAPEX'); ?>
       </td>
       <?php } ?>
@@ -146,11 +156,7 @@ $main = new TechList();
     <?php
     
     require 'table_lcoe.php';
-    
-    if(SHOW_IMPACT_ENVIRONMENT){
-      require 'table_impact_environment.php';
-    }
-    
+
     if(SHOW_IMPACT_ECONOMIC){
       require 'table_impact_economic.php';
     }
@@ -159,8 +165,16 @@ $main = new TechList();
       require 'table_impact_social.php';
     }
     
+    if(SHOW_IMPACT_ENVIRONMENT){
+      require 'table_impact_environment.php';
+    }
+    
     if(SHOW_IMPACT_LONGTERM){
       require 'table_impact_longterm.php';
+    }
+    
+    if(SHOW_IMPACT_ECONOMIC OR SHOW_IMPACT_SOCIAL OR SHOW_IMPACT_ENVIRONMENT OR SHOW_IMPACT_LONGTERM){
+      require 'table_impact_total.php';
     }
     
     

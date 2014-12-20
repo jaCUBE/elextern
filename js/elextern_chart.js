@@ -34,7 +34,7 @@ function elextern_chart() {
             left: 100,
             top: 40,
             width: '100%',
-            height: '300'
+            height: '280'
         },
         isStacked: true
       };

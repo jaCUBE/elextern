@@ -137,7 +137,7 @@ $(function(){
   
   
   
-  // IMPACT, LONGTERM: input for climate changes adaptation costs
+  // IMPACT, LONG-TERM: input for climate changes adaptation costs
   $('#lt-climate-cost').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',
@@ -153,7 +153,7 @@ $(function(){
   
   
   
-  // IMPACT, LONGTERM: input for start of climate changes
+  // IMPACT, LONG-TERM: input for start of climate changes
   $('#lt-climate-start').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',
@@ -169,7 +169,7 @@ $(function(){
 
   
   
-  // IMPACT, LONGTERM: input for nuclear waste post-treatment costs
+  // IMPACT, LONG-TERM: input for nuclear waste post-treatment costs
   $('#lt-nuclear-waste-treatment').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',

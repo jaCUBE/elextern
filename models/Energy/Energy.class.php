@@ -273,6 +273,11 @@ class Energy {
     
     return $result; // Returning result
   }
+  
+  
+  public function opexOfCapex(){
+    return $this->opex * 100;
+  }
 
   
   
@@ -472,8 +477,8 @@ class Energy {
   
   
   /**
-   * @brief Calculating of all longterm impacts together.
-   * @return float Cost of all longterm impacts [€/MWh]
+   * @brief Calculating of all long-term impacts together.
+   * @return float Cost of all long-term impacts [€/MWh]
    */
   
   public function impactLongterm(){
@@ -657,6 +662,24 @@ class Energy {
     }
     
     return implode(' ', $class);
+  }
+  
+  public function impactTotal(){
+    return $this->impactEnvironment() + $this->impactEconomic() + $this->impactSocial() + $this->impactLongterm();
+  }
+  
+  public function externalitiesCosts(){
+    return $this->impactTotal();
+  }
+  
+  public function netCost(){
+    global $_YIELD_CALC;
+    
+    return $this->lcoe() + $this->yieldFlexibility();
+  }
+  
+  public function referenceCosts(){
+    return $this->impactTotal() + $this->netCost();
   }
   
 }

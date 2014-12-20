@@ -19,7 +19,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('fuel', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -32,7 +31,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('capexActual', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -45,7 +43,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexActual', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -58,7 +55,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('yieldFlexibility', true); ?>
-    <?php echo $_EX->htmlUnit(''); ?>
   </td>
   <?php } ?>
 </tr> 

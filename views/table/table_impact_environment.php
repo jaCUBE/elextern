@@ -16,17 +16,15 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEnvironmentLandUse', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr>
 
 <tr class="displaced-people-compensation child child-environmental" data-placement="left" data-original-title="Unexpected Displaced People" data-content="In case of not-planned evacuation (nuclear incident) compensations are due to expelled people for their new accomodation.">
-  <td class="attribute">Compensation for Unexpected Displaced People</td>
+  <td class="attribute">Compensation for Expulsion</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEnvironmentDisplacedPeople', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 

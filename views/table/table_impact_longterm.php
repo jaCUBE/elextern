@@ -1,6 +1,6 @@
 <tr class="impact-longterm parent" id="longterm" data-placement="left" data-original-title="Longterm Impact" data-content=" When do we expect climate change impacts to start to affect our lifes.">
   <td class="attribute">
-    Longterm Impact
+    Long-term Impact
     <?php echo $_EX->htmlUnit('Click to expand'); ?>
   </td>
   <?php foreach($main->tech as $tech){ ?>
@@ -16,7 +16,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactLongtermCO2', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -28,7 +27,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactLongtermNuclearWaste', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 

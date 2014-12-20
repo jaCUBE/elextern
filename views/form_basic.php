@@ -24,10 +24,3 @@
     </tr>
 
   </table>
-
-
-<div class="center">
-  <div class="btn btn-xs btn-default" onclick="default_form();">
-    Default Values
-  </div>
-</div>

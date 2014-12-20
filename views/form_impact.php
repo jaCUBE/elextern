@@ -22,7 +22,7 @@
     
     
     <td class="center">
-      <label for="impact-longterm">Longterm Impact</label><br />
+      <label for="impact-longterm">Long-term Impact</label><br />
       <input type="checkbox" name="impact_longterm" id="impact-longterm" class="bootstrap-switch" value="true" <?php if(SHOW_IMPACT_LONGTERM){ ?> checked <?php } ?> />
     </td>
     

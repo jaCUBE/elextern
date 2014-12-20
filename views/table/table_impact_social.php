@@ -16,7 +16,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialSickLeave', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -28,7 +27,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialRespiratoryDisease', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -40,7 +38,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialCancer', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -52,7 +49,6 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialMortality', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 

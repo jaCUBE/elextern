@@ -12,7 +12,7 @@ $cols = Array(
   Array('id' => "", 'label' => 'Environtmental Impact', 'pattern' => "", 'type' => 'number'),
   Array('id' => "", 'label' => 'Economic Impact', 'pattern' => "", 'type' => 'number'), 
   Array('id' => "", 'label' => 'Social Impact', 'pattern' => "", 'type' => 'number'),   
-  Array('id' => "", 'label' => 'Longterm Impact', 'pattern' => "", 'type' => 'number')
+  Array('id' => "", 'label' => 'Long-term Impact', 'pattern' => "", 'type' => 'number')
 ); 
 
 
@@ -20,7 +20,7 @@ $cols = Array(
 
 foreach($main->tech as $energy){
   if(SHOW_CAPEX){
-    $capex = $energy->capexActual() + $energy->yieldFlexibility();
+    $capex = $energy->capexActual();
   }else{
     $capex = 0;
   }
@@ -37,13 +37,19 @@ foreach($main->tech as $energy){
     $fuel = 0;
   }
   
+  if(SHOW_IMPACT_ECONOMIC){
+    $impact_economic = $energy->impactEconomic() + $energy->yieldFlexibility();
+  }else{
+    $impact_economic = 0;
+  }
+  
   $row_temp = Array();
   $row_temp[] = Array('v' => $energy->technology, 'f' => NULL);
   $row_temp[] = Array('v' => round($capex, 2), 'f' => NULL);
   $row_temp[] = Array('v' => round($opex, 2), 'f' => NULL);
   $row_temp[] = Array('v' => round($fuel, 2), 'f' => NULL);
   $row_temp[] = Array('v' => round($energy->impactEnvironment(), 2), 'f' => NULL); 
-  $row_temp[] = Array('v' => round($energy->impactEconomic(), 2), 'f' => NULL); 
+  $row_temp[] = Array('v' => round($impact_economic, 2), 'f' => NULL); 
   $row_temp[] = Array('v' => round($energy->impactSocial(), 2), 'f' => NULL);       
   $row_temp[] = Array('v' => round($energy->impactLongTerm(), 2), 'f' => NULL); 
   $rows[] = Array('c' => $row_temp); 
