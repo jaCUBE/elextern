@@ -5,14 +5,14 @@ $main = new TechList();
 ?>
 
 
-
+<!--
 <strong>Filter:</strong><br />
 <span class="btn btn-xs btn-info" onclick="filter_table('all');">All</span>
 
 <span class="btn-group">
   <span class="btn btn-xs btn-default" onclick="filter_table('.fossil');">Fossil only</span>
   <span class="btn btn-xs btn-default" onclick="filter_table('.dispatchable');">Dispatchable only</span>
-</span>
+</span> -->
 
 
 
