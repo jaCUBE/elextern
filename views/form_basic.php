@@ -4,13 +4,13 @@
 
       <td style="width: 140px;">
         <label for="discount-rate"><i class="fa fa-line-chart"></i> Discount Rate:</label><br />
-        <input type="text" name="discount_rate" id="discount-rate" value="<?php echo DISCOUNT_RATE*100; ?>">
+        <input type="text" name="discount_rate" id="discount-rate" class="elextern-storage" value="<?php echo DISCOUNT_RATE*100; ?>" data-default="<?php echo DISCOUNT_RATE*100; ?>">
       </td>
 
 
       <td style="width: 160px;">
         <label for="time-horizon"><i class="fa fa-clock-o"></i> Time Horizon:</label><br />
-        <input type="text" name="time_horizon" id="time-horizon" value="<?php echo TIME_HORIZON; ?>">
+        <input type="text" name="time_horizon" id="time-horizon" class="elextern-storage" value="<?php echo TIME_HORIZON; ?>" data-default="<?php echo TIME_HORIZON; ?>">
       </td> 
 
       <td style="width: 60px;">
@@ -24,3 +24,10 @@
     </tr>
 
   </table>
+
+
+<div class="center">
+  <div class="btn btn-xs btn-default" onclick="default_form();">
+    Default Values
+  </div>
+</div>

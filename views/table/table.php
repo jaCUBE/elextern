@@ -37,6 +37,18 @@ $main = new TechList();
     
     
     
+    
+    <tr class="load-factor" data-placement="left" data-original-title="Load Factor" data-content="">
+      <td class="attribute">Load Factor</td>
+      <?php foreach($main->tech as $tech){ ?>
+      <td class="center"><?php echo $tech->load_factor * 100; ?>&nbsp;%</td>
+      <?php } ?>
+    </tr>
+    
+    
+    
+    
+    
     <tr class="dispatchability" data-placement="left" data-original-title="Dispatchiblity" data-content="If the power technology can be activated 'on demand' or not.">
       <td class="attribute">Dispatchable Source?</td>
       <?php foreach($main->tech as $tech){ ?>

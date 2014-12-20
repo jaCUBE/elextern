@@ -1,11 +1,14 @@
 $(function() {
   $('.bootstrap-switch').bootstrapSwitch();
     
+      
+  if(localStorage.getItem('discount-rate') != null){
+    load_form();
+  }
+      
   $('#chart .btn-submit').hide();
   
   $('.jquery-chosen').chosen();
-  
-
 
   show_another_input();
   $('#another-input-select').change(show_another_input);
@@ -14,21 +17,22 @@ $(function() {
     elextern_chart();
     $('#chart input').keyup(elextern_chart);
     $('#chart input').change(elextern_chart);
-    $('.bootstrap-switch').click(elextern_chart);
+    $('#chart input[type=checkbox]').click(elextern_chart);
+    $('#chart input').change(save_form);
   }
   
   if($('#table').length > 0){
     ajax_table();
     $('#table input').keyup(ajax_table);
     $('#table input').change(ajax_table);
-    $('.bootstrap-switch').click(ajax_table);
+    $('#table .bootstrap-switch').click(ajax_table);
+    $('#table input').change(save_form);
   }
   
   $('#chart .table-impact').hide();
   
   $('.toggle-checkbox').click(toggle_checkbox);
-  
-  
+
   reinitialize();
 });
 
@@ -98,4 +102,25 @@ function toggle_checkbox(){
   $(checkbox_selector).trigger('click');
   
   $(this).toggleClass('disabled-legend');
+}
+
+
+function save_form(){
+  $('.elextern-storage').each(function(){
+    localStorage[$(this).attr('id')] = $(this).val();
+  });
+}
+
+function load_form(){
+  $('.elextern-storage').each(function(){
+    $(this).val(localStorage[$(this).attr('id')]);
+  });
+}
+
+function default_form(){
+  $('.elextern-storage').each(function(){
+    $(this).val($(this).data('default'));
+  });  
+  
+  $('#form-basic input:first').trigger('change');
 }

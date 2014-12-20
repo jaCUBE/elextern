@@ -37,7 +37,7 @@
   
   <div class="another-input env-compensation">
     <strong>Unplanned evacuations compensation:</strong><br />
-    <input type="text" name="env_compensation" id="env-compensation" value="<?php echo ENV_COMPENSATION; ?>">
+    <input type="text" name="env_compensation" id="env-compensation" class="elextern-storage" value="<?php echo ENV_COMPENSATION; ?>" data-default="<?php echo ENV_COMPENSATION; ?>">
   </div>
   
   
@@ -46,22 +46,22 @@
   
   <div class="another-input soc-sick-leave">
     <strong>Lost working days cost:</strong><br />
-    <input type="text" name="soc_sick_leave" id="soc-sick-leave" value="<?php echo SOC_SICK_LEAVE; ?>">
+    <input type="text" name="soc_sick_leave" id="soc-sick-leave" class="elextern-storage" value="<?php echo SOC_SICK_LEAVE; ?>" data-default="<?php echo SOC_SICK_LEAVE; ?>">
   </div>
   
   <div class="another-input soc-respiratory">
     <strong>Air pollution cost:</strong><br />
-    <input type="text" name="soc_respiratory" id="soc-respiratory" value="<?php echo SOC_RESPIRATORY; ?>">
+    <input type="text" name="soc_respiratory" id="soc-respiratory" class="elextern-storage" value="<?php echo SOC_RESPIRATORY; ?>" data-default="<?php echo SOC_RESPIRATORY; ?>">
   </div>
   
   <div class="another-input soc-cancer">
     <strong>Irradiation cost:</strong><br />
-    <input type="text" name="soc_cancer" id="soc-cancer" value="<?php echo SOC_CANCER; ?>">
+    <input type="text" name="soc_cancer" id="soc-cancer" class="elextern-storage" value="<?php echo SOC_CANCER; ?>" data-default="<?php echo SOC_CANCER; ?>">
   </div>
   
   <div class="another-input soc-mortality">
     <strong>Value of Statistical Life:</strong><br />
-    <input type="text" name="soc_mortality" id="soc-mortality" value="<?php echo SOC_MORTALITY; ?>">
+    <input type="text" name="soc_mortality" id="soc-mortality" class="elextern-storage" value="<?php echo SOC_MORTALITY; ?>" data-default="<?php echo SOC_MORTALITY; ?>">
   </div>
   
   
@@ -71,17 +71,17 @@
   
   <div class="another-input lt-nuclear-waste-treatment">
     <strong>Post-treatment and storage cost:</strong><br />
-    <input type="text" name="lt_nuclear_waste_treatment" id="lt-nuclear-waste-treatment" value="<?php echo LT_NUCLEAR_WASTE_TREATMENT*100; ?>">
+    <input type="text" name="lt_nuclear_waste_treatment" class="elextern-storage" id="lt-nuclear-waste-treatment" value="<?php echo LT_NUCLEAR_WASTE_TREATMENT*100; ?>" data-default="<?php echo LT_NUCLEAR_WASTE_TREATMENT*100; ?>">
   </div>
   
   <div class="another-input lt-climate-start">
     <strong>Climate change effects start:</strong><br />
-    <input type="text" name="lt_climate_start" id="lt-climate-start" value="<?php echo LT_CLIMATE_START; ?>">
+    <input type="text" name="lt_climate_start" id="lt-climate-start" class="elextern-storage" value="<?php echo LT_CLIMATE_START; ?>" data-default="<?php echo LT_CLIMATE_START; ?>">
   </div>
   
   <div class="another-input lt-climate-cost">
     <strong>Yearly adaptation cost:</strong><br />
-    <input type="text" name="lt_climate_cost" id="lt-climate-cost" value="<?php echo LT_CLIMATE_COST*100; ?>">
+    <input type="text" name="lt_climate_cost" id="lt-climate-cost" class="elextern-storage" value="<?php echo LT_CLIMATE_COST*100; ?>" data-default="<?php echo LT_CLIMATE_COST*100; ?>">
   </div>
   
   
@@ -91,22 +91,22 @@
   
   <div class="another-input oil-price">
     <strong>Oil price:</strong><br />
-    <input type="text" name="oil_price" id="oil-price" value="<?php echo OIL_PRICE; ?>">
+    <input type="text" name="oil_price" id="oil-price" class="elextern-storage" value="<?php echo OIL_PRICE; ?>" data-default="<?php echo OIL_PRICE; ?>">
   </div>
   
   <div class="another-input gas-price">
     <strong>Gas price:</strong><br />
-    <input type="text" name="gas_price" id="gas-price" value="<?php echo GAS_PRICE; ?>">
+    <input type="text" name="gas_price" id="gas-price" class="elextern-storage" value="<?php echo GAS_PRICE; ?>" data-default="<?php echo GAS_PRICE; ?>">
   </div>
   
   <div class="another-input coal-price">
     <strong>Coal price:</strong><br />
-    <input type="text" name="coal_price" id="coal-price" value="<?php echo COAL_PRICE; ?>">
+    <input type="text" name="coal_price" id="coal-price" class="elextern-storage" value="<?php echo COAL_PRICE; ?>" data-default="<?php echo COAL_PRICE; ?>">
   </div>
   
   <div class="another-input lignite-price">
     <strong>Lignite price:</strong><br />
-    <input type="text" name="lignite_price" id="lignite-price" value="<?php echo LIGNITE_PRICE; ?>">
+    <input type="text" name="lignite_price" id="lignite-price" class="elextern-storage" value="<?php echo LIGNITE_PRICE; ?>" data-default="<?php echo LIGNITE_PRICE; ?>">
   </div>
   
 </td>
