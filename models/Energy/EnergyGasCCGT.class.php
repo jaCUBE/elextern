@@ -14,10 +14,10 @@
 class EnergyGasCCGT extends EnergyGas {
 
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
-  public $technology = 'Gas CCGT';
+  public $technology_id = 'gas_ccgt';
   
   
   

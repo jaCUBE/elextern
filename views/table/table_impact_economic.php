@@ -11,6 +11,8 @@
   <?php } ?>
 </tr>
 
+
+
 <tr class="decomissioning-actual child child-economic" data-placement="left" data-original-title="Actual Decomissioning Costs" data-content="Net to present value of costs required to dismantle the plant after operation.">
   <td class="attribute">Decomissioning Costs</td>
   <?php foreach($main->tech as $tech){ ?>
@@ -20,20 +22,24 @@
   <?php } ?>
 </tr> 
 
+
+
 <tr class="tech-import child child-economic" data-placement="left" data-original-title="Tech Import" data-content="Share of imports that don't benefit the local economy. Less than 100% in case of a strong mutually beneficiary relationship with a foreign country.">
   <td class="attribute">Tech Imports</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
-    <?php echo $tech->makeHtml('techImport', true); ?>
+    <?php echo $tech->makeHtml('impactEconomicTechImport', true); ?>
   </td>
   <?php } ?>
 </tr> 
 
+
+
 <tr class="fuel child child-economic" data-placement="left" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
-  <td class="attribute">Fuel</td>
+  <td class="attribute">Fossil Fuel Depletion</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
-    <?php echo $tech->makeHtml('fuel', true); ?>
+    <?php echo $tech->makeHtml('impactEconomicFossilFuel', true); ?>
   </td>
   <?php } ?>
 </tr> 

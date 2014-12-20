@@ -14,11 +14,11 @@
 class EnergyLigniteCHP extends EnergyLignite {
   
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
   
-  public $technology = 'Lignite CHP';
+  public $technology_id = 'lignite_chp';
   
   
   

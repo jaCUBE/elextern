@@ -14,11 +14,11 @@
 class EnergyNuclearGen2 extends EnergyNuclear {
     
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
   
-  public $technology = 'Nuclear Gen II';
+  public $technology_id = 'nuclear2';
   
   
   

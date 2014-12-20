@@ -13,7 +13,7 @@
 
 <tr class="total" data-placement="left" data-original-title="Reference Costs" data-content="Total electricity costs (LCOE + Externalities).">
   <td class="attribute">
-    Reference Costs
+    LCOE + Externalities
   </td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">

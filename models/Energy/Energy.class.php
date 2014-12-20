@@ -20,6 +20,12 @@ class Energy {
   public $row_id;
   
   /**
+   * @brief ID of technology
+   * @var string $technology_id
+   */
+  public $technology_id;
+  
+  /**
    * @brief Name of energy source type
    * @var string $technology
    */
@@ -171,7 +177,7 @@ class Energy {
   
   
   public function __construct() {    
-    if(!empty($this->technology)){ // If technology name is filled...
+    if(!empty($this->technology_id)){ // If technology name is filled...
       $this->fetchTechnology(); // ...fetch technologies into this instance of class
     }
     
@@ -197,14 +203,12 @@ class Energy {
     $sql = '
       SELECT *
       FROM energy
-      WHERE country_code = :country_code
-        AND technology = :technology
+      WHERE technology_id = :technology_id
         AND visible = 1
       LIMIT 1'; // SQL query for selecting all data for technology ID of country_code from database
     
     $STH = $_DB->prepare($sql);
-    $STH->bindParam(':country_code', $this->country_code); // Binding country_code into SQL
-    $STH->bindParam(':technology', $this->technology); // Binding technology_id into SQL
+    $STH->bindParam(':technology_id', $this->technology_id); // Binding technology_id into SQL
     $STH->setFetchMode(PDO::FETCH_INTO, $this);
     $STH->execute();
     
@@ -356,7 +360,7 @@ class Energy {
    * @return float Calculated installed capacity [MW]
    */
   
-  public function techImport(){    
+  public function impactEconomicTechImport(){    
     $result = $this->capexActual() * $this->eco_foreign_purchases; // Calculating tech imports actual by formula
     $result *= ECO_WEIGHT_TECH_IMPORT; // Correction by tech import weight
     
@@ -398,10 +402,15 @@ class Energy {
     }
     
     $result = $this->decomissioningActual(); // Costs for decomissiong
-    $result += $this->techImport(); // Cost of technology imports
-    $result += $this->fuel() * $this->eco_fossil_fuel; // Cost of fuel (if fuel is fossil)
+    $result += $this->impactEconomicTechImport(); // Cost of technology imports
+    $result += $this->impactEconomicFossilFuel(); // Cost of fuel (if fuel is fossil)
     
     return $result; // Returning result
+  }
+  
+  
+  public function impactEconomicFossilFuel(){
+    return $this->fuel() * $this->eco_fossil_fuel; // Cost of fuel (if fuel is fossil)
   }
   
   

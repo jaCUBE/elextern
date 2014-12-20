@@ -14,10 +14,10 @@
 class EnergyHydroLarge extends EnergyHydro {
     
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
-  public $technology = 'Large Hydro';
+  public $technology_id = 'hydro_large';
   
   
   

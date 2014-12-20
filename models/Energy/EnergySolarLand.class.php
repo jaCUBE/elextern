@@ -13,11 +13,11 @@
  */
 class EnergySolarLand extends EnergySolar {
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
   
-  public $technology = 'Solar Land';
+  public $technology_id = 'solar_land';
   
   
   

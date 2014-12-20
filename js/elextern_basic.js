@@ -102,6 +102,9 @@ function toggle_checkbox(){
   $(checkbox_selector).trigger('click');
   
   $(this).toggleClass('disabled-legend');
+  
+  $(this).find('.fa').toggleClass('fa-eye-slash');
+  $(this).find('.fa').toggleClass('fa-eye');
 }
 
 

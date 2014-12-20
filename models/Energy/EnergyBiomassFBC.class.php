@@ -14,11 +14,11 @@
 class EnergyBiomassFBC extends EnergyBiomass {
     
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
   
-  public $technology = 'FBC Biomass';
+  public $technology_id = 'biomass';
   
   
   

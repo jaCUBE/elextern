@@ -14,11 +14,11 @@
 class EnergyWindOnshore extends EnergyWind {
     
   /**
-   * @brief Name of this technology
-   * @var string $technology
+   * @brief ID of this technology
+   * @var string $technology_id
    */
   
-  public $technology = 'Onshore Wind';
+  public $technology_id = 'wind_onshore';
   
   
   
