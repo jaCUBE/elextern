@@ -6,7 +6,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('lcoe', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -19,7 +19,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('fuel', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -32,7 +32,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('capexActual', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -45,7 +45,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexActual', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr> 
