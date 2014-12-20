@@ -373,6 +373,7 @@ class Energy {
     $result = $this->decomissioningActual(); // Costs for decomissiong
     $result += $this->impactEconomicTechImport(); // Cost of technology imports
     $result += $this->impactEconomicFossilFuel(); // Cost of fuel (if fuel is fossil)
+    $result += $this->yieldFlexibility(); // Adding value of yield flexibility as part of economic impact
     
     return $result; // Returning result
   }
