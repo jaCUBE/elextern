@@ -27,7 +27,7 @@ $main = new TechList();
     
     
     
-    <tr class="efficiency" data-placement="left" data-original-title="Economic Impact" data-content="Efficiency of energy production.">
+    <tr class="efficiency" data-placement="bottom" data-original-title="Economic Impact" data-content="Efficiency of energy production.">
       <td class="attribute">Efficiency</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center"><?php echo $tech->eco_efficiency * 100; ?>&nbsp;%</td>
@@ -38,7 +38,7 @@ $main = new TechList();
     
     
     
-    <tr class="load-factor" data-placement="left" data-original-title="Load Factor" data-content="">
+    <tr class="load-factor" data-placement="bottom" data-original-title="Load Factor" data-content="">
       <td class="attribute">Load Factor</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center"><?php echo $tech->load_factor * 100; ?>&nbsp;%</td>
@@ -49,7 +49,7 @@ $main = new TechList();
     
     
     
-    <tr class="dispatchability" data-placement="left" data-original-title="Dispatchiblity" data-content="If the power technology can be activated 'on demand' or not.">
+    <tr class="dispatchability" data-placement="bottom" data-original-title="Dispatchiblity" data-content="If the power technology can be activated 'on demand' or not.">
       <td class="attribute">Dispatchable Source?</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
@@ -63,7 +63,7 @@ $main = new TechList();
     
     
     
-    <tr class="fossil-fuel" data-placement="left" data-original-title="Uses Fossil Fuel?" data-content="If the fuel used is fossil or not.">
+    <tr class="fossil-fuel" data-placement="bottom" data-original-title="Uses Fossil Fuel?" data-content="If the fuel used is fossil or not.">
       <td class="attribute">Uses Fossil Fuel?</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
@@ -75,7 +75,7 @@ $main = new TechList();
     </tr>
     
     
-    <tr class="construction_time" data-placement="left" data-original-title="Life Time" data-content="Time during which the power plant can produce electricity.">
+    <tr class="construction_time" data-placement="bottom" data-original-title="Life Time" data-content="Time during which the power plant can produce electricity.">
       <td class="attribute">Life Time</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
@@ -87,7 +87,7 @@ $main = new TechList();
     
     
     
-    <tr class="construction_time" data-placement="left" data-original-title="Construction Time" data-content="Time before the power plant operates.">
+    <tr class="construction_time" data-placement="bottom" data-original-title="Construction Time" data-content="Time before the power plant operates.">
       <td class="attribute">Construction Time</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="center">
@@ -100,7 +100,7 @@ $main = new TechList();
     
     
     
-    <tr class="capex" data-placement="left" data-original-title="CAPEX" data-content="CAPital EXpenditures: investment costs.">
+    <tr class="capex" data-placement="bottom" data-original-title="CAPEX" data-content="CAPital EXpenditures: investment costs.">
       <td class="attribute">CAPEX</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
@@ -114,7 +114,7 @@ $main = new TechList();
     
     
     
-    <tr class="capex-idr" data-placement="left" data-original-title="CAPEX IDR" data-content="Assuming Investment costs are linearly spent during the power plant construction time, CAPEX IDR represents CAPEX Including Discount Rate.">
+    <tr class="capex-idr" data-placement="bottom" data-original-title="CAPEX IDR" data-content="Assuming Investment costs are linearly spent during the power plant construction time, CAPEX IDR represents CAPEX Including Discount Rate.">
       <td class="attribute">CAPEX IDR</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
@@ -127,7 +127,7 @@ $main = new TechList();
     
     
     
-    <tr class="grid-connection" data-placement="left" data-original-title="Grid Connection" data-content="Costs for connecting the power plant to the grid.">
+    <tr class="grid-connection" data-placement="bottom" data-original-title="Grid Connection" data-content="Costs for connecting the power plant to the grid.">
       <td class="attribute">Grid Connection</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">
@@ -140,7 +140,7 @@ $main = new TechList();
     
     
     
-    <tr class="opex" data-placement="left" data-original-title="Operation OPEX%" data-content="Share of CAPEX costs that are due every year for maintenance (fixed costs even without production).">
+    <tr class="opex" data-placement="bottom" data-original-title="Operation OPEX%" data-content="Share of CAPEX costs that are due every year for maintenance (fixed costs even without production).">
       <td class="attribute">Operation OPEX%</td>
       <?php foreach($main->tech as $tech){ ?>
       <td class="right">

@@ -1,4 +1,4 @@
-<tr class="lcoe parent" id="lcoe" data-placement="left" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
+<tr class="lcoe parent" id="lcoe" data-placement="bottom" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
   <td class="attribute">
     LCOE
     <?php echo $_EX->htmlUnit('Click to expand'); ?>
@@ -14,7 +14,7 @@
 
 
 
-<tr class="fuel child child-lcoe" data-placement="left" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
+<tr class="fuel child child-lcoe" data-placement="bottom" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
   <td class="attribute">Fuel</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
@@ -26,7 +26,7 @@
 
 
 
-<tr class="capex-actual child child-lcoe" data-placement="left" data-original-title="Actual CAPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor">
+<tr class="capex-actual child child-lcoe" data-placement="bottom" data-original-title="Actual CAPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor">
   <td class="attribute">Actual CAPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
@@ -38,23 +38,11 @@
 
 
 
-<tr class="opex-actual child child-lcoe" data-placement="left" data-original-title="Actual OPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
+<tr class="opex-actual child child-lcoe" data-placement="bottom" data-original-title="Actual OPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
   <td class="attribute">Actual OPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexActual', true); ?>
-  </td>
-  <?php } ?>
-</tr> 
-
-
-
-
-<tr class="opex-actual child child-lcoe" data-placement="left" data-original-title="Flexibility Yield" data-content="Interpolated according to ELIX index (Electricity spot price for France-Germany-Austria-Switzerland market).">
-  <td class="attribute">Flexibility Yield</td>
-  <?php foreach($main->tech as $tech){ ?>
-  <td class="right">
-    <?php echo $tech->makeHtml('yieldFlexibility', true); ?>
   </td>
   <?php } ?>
 </tr> 

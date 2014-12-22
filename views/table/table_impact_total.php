@@ -1,4 +1,4 @@
-<tr class="total" data-placement="left" data-original-title="Externalities Costs" data-content="Total costs of externalities (not included in the LCOE but paid by the society or impacting future generations).">
+<tr class="total" data-placement="bottom" data-original-title="Externalities Costs" data-content="Total costs of externalities (not included in the LCOE but paid by the society or impacting future generations).">
   <td class="attribute">
     Externalities Costs
   </td>
@@ -11,7 +11,7 @@
 </tr>
 
 
-<tr class="total" data-placement="left" data-original-title="Reference Costs" data-content="Total electricity costs (LCOE + Externalities).">
+<tr class="total" data-placement="bottom" data-original-title="Reference Costs" data-content="Total electricity costs (LCOE + Externalities).">
   <td class="attribute">
     LCOE + Externalities
   </td>
