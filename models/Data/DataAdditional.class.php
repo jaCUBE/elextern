@@ -13,20 +13,14 @@
  */
 
 class DataAdditional extends Data {
-  public $world_gdp = 56000;
-  public $inhabitable_surface = 107;
-  public $carbon_budget = 700;
-  public $nuclear_exclusion = 30;
-  public $nuclear_accident = 36125;
-  public $loc_population = 134;
-  public $loc_surface_lignite = 21;
-  public $loc_solar_density = 100;
-  
-  public function __construct() {
-    
-    
-    $this->defineConstant();
-  }
+  public $world_gdp;
+  public $inhabitable_surface;
+  public $carbon_budget;
+  public $nuclear_exclusion;
+  public $nuclear_accident;
+  public $loc_population;
+  public $loc_surface_lignite;
+  public $loc_solar_density;
   
   public function defineConstant(){
     define('WORLD_GDP', $this->world_gdp);

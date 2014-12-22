@@ -12,7 +12,8 @@
  * @author jaCUBE
  */
 class Data {
-    
+      
+  
   public function checkInput($name){
     if(!empty($_POST[$name])){
       $this->$name = $_POST[$name];
@@ -31,4 +32,14 @@ class Data {
       return false;
     }
   }
+  
+  public function prepareData(){
+    return false;
+  }
+  
+  public function getInput(){
+    return false;
+  }
+          
+  
 }

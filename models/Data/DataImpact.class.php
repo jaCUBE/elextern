@@ -25,8 +25,8 @@ class DataImpact extends Data {
   public $soc_mortality = 2000000;
   
   public $lt_nuclear_waste_treatment = 3;
-  public $lt_climate_start = 35;
-  public $lt_climate_cost = 3;
+  public $lt_climate_start;
+  public $lt_climate_cost;
 
   
   
@@ -37,18 +37,13 @@ class DataImpact extends Data {
   
   
   
-  public function __construct(){
-    $this->getInput();
-    
+  public function prepareData(){
     $this->eco_decomissioning_weight /= 100;
     $this->eco_technology_import_weight /= 100;
     $this->eco_fossil_fuel_weight /= 100;
     
     $this->lt_nuclear_waste_treatment /= 100;    
     $this->lt_climate_cost /= 100;
-    
-    $this->defineConstant();
-
   }
   
   

@@ -13,8 +13,8 @@
  */
 
 class DataMain extends Data {
-  public $time_horizon = 300;
-  public $discount_rate = 3;
+  public $time_horizon;
+  public $discount_rate;
   
   public $show_cost_net = true;
   public $show_cost_externality = true;
@@ -30,15 +30,10 @@ class DataMain extends Data {
   
   
   
-  public function __construct() {
-    
-    $this->getInput();
-    
+  public function prepareData() {
     $this->checkDiscountRate();
     
     $this->discount_rate /= 100;
-    
-    $this->defineConstant();
   }
 
   public function defineConstant(){

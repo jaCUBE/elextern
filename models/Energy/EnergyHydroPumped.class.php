@@ -28,13 +28,11 @@ class EnergyHydroPumped extends EnergyHydro {
   
   /**
    * @brief Overriden calculation for extended land use.
-   * @return float Extended land use for pumped hydro.
+   * @return float Extended land use for large hydro.
    */
   
   public function extendedLandUse() {
-    $result = 5100000 / 762000; // Calculating extended land use value
-    
-    return $result; // Returning result
+    return $this->env_land_use; // Returning result
   }
   
   

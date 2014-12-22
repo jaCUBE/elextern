@@ -12,30 +12,23 @@
  * @author jaCUBE
  */
 class DataEnergyUnit extends Data {
-  public $oil_price = 83.16;
-  public $oil_toe = 0.1364;
-  public $oil_co2 = 3.07;
+  public $oil_price;
+  public $oil_toe;
+  public $oil_co2;
   
-  public $gas_price = 7;
-  public $gas_toe = 40;
-  public $gas_co2 = 2.35;
+  public $gas_price;
+  public $gas_toe;
+  public $gas_co2;
   
-  public $coal_price = 63.14;
-  public $coal_toe = 1.5;
-  public $coal_co2 = 3.96;
+  public $coal_price;
+  public $coal_toe;
+  public $coal_co2;
   
-  public $lignite_price = 21;
-  public $lignite_toe = 3;
-  public $lignite_co2 = 3.96;
+  public $lignite_price;
+  public $lignite_toe;
+  public $lignite_co2;
   
-  public $mwh_toe = 11.7;
-  
-  
-  public function __construct() {
-    $this->getInput();
-    
-    $this->defineConstant();
-  }
+  public $mwh_toe;
   
   
   public function getInput(){    
