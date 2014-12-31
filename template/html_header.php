@@ -22,9 +22,6 @@
     
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <script src="<?php echo URL; ?>/libraries/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css">
-    
     <script src="<?php echo URL; ?>/libraries/jquery-chosen/chosen.jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/jquery-chosen/chosen.min.css">
     

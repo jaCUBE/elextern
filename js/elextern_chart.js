@@ -11,6 +11,8 @@ google.load("visualization", "1", {packages:["corechart"]});
 
 function elextern_chart() {
 
+  ajax_co2();
+
   $.ajax({
     type: "POST",
     data: $('#form-basic').serialize(),

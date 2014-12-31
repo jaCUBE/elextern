@@ -1,7 +1,4 @@
-$(function() {
-  $('.bootstrap-switch').bootstrapSwitch();
-    
-      
+$(function() {      
   if(localStorage.getItem('discount-rate') != null){
     load_form();
   }
@@ -14,46 +11,21 @@ $(function() {
   $('#another-input-select').change(show_another_input);
 
   if($('#chart').length > 0){
-    elextern_chart();
     $('#chart input').keyup(elextern_chart);
     $('#chart input').change(elextern_chart);
-    $('#chart input[type=checkbox]').click(elextern_chart);
     $('#chart input').change(save_form);
   }
   
   if($('#table').length > 0){
-    ajax_table();
     $('#table input').keyup(ajax_table);
     $('#table input').change(ajax_table);
-    $('#table .bootstrap-switch').click(ajax_table);
     $('#table input').change(save_form);
   }
-  
-  $('#chart .table-impact').hide();
   
   $('.toggle-checkbox').click(toggle_checkbox);
 
   reinitialize();
 });
-
-
-function filter_table(selector){
-  $('#table-sources td, #table-sources th').hide();
-  
-  $('#table-sources .legend').show();
-  
-  if(selector == 'all'){
-   $('#table-sources td, #table-sources th').show(); 
-  }
-  
-  $(selector).each(function (){
-    var index = $(this).index() + 1;
-    
-    $("#table-sources td:nth-child("+ index +"), th:nth-child("+ index +")").show();
-    $("#table-sources td:nth-child(1), th:nth-child(1)").show();
-  });  
-}
-
 
 
 
@@ -68,7 +40,8 @@ function show_another_input(){
 
 
 function ajax_table(){
-
+  ajax_co2();
+  
   $.ajax({
     type: "POST",
     url: 'ajax_table.php',
@@ -80,6 +53,18 @@ function ajax_table(){
   });
 }
 
+
+
+function ajax_co2(){
+  $.ajax({
+    type: "POST",
+    url: 'ajax_co2.php',
+    data: $('#form-basic').serialize(),
+    success: function(data, textStatus, xhr) {
+      $('.ajax-co2').html(data);
+    }
+  });
+}
 
 
 
@@ -108,17 +93,23 @@ function toggle_checkbox(){
 }
 
 
+
+
 function save_form(){
   $('.elextern-storage').each(function(){
     localStorage[$(this).attr('id')] = $(this).val();
   });
 }
 
+
+
 function load_form(){
   $('.elextern-storage').each(function(){
     $(this).val(localStorage[$(this).attr('id')]);
   });
 }
+
+
 
 function default_form(){
   $('.elextern-storage').each(function(){
@@ -127,3 +118,4 @@ function default_form(){
   
   $('#form-basic input:first').trigger('change');
 }
+

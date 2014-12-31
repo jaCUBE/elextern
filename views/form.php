@@ -1,4 +1,4 @@
-<form action="" id="form-basic" method="post" class="well">
+<form action="" id="form-basic" method="post">
 
   <?php require 'form_basic.php'; ?>
   
