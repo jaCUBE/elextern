@@ -1,4 +1,4 @@
-$(function(){
+function initialize_touchspin(){
   
   
   
@@ -240,4 +240,4 @@ $(function(){
   });
   
   
-});
+  };

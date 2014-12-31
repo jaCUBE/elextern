@@ -28,6 +28,7 @@
           </ul>
         </li>
         
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>"><a href="source.php"><i class="fa fa-book"></i> Sources</a></li>
         
         <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'contact.php') echo 'active'; ?>"><a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a></li>
       </ul>

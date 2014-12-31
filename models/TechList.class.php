@@ -69,7 +69,7 @@ class TechList {
         <th class="legend">Value</th>
         
         <?php foreach($this->tech as $tech){ ?>
-        <th class="<?php echo $tech->cssClass(); ?>">
+        <th>
           <?php echo $tech->technology; ?>
         </th>
         <?php } ?>

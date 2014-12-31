@@ -628,21 +628,6 @@ class Energy {
   }
   
   
-  
-  public function cssClass(){
-    $class = Array();
-    
-    if($this->eco_fossil_fuel){
-      $class[] = 'fossil';
-    }
-    
-    if($this->dispatchable){
-      $class[] = 'dispatchable';
-    }
-    
-    return implode(' ', $class);
-  }
-  
   public function impactTotal(){
     return $this->impactEnvironment() + $this->impactEconomic() + $this->impactSocial() + $this->impactLongterm();
   }
