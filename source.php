@@ -12,7 +12,7 @@ require 'template/header.php';
   
   <?php
   
-  $data = new SourceList();
+  $data = new SourceManager();
   $data->fetchSourceList();
   
   require 'views/source.php'; ?>

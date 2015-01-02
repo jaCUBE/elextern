@@ -23,8 +23,8 @@
         <li class="dropdown <?php if(basename($_SERVER["SCRIPT_NAME"]) == 'table.php') echo 'active'; ?>">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-table"></i> Tables <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="table.php?type=physical"><i class="fa fa-gears"></i> Physical Data</a></li>
-            <li><a href="table.php?type=economical"><i class="fa fa-money"></i> Economical Data</a></li>
+            <li><a href="table.php?type=social"><i class="fa fa-users"></i> Socio-economic View</a></li>
+            <li><a href="table.php?type=technical"><i class="fa fa-gears"></i> Techno-economic Data</a></li>
           </ul>
         </li>
         

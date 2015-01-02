@@ -10,9 +10,13 @@ require 'template/header.php';
 
 <div id="table">
   
-  <?php require 'views/form.php'; ?>
-  
-  <div id="table-content">
+  <div id="table-<?php echo $_GET['type']; ?>">
+
+    <?php require 'views/form.php'; ?>
+
+    <div id="table-content">
+
+    </div>
     
   </div>
 

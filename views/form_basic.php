@@ -25,6 +25,10 @@
 
   </table>
 
+<?php if(!empty($_GET['type'])){ ?>
+  <input type="hidden" name="table_type" value="<?php echo $_GET['type']; ?>" />
+<?php } ?>
+
 
 <div class="right" style="font-size: 8pt;">
   Implicit CO<sub>2</sub> price is <span class="ajax-co2"></span> €/tCO<sub>2</sub>.

@@ -11,7 +11,7 @@
  *
  * @author jaCUBE
  */
-class SourceList {
+class SourceManager {
   public $source_list = Array();
   
   public function fetchSourceList(){

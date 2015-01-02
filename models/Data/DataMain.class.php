@@ -41,6 +41,7 @@ class DataMain extends Data {
     define('DISCOUNT_RATE', $this->discount_rate);
     define('SHOW_COST_NET', $this->show_cost_net);
     define('SHOW_COST_EXTERNALITY', $this->show_cost_externality);
+    
     define('SHOW_IMPACT_ENVIRONMENT', $this->impact_environment);
     define('SHOW_IMPACT_ECONOMIC', $this->impact_economic);
     define('SHOW_IMPACT_SOCIAL', $this->impact_social);
@@ -60,14 +61,16 @@ class DataMain extends Data {
     $this->checkInput('discount_rate');
     $this->checkInput('time_horizon');
     
-    $this->checkCheckbox('impact_environment');
-    $this->checkCheckbox('impact_social');
-    $this->checkCheckbox('impact_economic');
-    $this->checkCheckbox('impact_longterm');
-    
-    $this->checkCheckbox('show_capex');
-    $this->checkCheckbox('show_opex');
-    $this->checkCheckbox('show_fuel');
+    if(empty($_POST['table_type'])){
+      $this->checkCheckbox('impact_environment');
+      $this->checkCheckbox('impact_social');
+      $this->checkCheckbox('impact_economic');
+      $this->checkCheckbox('impact_longterm');
+
+      $this->checkCheckbox('show_capex');
+      $this->checkCheckbox('show_opex');
+      $this->checkCheckbox('show_fuel');
+    }
   }
 
   

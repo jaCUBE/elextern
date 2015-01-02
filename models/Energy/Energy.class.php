@@ -536,6 +536,10 @@ class Energy {
       $value = $this->$name; // ...value is property
     }
     
+    if($value <= 0.0001 AND $value > 0){
+      return '<span title="'.$value.'">&lt;&nbsp;0,0001</span>';
+    }
+    
     $value = number_format($value, 2, ',', ' '); // Returning formatted number; rounded and with decimal comma instead of point
     
     return str_replace(' ', '&nbsp;', $value); // Returning formatted number; rounded and with decimal comma instead of point

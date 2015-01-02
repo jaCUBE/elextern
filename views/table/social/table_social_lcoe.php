@@ -1,7 +1,6 @@
 <tr class="lcoe parent" id="lcoe" data-placement="bottom" data-original-title="LCOE" data-content="Levelised Costs Of Electricity.">
   <td class="attribute">
     LCOE
-    <?php echo $_EX->htmlUnit('Click to expand'); ?>
   </td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
@@ -15,7 +14,7 @@
 
 
 <tr class="fuel child child-lcoe" data-placement="bottom" data-original-title="Actual CAPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
-  <td class="attribute">Fuel</td>
+  <td class="attribute"><i class="fa fa-level-down"></i> Fuel</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('fuel', true); ?>
@@ -27,7 +26,7 @@
 
 
 <tr class="capex-actual child child-lcoe" data-placement="bottom" data-original-title="Actual CAPEX" data-content="Discounted investment costs per produced MWh over the power plant lifetime and given Discount Rate and Load Factor">
-  <td class="attribute">Actual CAPEX</td>
+  <td class="attribute"><i class="fa fa-level-down"></i>  Actual CAPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('capexActual', true); ?>
@@ -39,7 +38,7 @@
 
 
 <tr class="opex-actual child child-lcoe" data-placement="bottom" data-original-title="Actual OPEX" data-content="Operation costs per produced MWh given Load Factor LF.">
-  <td class="attribute">Actual OPEX</td>
+  <td class="attribute"><i class="fa fa-level-down"></i>  Actual OPEX</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexActual', true); ?>
