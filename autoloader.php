@@ -10,6 +10,7 @@ function exAutoload($class_name) {
   $path = 'models/'; // Default way to class folder
 
   $folders = Array(
+    'Comment',
     'Data',
     'Energy',
     'Item',

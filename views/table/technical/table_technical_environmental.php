@@ -1,5 +1,5 @@
 <tr class="extended-land-use child-environmental">
-  <td class="attribute"><i class="fa fa-level-down"></i> Extended Land Use</td>
+  <td class="attribute"><i class="fa fa-level-down"></i> Extended Land Use (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('extendedLandUse', true); ?>
@@ -12,7 +12,7 @@
 
 
 <tr class="extended-land-use child-environmental">
-  <td class="attribute"><i class="fa fa-level-down"></i> Compensations for Expulsions</td>
+  <td class="attribute"><i class="fa fa-level-down"></i> Compensations for Expulsions (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('displacedPeople', true); ?>

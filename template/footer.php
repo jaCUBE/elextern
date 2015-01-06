@@ -1,3 +1,8 @@
 <div id="footer">
-  Centrum vyzkumu Rez s.r.o. 2014<br />
+  <h2>Elextern</h2>
+  <h3>Electricity Externalities for Better Planning</h3>
+  
+  <div class="copy">
+    &copy; 2015, Centrum vyzkumu Rez s.r.o.
+  </div>
 </div>

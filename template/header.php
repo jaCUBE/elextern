@@ -17,7 +17,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'index.php') echo 'active'; ?>"><a href="index.php"><i class="fa fa-bar-chart-o"></i> Chart</a></li>
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'index.php') echo 'active'; ?>">
+          <a href="index.php"><i class="fa fa-bar-chart-o"></i> Chart</a>
+        </li>
         
         
         <li class="dropdown <?php if(basename($_SERVER["SCRIPT_NAME"]) == 'table.php') echo 'active'; ?>">
@@ -28,9 +30,17 @@
           </ul>
         </li>
         
-        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>"><a href="source.php"><i class="fa fa-book"></i> Sources</a></li>
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>">
+          <a href="source.php"><i class="fa fa-book"></i> Sources</a>
+        </li>
         
-        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'contact.php') echo 'active'; ?>"><a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a></li>
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'comment.php') echo 'active'; ?>">
+          <a href="comment.php"><i class="fa fa-comment"></i> Comments <span class="badge"><?php echo $_EX->countComment(); ?></span></a>
+        </li>
+        
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'contact.php') echo 'active'; ?>">
+          <a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a>
+        </li>
       </ul>
       
       <div class="nav navbar-nav navbar-right">

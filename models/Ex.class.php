@@ -51,4 +51,20 @@ class Ex {
     }
     
     
+    public function countComment(){
+      global $_DB;
+      
+      $sql = '
+        SELECT COUNT(*) AS comment_count
+        FROM comments
+        WHERE visible = 1';
+      
+      $STH = $_DB->prepare($sql);
+      $STH->execute();
+      
+      $res = $STH->fetch();
+      
+      return $res['comment_count'];
+    }
+    
 }
