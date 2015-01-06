@@ -540,11 +540,22 @@ class Energy {
       return '<span title="'.$value.'">&lt;&nbsp;0,0001</span>';
     }
     
+    
+    if($this->isPercentage($name)){
+      $value *= 100;
+    }
+    
     $value = number_format($value, 2, ',', ' '); // Returning formatted number; rounded and with decimal comma instead of point
     
     return str_replace(' ', '&nbsp;', $value); // Returning formatted number; rounded and with decimal comma instead of point
   }
   
+  
+  public function isPercentage($name){
+    $percentage_list = Array('eco_efficiency', 'eco_foreign_purchases', 'eco_decomissionning');
+            
+    return in_array($name, $percentage_list);
+  }
   
   
   

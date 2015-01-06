@@ -3,6 +3,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('eco_decomissionning'); ?>
+    <?php echo $_EX->htmlUnit('% CAPEX'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -14,6 +15,7 @@
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('eco_foreign_purchases'); ?>
+    <?php echo $_EX->htmlUnit('% CAPEX'); ?>
   </td>
   <?php } ?>
 </tr> 
