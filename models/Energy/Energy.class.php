@@ -537,7 +537,7 @@ class Energy {
     }
     
     if($value <= 0.0001 AND $value > 0){
-      return '<span title="'.$value.'">&lt;&nbsp;0,0001</span>';
+      return '<span title="'.$value.'">'.$this->scientificNotation($value).'</span>';
     }
     
     
@@ -557,6 +557,11 @@ class Energy {
     return in_array($name, $percentage_list);
   }
   
+  
+  public function scientificNotation($val){
+    $exp = floor(log($val, 10));
+    return sprintf('%.2fE%+03d', $val/pow(10,$exp), $exp);
+  }
   
   
   
