@@ -666,4 +666,24 @@ class Energy {
     return $this->impactTotal() + $this->netCost();
   }
   
+  
+  public function isDisabled(){
+    if(!isset($_COOKIE[$this->cssName()])){
+      return false;
+    }
+    
+    if($_COOKIE[$this->cssName()] == 'disabled'){
+      return true;
+    }
+    
+    return false;
+  }
+  
+  
+  public function cssName(){
+    global $_EX;
+    
+    return $_EX->makeCssName($this->technology); 
+  }
+  
 }

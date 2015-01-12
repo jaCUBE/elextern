@@ -53,7 +53,7 @@ class TechList {
   
   public function checkFull(){
     foreach($this->tech as $index => $tech){
-      if(!$tech->isFull()){
+      if(!$tech->isFull() OR $tech->isDisabled()){
         unset($this->tech[$index]);
       }
     }

@@ -21,6 +21,8 @@ $(function() {
   $('#table input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table input').change(ajax_table); // TABLE: every change of input redraws table
   
+  $('#energy .energy-item').click(toggle_energy_item);
+  
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
 });
@@ -245,4 +247,23 @@ function chart_label_check(){
       $(this).find('.fa').toggleClass('fa-eye');
     }
   });  
+}
+
+
+function toggle_energy_item(){
+  var name = $(this).data('energy');
+  
+  $(this).toggleClass('btn-success');
+  $(this).toggleClass('btn-danger');
+  
+  var cookie = getCookie(name);
+  
+  console.log(cookie);
+  
+  if(cookie == 'disabled'){
+    setCookie(name, 'enabled', '/', 20);
+  }else{
+  
+  setCookie(name, 'disabled', '/', 20);
+  }
 }

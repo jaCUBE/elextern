@@ -67,4 +67,24 @@ class Ex {
       return $res['comment_count'];
     }
     
+    
+  /**
+   * Řetězec v parametru připraví do formátu názvu CSS třídy.
+   * 
+   * @param string $string Vstup k přípravě na CSS třídu.
+   * 
+   * @return string Formátovaný řetězec na CSS třídu.
+   */ 
+  
+  public function makeCssName($string){    
+    $original = Array('/', ' ', '(', ')', ',', '[', ']', '_', '%');
+    $replace  = Array('-', '-', '-', '-', '', '-', '', '-', '');
+    
+    $string = str_replace($original, $replace, $string);
+    
+    $string = strtolower($string);
+    
+    return $string;   
+  }  
+    
 }

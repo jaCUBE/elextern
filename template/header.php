@@ -30,6 +30,10 @@
           </ul>
         </li>
         
+        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'energy.php') echo 'active'; ?>">
+          <a href="energy.php"><i class="fa fa-bolt"></i> Energy</a>
+        </li>
+        
         <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>">
           <a href="source.php"><i class="fa fa-book"></i> Sources</a>
         </li>
@@ -42,10 +46,6 @@
           <a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a>
         </li>
       </ul>
-      
-      <div class="nav navbar-nav navbar-right">
-        <a href="#" onclick="default_form();"  class="btn btn-primary"><i class="fa fa-undo"></i> Default impact values</a>
-      </div>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

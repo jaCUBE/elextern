@@ -34,6 +34,7 @@
     
     <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
     
+    <script src="<?php echo URL; ?>/js/elextern_cookies.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     <script src="<?php echo URL; ?>/js/elextern_basic.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     <script src="<?php echo URL; ?>/js/elextern_touchspin.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     <script src="<?php echo URL; ?>/js/elextern_chart.js?v=<?php echo time(); ?>" type="text/javascript"></script>
