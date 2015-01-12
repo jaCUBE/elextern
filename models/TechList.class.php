@@ -14,7 +14,7 @@
 
 class TechList {
   public $tech = Array();
-  
+  public $tech_all = Array();
   
   public function __construct() {
     
@@ -45,6 +45,7 @@ class TechList {
     
     while($obj = $STH->fetch()){
       $energy = $_EX->cloneObject($obj, $obj->model);
+      $this->tech_all[] = $energy;
       $this->tech[] = $energy;
     }
     

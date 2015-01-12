@@ -11,7 +11,9 @@ require 'template/header.php';
 <div id="table">
   
   <div id="table-<?php echo $_GET['type']; ?>">
-
+    
+    <?php $tech_list = new TechList(); ?>
+    
     <?php require 'views/form.php'; ?>
 
     <div id="table-content">

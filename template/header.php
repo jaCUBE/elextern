@@ -30,10 +30,6 @@
           </ul>
         </li>
         
-        <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'energy.php') echo 'active'; ?>">
-          <a href="energy.php"><i class="fa fa-bolt"></i> Energy</a>
-        </li>
-        
         <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>">
           <a href="source.php"><i class="fa fa-book"></i> Sources</a>
         </li>

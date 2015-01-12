@@ -108,5 +108,9 @@
     <strong>Lignite price:</strong><br />
     <input type="text" name="lignite_price" id="lignite-price" class="elextern-storage" value="<?php echo LIGNITE_PRICE; ?>" data-default="<?php echo LIGNITE_PRICE; ?>">
   </div>
-  
+
 </td>
+
+
+
+

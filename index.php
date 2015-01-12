@@ -8,7 +8,7 @@ require 'template/header.php';
 ?>
 
 <div id="chart">
-  
+  <?php $tech_list = new TechList(); ?>
   
   <?php require 'views/chart/chart.php'; ?>
   

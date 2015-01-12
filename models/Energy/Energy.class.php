@@ -686,4 +686,17 @@ class Energy {
     return $_EX->makeCssName($this->technology); 
   }
   
+  
+  public function cssClass(){
+    $class = Array();
+    
+    if($this->eco_fossil_fuel){
+      $class[] = 'fossil';
+    }else{
+      $class[] = 'no-fossil';
+    }
+    
+    return implode(' ', $class);
+  }
+  
 }

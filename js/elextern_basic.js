@@ -21,7 +21,9 @@ $(function() {
   $('#table input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table input').change(ajax_table); // TABLE: every change of input redraws table
   
-  $('#energy .energy-item').click(toggle_energy_item);
+  $('#energy-selection .energy-item').click(toggle_energy_item);
+  
+  $('#table, #chart').ready(energy_selection_count);
   
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
@@ -250,20 +252,36 @@ function chart_label_check(){
 }
 
 
-function toggle_energy_item(){
+function toggle_energy_item(autorefresh){
   var name = $(this).data('energy');
   
   $(this).toggleClass('btn-success');
   $(this).toggleClass('btn-danger');
   
   var cookie = getCookie(name);
-  
-  console.log(cookie);
-  
+
   if(cookie == 'disabled'){
     setCookie(name, 'enabled', '/', 20);
   }else{
   
   setCookie(name, 'disabled', '/', 20);
   }
+  
+  
+  energy_selection_count();
+  
+  if($('#table').length > 0){
+    setTimeout(ajax_table, 250);
+  }
+  
+  if($('#chart').length > 0){
+    setTimeout(elextern_chart, 250);
+  }
+}
+
+
+function energy_selection_count(){
+  var count = $('#energy-selection .energy-item.btn-success').length;
+  
+  $('#energy-selection-disabled').html(count);
 }

@@ -1,4 +1,6 @@
-<div class="nav navbar-nav navbar-right">
+<div class="right">
+  <a href="#" data-toggle="modal" data-target="#energy-selection" class="btn btn-info btn-xs"><i class="fa fa-bolt"></i> Energy selection (<span id="energy-selection-disabled"></span> / <?php echo count($tech_list->tech_all); ?>)</a>
+  
   <a href="#" onclick="default_form();"  class="btn btn-primary btn-xs"><i class="fa fa-undo"></i> Default impact values</a>
 </div>
 
@@ -24,11 +26,14 @@
 
 
     <?php require 'form_another.php'; ?>
+    
 
 
   </tr>
 
 </table>
+
+<?php require 'form_modal.php'; ?>
 
 <?php if(!empty($_GET['type'])){ ?>
   <input type="hidden" name="table_type" value="<?php echo $_GET['type']; ?>" />
