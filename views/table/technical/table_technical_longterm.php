@@ -2,7 +2,7 @@
   <td class="attribute"><i class="fa fa-level-down"></i> Nuclear Wastes Treatment</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
-    <?php echo $tech->makeHtml('impactLongtermNuclearWaste', true); ?>
+    <?php echo $tech->makeHtml('impactLongtermNuclearWasteTreatment', true); ?>
   </td>
   <?php } ?>
 </tr> 

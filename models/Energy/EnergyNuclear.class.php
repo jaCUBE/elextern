@@ -38,7 +38,7 @@ class EnergyNuclear extends Energy {
   }
   
 
-  public function nuclearFuelPostTreatment() {    
+  public function impactLongtermNuclearWasteTreatment() {    
     $result_one = $this->fuel() * LT_NUCLEAR_WASTE_TREATMENT;
     $result_two = 1 - pow(1 + DISCOUNT_RATE, -TIME_HORIZON);
     $result = $result_one * $result_two / DISCOUNT_RATE;

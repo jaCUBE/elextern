@@ -466,7 +466,8 @@ class Energy {
     }
     
     $result = $this->impactLongtermCO2();
-    $result += $this->impactLongtermNuclearWaste();
+    $result += $this->impactLongtermNuclearWasteTreatment(); // Costs for nuclear waste treatment multiplied by input value
+    
     
     return $result; // Returning result   
   }
@@ -479,9 +480,8 @@ class Energy {
   
   
   
-  public function impactLongtermNuclearWaste(){
-    return LT_NUCLEAR_WASTE_TREATMENT * $this->nuclearFuelPostTreatment(); // Costs for nuclear waste treatment multiplied by input value
-  }
+  
+
   
   
   /**
@@ -607,7 +607,7 @@ class Energy {
    * @return float Nuclear fuel post-treatment
    */
   
-  public function nuclearFuelPostTreatment(){
+  public function impactLongtermNuclearWasteTreatment(){
     return 0.0; // Default: no nuclear post-treatment
   }
   

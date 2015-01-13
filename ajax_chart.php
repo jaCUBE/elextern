@@ -38,7 +38,7 @@ foreach($main->tech as $energy){
   }
   
   if(SHOW_IMPACT_ECONOMIC){
-    $impact_economic = $energy->impactEconomic() + $energy->yieldFlexibility();
+    $impact_economic = $energy->impactEconomic();
   }else{
     $impact_economic = 0;
   }

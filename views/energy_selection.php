@@ -25,16 +25,16 @@
 <div class="center">
   
   <a href="#" class="btn btn-default" onclick="$('.energy-item.fossil.btn-danger, .energy-item.no-fossil.btn-success').trigger('click');">
-    Fossil Only
+    Fossil Fuels Only
   </a>
   
   <a href="#" class="btn btn-default" onclick="$('.energy-item.fossil.btn-success, .energy-item.no-fossil.btn-danger').trigger('click');">
-    Renewal Only
+    Renewables Only
   </a>
 
   <br /><br />
   
-  <a href="#" class="btn btn-default" onclick="$('.energy-item').trigger('click');">
+  <a href="#" class="btn btn-info" onclick="$('.energy-item').trigger('click'); elextern_chart(); ajax_table();">
     Invert
   </a>
   
