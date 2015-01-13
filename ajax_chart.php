@@ -5,7 +5,7 @@ $main = new TechList();
 
 
 $cols = Array(
-  Array('id' => "", 'label' => 'Energy Type', 'pattern' => "", 'type' => 'string'), 
+  Array('id' => "", 'label' => 'Electricity Technologies', 'pattern' => "", 'type' => 'string'), 
   Array('id' => "", 'label' => 'CAPEX', 'pattern' => "", 'type' => 'number'), 
   Array('id' => "", 'label' => 'OPEX', 'pattern' => "", 'type' => 'number'), 
   Array('id' => "", 'label' => 'Fuel', 'pattern' => "", 'type' => 'number'),   

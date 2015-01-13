@@ -6,7 +6,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Select your energy souces...</h4>
+        <h4 class="modal-title" id="myModalLabel">Select your electricity technologies...</h4>
       </div>
       <div class="modal-body">
         <?php require 'energy_selection.php'; ?>

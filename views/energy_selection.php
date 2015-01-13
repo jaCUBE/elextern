@@ -1,6 +1,9 @@
 <div class="alert alert-info">
-  Select or deselect desired sources here. It will affect both, table and chart.
+  Select or deselect desired electricity technologies here. It will affect both, table and chart.
 </div>
+
+
+
 
 
 <?php foreach($tech_list->tech_all as $i => $energy){ ?>
@@ -20,7 +23,14 @@
     
 <?php } ?>
 
+
+
+
 <hr />
+
+
+
+
 
 <div class="center">
   
