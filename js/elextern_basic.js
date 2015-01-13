@@ -14,14 +14,17 @@ $(function() {
 
   $('.toggle-checkbox').click(toggle_checkbox); // Click on chart legend makes change in hidden checkboxes
 
-  $('#chart input').keyup(elextern_chart); // CHART: every key up redraws chart
-  $('#chart input').change(elextern_chart); // CHART: every change of input redraws chart
+  $('#chart input, #demo input').keyup(elextern_chart); // CHART: every key up redraws chart
+  $('#chart input, #demo input').change(elextern_chart); // CHART: every change of input redraws chart
   $('#chart #legend span').click(save_form); // CHART: every click on legend saves form state
 
   $('#table input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table input').change(ajax_table); // TABLE: every change of input redraws table
   
   $('#energy-selection .energy-item').click(toggle_energy_item);
+  
+  $('#demo #form-basic table td, #demo #form-basic .btn').hide();
+  $('#demo #form-basic table td:first').show();
   
   $('#table, #chart').ready(energy_selection_count);
   

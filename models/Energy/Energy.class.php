@@ -668,14 +668,21 @@ class Energy {
   
   
   public function isDisabled(){
-    if(!isset($_COOKIE[$this->cssName()])){
+    global $_EX;
+    
+    if(!$_EX->isLogged() AND $this->show_demo){
       return false;
     }
     
+
+    if(!isset($_COOKIE[$this->cssName()])){
+      return false;
+    }
+
     if($_COOKIE[$this->cssName()] == 'disabled'){
       return true;
     }
-    
+
     return false;
   }
   

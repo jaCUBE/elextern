@@ -6,7 +6,7 @@
   
   
   
-  <?php foreach($tech_list->tech_all as $source){ ?>
+  <?php foreach($data->source_list as $source){ ?>
   
   <li class="source">
     <div>

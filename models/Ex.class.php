@@ -86,5 +86,16 @@ class Ex {
     
     return $string;   
   }  
+  
+  
+  public function isLogged(){
+    if(empty($_GET['logged'])){
+      return false;
+    }
+    
+    return true;
+  }
+  
+  
     
 }
