@@ -89,11 +89,11 @@ class Ex {
   
   
   public function isLogged(){
-    if(empty($_GET['logged'])){
-      return false;
+    if(@$_COOKIE['login'] == 'test'){
+      return true;
     }
     
-    return true;
+    return false;
   }
   
   

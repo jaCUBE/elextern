@@ -1,3 +1,8 @@
+<div class="alert alert-warning">
+  So far, for testing purposes only. Just press <strong>Log Me In</strong> button or <a href="#" class="btn btn-xs btn-warning" onclick="login();">this button</a>. It will log you in testing account.
+</div>
+
+
 <div class="row">
   
   <div class="col-md-1">
@@ -29,7 +34,7 @@
       <br />
       
       <div class="center">
-        <button type="submit" class="btn btn-primary btn-lg">
+        <button class="btn btn-primary btn-lg">
           Sign me up
         </button>
       </div>
@@ -47,23 +52,7 @@
     <h2 class="elextern">
       Login
     </h2>
-    <form action="index.php" method="post">
-      <input type="hidden" name="ex_form" value="login" />
-      
-      <label for="email">E-mail:</label>
-      <input type="text" name="email" class="form-control" placeholder="i.e.: frederic@mysite.com" />
-      
-      <label for="password">Password:</label>
-      <input type="password" name="password" class="form-control" />
-      
-      <br />
-      
-      <div class="center">
-        <button type="submit" class="btn btn-default">
-          Log me in
-        </button>
-      </div>
-    </form>
+    <?php require 'login_form.php'; ?>
   </div>
   
   <div class="col-md-1">

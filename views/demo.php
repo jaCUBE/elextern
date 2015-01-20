@@ -5,8 +5,7 @@
   
   
   <div class="col-md-5">
-    <?php require 'form.php'; ?>
-    <div id="chart_div"></div>
+    <?php require 'views/chart/chart.php'; ?>
     
     <img src="<?php echo URL; ?>/images/demo_chart1.png" />
     
@@ -21,8 +20,8 @@
   
   <div class="col-md-7">
     <div class="jumbotron">      
-      <p>ELEXTERN is a tool that clearly distinguishes physical impacts from social parameters that
-        are scenario-dependent, to be chosen by the user.
+      <p>ELEXTERN is a tool that computes the real costs of electricity making, including externalities.
+        It clearly distinguishes physical impacts from social parameters that are scenario-dependent, to be chosen by the user.
         <br /><br />
         It considers electricity variable value
         (peak/low demand) and relative costs of each technology as well as following externalities:
@@ -30,7 +29,11 @@
         health impact, and long-term liabilities.</p>
 
       <p class="right">
-        <a class="btn btn-primary btn-lg" href="login.php" role="button">Sign up for free! &raquo;</a><br />
+        <a href="#" data-toggle="modal" data-target="#elextern-login" class="btn btn-success" style="margin-top: 10px;">
+          I have an account, log me in
+        </a>
+        
+        <a class="btn btn-primary btn-lg" href="login.php" role="button">Sign up for free! &raquo;</a>
       </p>
     </div>    
 
@@ -69,9 +72,9 @@
 
     <p style="font-size: 8pt;">
       <strong>References</strong><br />
-      [1] International Energy Agency and Organisation for Economic Co-operation and Development (IEA/OECD); Projected Costs of Generating Electricity; 2010; Paris, France
+      [1] International Energy Agency and Organisation for Economic Co-operation and Development (IEA/OECD); Projected Costs of Generating Electricity; 2010; Paris, France <a href="http://www.iea.org/publications/freepublications/publication/projected_costs.pdf" class="btn btn-xs btn-default">Web</a>
       <br /><br />
-      [2] Máca V, Melichar J, Ščasný M; Internalization of External Costs of Energy Generation in Central and Eastern European Countries; Journal of Environment & Development; 21(2):181-197; June 2012
+      [2] Máca V, Melichar J, Ščasný M; Internalization of External Costs of Energy Generation in Central and Eastern European Countries; Journal of Environment & Development; 21(2):181-197; June 2012 <a href="http://dx.doi.org/10.1177/1070496512442504" class="btn btn-xs btn-default">Web</a>
     </p>
 
   </div>
@@ -79,3 +82,25 @@
 </div>
 
 
+
+
+<div class="modal fade" id="elextern-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ELEXTERN Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-warning">
+          So far, for testing purposes only. Just press <strong>Log Me In</strong> button or <a href="#" class="btn btn-xs btn-warning" onclick="login();">this button</a>. It will log you in testing account.
+        </div>
+        <?php require 'login_form.php'; ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  

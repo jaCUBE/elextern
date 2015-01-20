@@ -28,6 +28,10 @@ $(function() {
   
   $('#table, #chart').ready(energy_selection_count);
   
+  $('.demo-only').hide();
+  $('#demo .demo-only').show();
+  
+  
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
 });
@@ -287,4 +291,16 @@ function energy_selection_count(){
   var count = $('#energy-selection .energy-item.btn-success').length;
   
   $('#energy-selection-disabled').html(count);
+}
+
+function login(){
+  setCookie('login', 'test', '/', 20);
+  
+  self.location= 'index.php';
+}
+
+function logout(){
+  setCookie('login', '', '/', 20);
+  
+  self.location= 'index.php';
 }

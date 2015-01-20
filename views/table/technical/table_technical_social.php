@@ -1,5 +1,5 @@
 <tr class="extended-land-use child-social">
-  <td class="attribute"><i class="fa fa-level-down"></i> Sick Leaves (per MWh)</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Sick Leaves (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_sick_leave'); ?>
@@ -11,7 +11,7 @@
 
 
 <tr class="extended-land-use child-social">
-  <td class="attribute"><i class="fa fa-level-down"></i> Respiratory Diseases (per MWh)</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Respiratory Diseases (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_respiratory'); ?>
@@ -23,7 +23,7 @@
 
 
 <tr class="extended-land-use child-social">
-  <td class="attribute"><i class="fa fa-level-down"></i> Cancers (per MWh)</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Cancers (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_cancer'); ?>
@@ -34,7 +34,7 @@
 
 
 <tr class="extended-land-use child-social">
-  <td class="attribute"><i class="fa fa-level-down"></i> Mortality (per MWh)</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Mortality (per MWh)</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_mortality'); ?>

@@ -11,7 +11,7 @@
 </tr>
 
 <tr class="social-sick child child-social" data-placement="bottom" data-original-title="Sick leaves" data-content="Lost working days">
-  <td class="attribute"><i class="fa fa-level-down"></i> Sick leaves</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Sick leaves</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialSickLeave', true); ?>
@@ -22,7 +22,7 @@
 
 
 <tr class="social-respiratory child child-social" data-placement="bottom" data-original-title="Respiratory Diseases" data-content="Respiratory diseases due to air pollution from burning fuels">
-  <td class="attribute"><i class="fa fa-level-down"></i> Respiratory Diseases</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Respiratory Diseases</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialRespiratoryDisease', true); ?>
@@ -33,7 +33,7 @@
 
 
 <tr class="social-cancer child child-social" data-placement="bottom" data-original-title="Cancers" data-content="Cancers due to irradiation from nuclear materials manipulation incidents">
-  <td class="attribute"><i class="fa fa-level-down"></i> Cancers</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Cancers</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialCancer', true); ?>
@@ -44,7 +44,7 @@
 
 
 <tr class="social-mortality child child-social" data-placement="bottom" data-original-title="Mortality" data-content="Average deaths per use of Technology (any cause)">
-  <td class="attribute"><i class="fa fa-level-down"></i> Mortality</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Mortality</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactSocialMortality', true); ?>

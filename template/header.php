@@ -52,8 +52,21 @@
           <a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a>
         </li>
         
+
+        
         
       </ul>
+
+      <?php if($_EX->isLogged()){ ?>
+      <ul class="nav navbar-nav navbar-right">
+        <li style="padding-top: 7px;">
+         
+          <div onclick="logout();" class="btn btn-danger btn-xs">
+            <i class="fa fa-key"></i> Logout <?php echo $_COOKIE['login']; ?>
+          </div>
+        </li>
+      </ul>
+      <?php } ?>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

@@ -11,7 +11,7 @@
 </tr>
 
 <tr class="conflict-of-use child child-environmental" data-placement="bottom" data-original-title="Conflict of Use" data-content="Extended land use for the installations and upstream activities (mining) leading to loss of biodiversity and the free services offered by nature.">
-  <td class="attribute"><i class="fa fa-level-down"></i> Conflict of Use</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Conflict of Use</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEnvironmentLandUse', true); ?>
@@ -20,7 +20,7 @@
 </tr>
 
 <tr class="displaced-people-compensation child child-environmental" data-placement="bottom" data-original-title="Unexpected Displaced People" data-content="In case of not-planned evacuation (nuclear incident) compensations are due to expelled people for their new accomodation.">
-  <td class="attribute"><i class="fa fa-level-down"></i> Compensation for Expulsion</td>
+  <td class="attribute"><i class="fa fa-level-up"></i> Compensation for Expulsion</td>
   <?php foreach($main->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEnvironmentDisplacedPeople', true); ?>
