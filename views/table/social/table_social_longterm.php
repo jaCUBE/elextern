@@ -1,4 +1,4 @@
-<tr class="impact-longterm parent" id="longterm" data-placement="bottom" data-original-title="Longterm Impact" data-content=" When do we expect climate change impacts to start to affect our lifes.">
+<tr class="impact-longterm parent" id="longterm" data-placement="bottom" data-original-title="Longterm Impact" data-content="Global climate change (high momentum) and nuclear waste storage (very-long timescales involved) are here considered to impact future generations in the long-term">
   <td class="attribute">
     Long-term Impact
   </td>

@@ -26,7 +26,7 @@ class TechList {
   private function prepareTech(){
     $this->fetchTechList();
     
-    $this->checkFull();
+    $this->checkVisibility();
   }
   
   
@@ -52,11 +52,20 @@ class TechList {
   }
   
   
-  public function checkFull(){
+  public function checkVisibility(){
+    global $_EX;
+    
     foreach($this->tech as $index => $tech){
+      
       if(!$tech->isFull() OR $tech->isDisabled()){
         unset($this->tech[$index]);
       }
+      
+      if(!$_EX->isLogged() AND $tech->show_demo == 0){
+        unset($this->tech[$index]);
+      }
+      
+      
     }
   }
   
