@@ -28,7 +28,7 @@ class DataManager {
     
     $sql = '
       SELECT *
-      FROM default_value';
+      FROM ex_default';
     
     $STH = $_DB->prepare($sql);
     $STH->setFetchMode(PDO::FETCH_OBJ);

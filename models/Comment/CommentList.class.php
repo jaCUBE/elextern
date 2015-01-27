@@ -19,7 +19,7 @@ class CommentList {
     
     $sql = '
       SELECT *
-      FROM comments
+      FROM ex_comment
       WHERE visible = 1
       ORDER BY added DESC';
     

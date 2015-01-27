@@ -6,7 +6,7 @@ function elextern_chart() {
   $.ajax({
     type: "POST",
     data: $('#form-basic').serialize(),
-    url: 'ajax_chart.php',
+    url: 'ajax.php?action=chart',
     datatype: 'json',
     success: function(data, textStatus, xhr) {      
       var data = new google.visualization.DataTable(data);

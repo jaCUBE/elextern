@@ -56,7 +56,7 @@ class Ex {
       
       $sql = '
         SELECT COUNT(*) AS comment_count
-        FROM comments
+        FROM ex_comment
         WHERE visible = 1';
       
       $STH = $_DB->prepare($sql);
@@ -94,6 +94,38 @@ class Ex {
     }
     
     return false;
+  }
+  
+  
+  
+  public function view($view_name, $data = false, $data2 = false, $data3 = false){
+    $path = 'views/'; // Základní cesta
+
+    $view_folder = Array(
+      'admin',
+      'chart',  
+      'comment',
+      'contact',
+      'demo',
+      'form',
+      'login',
+      'source',
+      'table'); // Seznam zvláštních složek views
+
+    foreach($view_folder as $view_folder_one){ // Procházení všech zvláštních složek
+      if(strpos($view_name, $view_folder_one) === 0){ // Pokud název pohledu začíná názvem zvláštní složky...
+        $path .= $view_folder_one.'/'; // Přidání zvláštní složky k cestě
+      }
+    }
+
+    $div_name = str_replace('_', '-', $view_name); // Převedení jména pohledu na ID divu (podtržítko -> pomlčka)
+
+    
+    echo '<div id="'.$div_name.'">'; // Pohled se zobrazuje v div s ID shodném s názvem pohledu
+    @include $path.$view_name.'.view.php'; // Vykreslení template dle argumentu  
+    echo '</div>';
+    
+    flush(); // Vyprázdnění bufferu s každým pohledem
   }
   
   

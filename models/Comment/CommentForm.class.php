@@ -20,7 +20,7 @@ class CommentForm {
     }
     
     $sql = '
-      INSERT INTO comments(
+      INSERT INTO ex_comment(
         author_name,
         author_email,
         comment_text,

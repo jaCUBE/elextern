@@ -19,7 +19,7 @@ class SourceManager {
     
     $sql = '
       SELECT *
-      FROM source_list
+      FROM ex_source
       WHERE visible = 1
       ORDER BY show_order ASC';
     

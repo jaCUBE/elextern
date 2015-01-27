@@ -18,8 +18,8 @@ $(function() {
   $('#chart input, #demo input').change(elextern_chart); // CHART: every change of input redraws chart
   $('#chart #legend span').click(save_form); // CHART: every click on legend saves form state
 
-  $('#table input').keyup(ajax_table);  // TABLE: every key up redraws table
-  $('#table input').change(ajax_table); // TABLE: every change of input redraws table
+  $('#table-wrap input').keyup(ajax_table);  // TABLE: every key up redraws table
+  $('#table-wrap input').change(ajax_table); // TABLE: every change of input redraws table
   
   $('#energy-selection .energy-item').click(toggle_energy_item);
   
@@ -87,7 +87,7 @@ function ajax_table(){
   
   $.ajax({
     type: 'POST',
-    url: 'ajax_table.php',
+    url: 'ajax.php?action=table',
     data: $('#form-basic').serialize(), // Sending whole form through POST field
     success: function(data, textStatus, xhr) {
       $('#table-content').html(data); // Returned data is set as content of #table-content
@@ -104,7 +104,7 @@ function ajax_table(){
 function ajax_co2(){
   $.ajax({
     type: "POST",
-    url: 'ajax_co2.php',
+    url: 'ajax.php?action=co2',
     data: $('#form-basic').serialize(),
     success: function(data, textStatus, xhr) {
       $('.ajax-co2').html(data);

@@ -1,7 +1,7 @@
 <?php
 
-require 'autoloader.php'; // Including autoloader function for automatic loading classes
-require 'config.php'; // Config file with database credentials and other important stuff
+require __DIR__.'/autoloader.php'; // Including autoloader function for automatic loading classes
+require __DIR__.'/config.php'; // Config file with database credentials and other important stuff
 
 date_default_timezone_set('Europe/Prague'); // Current time is current time
 

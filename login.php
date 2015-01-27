@@ -8,7 +8,7 @@ require 'template/header.php';
 ?>
 
 
-<?php $tech_list = new TechList(); ?>
+<?php $tech_list = new TechManager(); ?>
 
 
   <div id="chart">

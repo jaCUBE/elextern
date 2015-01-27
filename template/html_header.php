@@ -9,7 +9,7 @@
     <link rel="SHORTCUT ICON" href="favicon.ico" />
     
     <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
-    <script src="<?php echo URL; ?>/libraries/less.js/less-1.7.5.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js" type="text/javascript"></script>
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     
     <script src="<?php echo URL; ?>/libraries/jquery-chosen/chosen.jquery.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/jquery-chosen/chosen.min.css">

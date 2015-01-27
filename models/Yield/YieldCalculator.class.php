@@ -62,7 +62,7 @@ class YieldCalculator {
     
     $sql = '
       SELECT *
-      FROM yield
+      FROM ex_yield
       ORDER BY load_factor DESC'; // SQL query for all yield records in db
     
     $STH = $_DB->prepare($sql);

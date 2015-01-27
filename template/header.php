@@ -37,12 +37,12 @@
 
           
           <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'source.php') echo 'active'; ?>">
-            <a href="source.php"><i class="fa fa-book"></i> Sources</a>
+            <a href="source.php"><i class="fa fa-file-text-o"></i> Sources</a>
           </li>
 
           
           <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'comment.php') echo 'active'; ?>">
-            <a href="comment.php"><i class="fa fa-comment"></i> Comments <span class="badge"><?php echo $_EX->countComment(); ?></span></a>
+            <a href="comment.php"><i class="fa fa-comments-o"></i> Comments <span class="badge"><?php echo $_EX->countComment(); ?></span></a>
           </li>
         <?php } ?>
         
