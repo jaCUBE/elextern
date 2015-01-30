@@ -29,7 +29,7 @@
         health impact, and long-term liabilities.</p>
 
       <p class="right">
-        <a href="#" data-toggle="modal" data-target="#elextern-login" class="btn btn-success" style="margin-top: 10px;">
+        <a href="#" class="btn btn-success" onclick="login();" style="margin-top: 10px;">
           I have an account, log me in
         </a>
         

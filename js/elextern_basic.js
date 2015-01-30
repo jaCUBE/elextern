@@ -12,21 +12,17 @@ $(function() {
   $('#chart input, #demo input').keyup(elextern_chart); // CHART: every key up redraws chart
   $('#chart input, #demo input').change(elextern_chart); // CHART: every change of input redraws chart
   $('#chart #legend span').click(save_form); // CHART: every click on legend saves form state
+  
 
   $('#table-wrap input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table-wrap input').change(ajax_table); // TABLE: every change of input redraws table
   
   $('.energy-item').click(toggle_energy_item);
-  
-  $('#table, #chart').ready(energy_selection_count);
-  
-  $('.demo-only').hide();
-  $('#demo .demo-only').show();
-  
-  $('#test').trigger('click');
-  
+
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
+  
+  demo_limitation();
 });
 
 
@@ -43,7 +39,6 @@ $(function() {
  * @description Initializing another things which need to be initialized after every AJAX request.
  * @returns {undefined}
  */
-
 
 function reinitialize(){
   $('#table-sources tr, #legend span').popover({ // Initializing popovers for every related elements
@@ -115,6 +110,15 @@ function toggle_checkbox(){
 }
 
 
+
+function demo_limitation(){  
+  $('.demo-only').hide(); // Hides all elements with demo-only class everywhere
+
+  if($('#demo').length > 0){ // On demo page...
+    $('.demo-only').show(); // Shows up all demo-only elements
+    $('#demo .nav-tabs').html(''); // Deleting tabs from demo form
+  }
+}
 
 
 function save_form(){
@@ -263,13 +267,6 @@ function toggle_energy_item(autorefresh){
   if($('#chart').length > 0){
     setTimeout(elextern_chart, 250);
   }
-}
-
-
-function energy_selection_count(){
-  var count = $('#energy-selection .energy-item.btn-success').length;
-  
-  $('#energy-selection-disabled').html(count);
 }
 
 function login(){
