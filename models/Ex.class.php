@@ -128,6 +128,21 @@ class Ex {
     flush(); // Vyprázdnění bufferu s každým pohledem
   }
   
+    
+
+  
+  public function  checkIe(){
+    $is_ie6  = (bool) preg_match('/msie 6./i', $_SERVER['HTTP_USER_AGENT']); 
+    $is_ie7  = (bool) preg_match('/msie 7./i', $_SERVER['HTTP_USER_AGENT']); 
+    $is_ie8  = (bool) preg_match('/msie 8./i', $_SERVER['HTTP_USER_AGENT']);
+
+    if($is_ie6 OR $is_ie7 OR $is_ie8){ 
+      return true; 
+    }
+    
+    return false;
+  }
+  
   
     
 }

@@ -242,7 +242,7 @@ function chart_label_check(){
 }
 
 
-function toggle_energy_item(autorefresh){
+function toggle_energy_item(){
   var name = $(this).data('energy');
   
   $(this).toggleClass('btn-success');
@@ -252,13 +252,9 @@ function toggle_energy_item(autorefresh){
 
   if(cookie == 'disabled'){
     setCookie(name, 'enabled', '/', 20);
-  }else{
-  
-  setCookie(name, 'disabled', '/', 20);
+  }else{  
+    setCookie(name, 'disabled', '/', 20);
   }
-  
-  
-  energy_selection_count();
   
   if($('#table').length > 0){
     setTimeout(ajax_table, 250);

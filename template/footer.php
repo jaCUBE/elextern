@@ -1,5 +1,5 @@
 <div id="footer">
-  <h2>Elextern</h2>
+  <h2 class="elextern">Elextern</h2>
   <h3>Electricity Externalities for Better Planning</h3>
   
   <div class="copy">
