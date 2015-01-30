@@ -8,7 +8,7 @@
 
 function exAutoload($class_name) {  
   if(strpos($class_name, 'Controller')){
-    @include 'Controllers/'.$class_name.'.class.php'; // Including whole way with or without category and class name
+    @include 'controllers/'.$class_name.'.class.php'; // Including whole way with or without category and class name
     return true;
   }
   
