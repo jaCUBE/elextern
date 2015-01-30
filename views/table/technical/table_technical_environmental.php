@@ -3,7 +3,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('extendedLandUse', true); ?>
-    <?php echo $_EX->htmlUnit('m<sup>2</sup> &times; year'); ?>
+    <?php echo $this->htmlUnit('m<sup>2</sup> &times; year'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -16,7 +16,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('displacedPeople', true); ?>
-    <?php echo $_EX->htmlUnit('people'); ?>
+    <?php echo $this->htmlUnit('people'); ?>
   </td>
   <?php } ?>
 </tr>

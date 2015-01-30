@@ -5,7 +5,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEconomic', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/MWh'); ?>
+    <?php echo $this->htmlUnit('EUR/MWh'); ?>
   </td>
   <?php } ?>
 </tr>

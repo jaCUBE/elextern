@@ -3,7 +3,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_sick_leave'); ?>
-    <?php echo $_EX->htmlUnit('days'); ?>
+    <?php echo $this->htmlUnit('days'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -15,7 +15,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_respiratory'); ?>
-    <?php echo $_EX->htmlUnit('diseases'); ?>
+    <?php echo $this->htmlUnit('diseases'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -27,7 +27,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_cancer'); ?>
-    <?php echo $_EX->htmlUnit('cancers'); ?>
+    <?php echo $this->htmlUnit('cancers'); ?>
   </td>
   <?php } ?>
 </tr> 
@@ -38,7 +38,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('soc_mortality'); ?>
-    <?php echo $_EX->htmlUnit('deaths'); ?>
+    <?php echo $this->htmlUnit('deaths'); ?>
   </td>
   <?php } ?>
 </tr> 

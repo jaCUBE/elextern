@@ -3,8 +3,6 @@
 </div>
 
 
-
-
 <?php foreach($data->tech_all as $i => $energy){ ?>
   <?php if($i % 3 == 0 OR $i == 0){ ?>
     <div class="row">

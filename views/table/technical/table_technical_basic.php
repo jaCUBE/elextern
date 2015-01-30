@@ -50,8 +50,8 @@
   <td class="attribute">Life Time</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="center">
-    <?php echo $tech->lifetime; ?>
-    <?php echo $_EX->htmlUnit('year'); ?>
+    <?php echo $tech->makeHtml('lifetime'); ?>
+    <?php echo $this->htmlUnit('year'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -63,7 +63,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="center">
     <?php echo $tech->construction_time; ?>
-    <?php echo $_EX->htmlUnit('year'); ?>
+    <?php echo $this->htmlUnit('year'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -76,7 +76,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('capex'); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $this->htmlUnit('EUR/kW'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -90,7 +90,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('capexIdr', true); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $this->htmlUnit('EUR/kW'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -103,7 +103,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('grid_connection'); ?>
-    <?php echo $_EX->htmlUnit('EUR/kW'); ?>
+    <?php echo $this->htmlUnit('EUR/kW'); ?>
   </td>
   <?php } ?>
 </tr>
@@ -116,7 +116,7 @@
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('opexOfCapex', true); ?>
-    <?php echo $_EX->htmlUnit('% CAPEX'); ?>
+    <?php echo $this->htmlUnit('% CAPEX'); ?>
   </td>
   <?php } ?>
 </tr>

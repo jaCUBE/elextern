@@ -1,4 +1,4 @@
-<?php $this->view('form', $this->data); ?>
+<?php $this->view('form', $data); ?>
 
 <div id="table-content">
 </div>
