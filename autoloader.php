@@ -21,6 +21,7 @@ function exAutoload($class_name) {
     'Source',
     'TechModel',
     'Tech',
+    'User',
     'Yield'); // Category of classes (each category has its own folder inside default folder)
 
   foreach($folders as $folder){ // Walking through categories...

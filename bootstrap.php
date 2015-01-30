@@ -19,4 +19,6 @@ $data = new DataManager();
 $data->fetchDefaultValue();
 $data->processData();
 
+require 'gate.php';
+
 ?>

@@ -19,16 +19,7 @@
     </td>
     
     
-    
-    <td>
-      Logout:
-    </td>
-    
-    <td>
-      <div class="btn btn-xs btn-danger" onclick="logout();">
-        <i class="fa fa-key"></i> Logout
-      </div>
-    </td>
+
     
   </tr>
   

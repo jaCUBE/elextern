@@ -17,11 +17,19 @@ class ExController {
   
   
   public function __construct() {
+    global $_EX;
+    
     $this->data = new stdClass();
     
     if(empty($_GET['action'])){
       $this->standard();
     }
+    
+
   }
+  
+  
+  
+
   
 }

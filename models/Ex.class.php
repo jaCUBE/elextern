@@ -13,6 +13,9 @@
  */
 class Ex {
   
+  
+  public $logged = null;
+  
     public function databaseConnect(){
       global $_DB;
 
@@ -89,7 +92,7 @@ class Ex {
   
   
   public function isLogged(){
-    if(@$_COOKIE['login'] == 'test'){
+    if(is_a($this->logged, 'User')){
       return true;
     }
     
@@ -108,7 +111,6 @@ class Ex {
       'contact',
       'demo',
       'form',
-      'login',
       'source',
       'table'); // Seznam zvláštních složek views
 
@@ -141,8 +143,6 @@ class Ex {
     }
     
     return false;
-  }
-  
-  
+  }  
     
 }

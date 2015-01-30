@@ -19,6 +19,10 @@ $(function() {
   
   $('.energy-item').click(toggle_energy_item);
 
+  $('#signup-form input').change(ajax_signup_check);
+  $('#signup-form input').keyup(ajax_signup_check);
+  $('#signup-form').ready(ajax_signup_check);
+
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
   
@@ -88,6 +92,21 @@ function ajax_co2(){
 
 
 
+function ajax_signup_check(){
+  $.ajax({
+    type: "POST",
+    url: 'ajax.php?action=signup_check',
+    data: {
+      'email': $('#signup-form #email').val(),
+      'name': $('#signup-form #name').val(),
+      'password': $('#signup-form #password').val()
+    },
+    success: function(data, textStatus, xhr) {
+      $('#signup-button').html(data);
+    }
+  });
+}
+
 
 
 
@@ -115,6 +134,8 @@ function demo_limitation(){
   $('.demo-only').hide(); // Hides all elements with demo-only class everywhere
 
   if($('#demo').length > 0){ // On demo page...
+  $('.registered-only').hide();
+    
     $('.demo-only').show(); // Shows up all demo-only elements
     $('#demo .nav-tabs').html(''); // Deleting tabs from demo form
   }
@@ -265,14 +286,12 @@ function toggle_energy_item(){
   }
 }
 
-function login(){
-  setCookie('login', 'test', '/', 20);
-  
-  self.location= 'index.php';
-}
-
 function logout(){
-  setCookie('login', '', '/', 20);
+  setCookie('email', '', '/', 20);
+  setCookie('password', '', '/', 20);
+  
+  setCookie('email', '', '/elextern/', 20);
+  setCookie('password', '', '/elextern/', 20);
   
   self.location= 'index.php';
 }

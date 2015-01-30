@@ -29,12 +29,16 @@
         health impact, and long-term liabilities.</p>
 
       <p class="right">
-        <a href="#" class="btn btn-success" onclick="login();" style="margin-top: 10px;">
+        <a href="#" class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
           I have an account, log me in
         </a>
         
-        <a class="btn btn-primary btn-lg" href="login.php" role="button">Sign up for free! &raquo;</a>
+        <a href="#" class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">Sign up for free! &raquo;</a>
       </p>
+      
+      <?php echo $this->view('demo_login'); ?>
+      <?php echo $this->view('demo_signup'); ?>
+      
     </div>    
 
     

@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>ELEXTERN: Tech Demo</title>
+    <title>ELEXTERN Beta</title>
     
     <meta charset="UTF-8" />
     
