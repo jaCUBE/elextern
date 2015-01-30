@@ -8,11 +8,7 @@
     
     <link rel="SHORTCUT ICON" href="favicon.ico" />
     
-    <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.3.0/less.min.js" type="text/javascript"></script>
-    
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     
@@ -20,15 +16,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/paper/bootstrap.min.css" rel="stylesheet">
     
-    <script src="<?php echo URL; ?>/libraries/jquery-chosen/chosen.jquery.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/jquery-chosen/chosen.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     
     <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
-    
-    <script src="<?php echo URL; ?>/libraries/jquery-mousewheel/jquery.mousewheel.min.js" type="text/javascript"></script>
     
     <link href="//fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
     
@@ -49,6 +42,9 @@
       ga('send', 'pageview');
 
     </script>
+    
+    <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.3.0/less.min.js" type="text/javascript"></script>
 
   </head>
   

@@ -3,7 +3,9 @@
   
   
   <div class="col-md-6 center">
-    <h2>Data & Calculations</h2>
+    <h2 class="elextern">
+      Data & Calculations
+    </h2>
 
     <a href="mailto:frederic.wertz@cvrez.cz">
       frederic.wertz@cvrez.cz
@@ -12,7 +14,9 @@
   
   
   <div class="col-md-6 center">
-    <h2>Website & Design</h2>
+    <h2 class="elextern">
+      Website & Design
+    </h2>
 
     <a href="mailto:jakub.rychecky@cvrez.cz">
       jakub.rychecky@cvrez.cz

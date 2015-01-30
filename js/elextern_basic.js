@@ -4,11 +4,6 @@ $(function() {
 
   chart_label_check(); // Function checks chart labels according to loaded checkbox state from local storage
 
-  $('.jquery-chosen').chosen(); // Initializing jQuery Chosen plug-in
-  
-  $('#another-input-select').ready(show_another_input); // First run of function for showing tune impact inputs
-  $('#another-input-select').change(show_another_input); // With every change of select tune up impact values, it shows different input
-
   $('input, textarea, select').change(save_form); // Every change in form input makes form save into local storage
   $('input, textarea, select').keyup(save_form); // Every press of key makes form save form into local storage
 
@@ -21,16 +16,14 @@ $(function() {
   $('#table-wrap input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table-wrap input').change(ajax_table); // TABLE: every change of input redraws table
   
-  $('#energy-selection .energy-item').click(toggle_energy_item);
-  
-  $('#demo #form-basic table td, #demo #form-basic .btn').hide();
-  $('#demo #form-basic table td:first').show();
+  $('.energy-item').click(toggle_energy_item);
   
   $('#table, #chart').ready(energy_selection_count);
   
   $('.demo-only').hide();
   $('#demo .demo-only').show();
   
+  $('#test').trigger('click');
   
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
@@ -61,20 +54,6 @@ function reinitialize(){
 
 
 
-/**
- * @description Show tune up impact input from chosen one from select.
- * @returns {undefined}
- */
-
-function show_another_input(){
-  var selector = $('#another-input-select').val(); // Selector is value of selected option
-  
-  $('.another-input').hide(); // Hide all tune up impact values first
-  $(selector).show(); // Then show the chosen one
-}
-
-
-
 
 
 /**
@@ -88,7 +67,7 @@ function ajax_table(){
   $.ajax({
     type: 'POST',
     url: 'ajax.php?action=table',
-    data: $('#form-basic').serialize(), // Sending whole form through POST field
+    data: $('#elextern-form').serialize(), // Sending whole form through POST field
     success: function(data, textStatus, xhr) {
       $('#table-content').html(data); // Returned data is set as content of #table-content
       reinitialize(); // Re-initializing some stuff
@@ -105,7 +84,7 @@ function ajax_co2(){
   $.ajax({
     type: "POST",
     url: 'ajax.php?action=co2',
-    data: $('#form-basic').serialize(),
+    data: $('#elextern-form').serialize(),
     success: function(data, textStatus, xhr) {
       $('.ajax-co2').html(data);
     }
@@ -237,7 +216,7 @@ function default_form(){
     }
   });  
   
-  $('#form-basic input:first').trigger('change');
+  $('#elextern-form input:first').trigger('change');
 }
 
 

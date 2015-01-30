@@ -176,7 +176,7 @@ function initialize_touchspin(){
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 0,
     max: 100,
-    step: 0.5,
+    step: 1,
     decimals: 0,
     boostat: 5,
     maxboostedstep: 10,

@@ -1,67 +1,16 @@
 * {
   font-family: 'Ubuntu';
+  font-size: 12px;
 }
 
-body {
-  background: #EDF6FF !important;
+input {
+  font-size: 12px !important;
 }
 
-.alert {
-  padding: 8px !important;
+a {
+  outline: 0 !important;
 }
 
-label {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.navbar-header a, #contact h2, #source h2, #comment h2, #footer h2, h2.elextern {
-  color: #0054A4 !important;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 15pt !important;
-  font-weight: bold !important;
-  
-
-  &::first-letter {
-    color: #009AC7;
-    font-size: 17pt;
-  } 
-}
-
-
-#container {
-  width: 1040px;
-  margin: auto;
-  background: #FFFFFF;
-  padding: 10px 20px;
-  border-left: 1px solid #87A0B7;
-  border-right: 1px solid #87A0B7;
-  border-bottom: 1px solid #87A0B7;
-  
--webkit-box-shadow: 1px 1px 5px 4px #D2E3F4;
--moz-box-shadow:    1px 1px 5px 4px #D2E3F4;
-box-shadow:         1px 1px 5px 4px #D2E3F4;
-
-border-radius: 0px 0px 10px 10px;
-}
-
-.well {
-  background: #EFFBFF !important;
-  margin-bottom: 30px !important;
-  border-color: #CBE5ED !important; 
-}
-
-#form-basic {
-  padding: 7px;
-}
-
-#form-basic {
-  input {
-    text-align: right;
-  }
-}
 
 .left {
   text-align: left;
@@ -78,6 +27,106 @@ border-radius: 0px 0px 10px 10px;
 .full-width {
   width: 100%;
 }
+
+label {
+  font-weight: normal;
+  color: #0E5FAD;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+h2 {
+  font-size: 14pt;
+}
+
+
+.help {
+  &:hover {
+    cursor: help;
+  }
+}
+
+.hand {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
+body {
+  background: #EDF6FF !important;
+  
+  
+  #container {
+    width: 1040px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 10px 20px;
+    border-left: 1px solid #87A0B7;
+    border-right: 1px solid #87A0B7;
+    border-bottom: 1px solid #87A0B7;
+
+    -webkit-box-shadow: 1px 1px 5px 4px #D2E3F4;
+    -moz-box-shadow:    1px 1px 5px 4px #D2E3F4;
+    box-shadow:         1px 1px 5px 4px #D2E3F4;
+
+    border-radius: 0px 0px 10px 10px;
+    
+    
+    #header {
+      width: 100%;
+      
+      td {
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    
+    
+    
+    .elextern {
+      color: #0054A4;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    
+    
+    
+    
+    
+  }
+  
+  
+
+}
+
+
+
+
+
+.alert {
+  color: #5B5B5B;
+  padding: 8px;
+}
+
+
+
+
+
+
+
+.well {
+  background: #EFFBFF !important;
+  margin-bottom: 30px !important;
+  border-color: #CBE5ED !important; 
+}
+
+
+
 
 
 #footer {
@@ -110,7 +159,7 @@ border-radius: 0px 0px 10px 10px;
 input.form-control {
   width: fit-content !important;
   padding: 3px 5px !important;
-  height: 34px !important;
+  height: 28px !important;
 }
 
 
@@ -123,6 +172,17 @@ input.form-control {
   }
 }
 
+.btn {
+  text-transform: none;
+  
+  &.btn-primary{
+    &:hover {
+      background:  #0D87E9;
+    }
+  }
+  
+}
+
 
 #tech-table {
   font-size: 10pt;
@@ -130,7 +190,7 @@ input.form-control {
   
   td, th {
     border: 1px solid #BBBBBB;
-    padding: 5px 4px;
+    padding: 2px 4px;
     font-size: 9pt;
   }
   
@@ -235,27 +295,6 @@ input.form-control {
 }
 
 
-.user-input {
-  td {
-    padding: 0px 5px;
-    vertical-align: top;
-  }
-}
-
-
-.help {
-  &:hover {
-    cursor: help;
-  }
-}
-
-.hand {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-
 
 #legend {  
   span {
@@ -352,10 +391,6 @@ input.form-control {
   }
 }
 
-.badge {
-  background: #169CC5 !important;
-}
-
 
 
 #energy-selection {
@@ -374,5 +409,47 @@ input.form-control {
   .jumbotron {
     word-break: keep-all;
     border-radius: 10px;
+  }
+}
+
+
+.nav-tabs {
+  margin-top: 15px;
+}
+
+.nav-tabs > li * {
+  border: none !important;
+}
+
+.nav-tabs > li.active > a {
+  box-shadow: 0 -2px 0 #0E5FAD inset !important;
+  color: #0E5FAD !important;
+}
+
+.input-group-addon {
+  padding: 0px 10px;
+  font-size: 11px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  background: #0E5FAD;
+}
+
+.nav.nav-pills {
+  margin-top: 17px;
+}
+
+.tab-pane {  
+  padding: 5px 7px;
+  border: 1px solid #EDF6FF;
+  background: #F9FCFF;
+  height: 87px;
+  margin-bottom: 15px;
+  
+  table {
+    td {
+      vertical-align: middle;
+      padding: 3px;
+    }
   }
 }

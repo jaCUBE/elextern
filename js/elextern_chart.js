@@ -5,7 +5,7 @@ function elextern_chart() {
 
   $.ajax({
     type: "POST",
-    data: $('#form-basic').serialize(),
+    data: $('#elextern-form').serialize(),
     url: 'ajax.php?action=chart',
     datatype: 'json',
     success: function(data, textStatus, xhr) {      
