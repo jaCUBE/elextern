@@ -4,7 +4,7 @@
   
   
   <div class="col-md-7">
-    <h2>
+    <h2 class="elextern">
       Comments
     </h2>
     
@@ -23,7 +23,7 @@
   
   
   <div class="col-md-5">
-    <h2>
+    <h2 class="elextern">
       Add Comment
     </h2>
     

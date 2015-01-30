@@ -9,8 +9,6 @@
         <span class="energy-item btn btn-xs <?php if($energy->isDisabled()){ echo 'btn-danger'; }else{ echo 'btn-success'; } ?> <?php echo $energy->cssClass(); ?>" data-energy="<?php echo $energy->cssName(); ?>">
           <?php echo $energy->technology; ?>
         </span>
-
-        &nbsp;
       <?php } ?>
     </td>
     

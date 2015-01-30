@@ -1,8 +1,23 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<table>
+  
+  
+  
+  <tr>
+    
+    <td>
+      Default values for whole form:
+    </td>
+    
+    <td>
+      <div class="btn btn-xs btn-info" onclick="form_default_value();">
+        <i class="fa fa-undo"></i> Set default values
+      </div>
+    </td>
+    
+  </tr>
+  
+  
+  
+  
+</table>
+  

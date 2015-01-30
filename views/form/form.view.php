@@ -42,6 +42,5 @@
   <?php } ?>
 </form>
 
-<div class="right" style="font-size: 8pt;">
-  Implicit CO<sub>2</sub> price is <span class="ajax-co2"></span> €/tCO<sub>2</sub>.
+<div id="ajax-co2">
 </div>

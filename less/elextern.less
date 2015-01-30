@@ -174,12 +174,43 @@ input.form-control {
 
 .btn {
   text-transform: none;
+  margin: 3px;
+  
+  &.btn-default{
+    &:hover, &:focus {
+      background:  #E6E6E6;
+    }
+  }
   
   &.btn-primary{
-    &:hover {
+    &:hover, &:focus {
       background:  #0D87E9;
     }
   }
+  
+  &.btn-info {
+    &:hover, &:focus {
+      background: #771D79;
+    }
+  }
+  
+  &.btn-success {
+    &:hover, &:focus {
+      background: #3D8B40;
+    }
+  }
+  
+  &.btn-danger {
+    &:hover, &:focus {
+      background: #B9151B;
+    }
+  }
+  
+  &.btn-warning {
+    &:hover, &:focus {
+      background: #EA9000;
+    }
+  }  
   
 }
 
@@ -443,8 +474,8 @@ input.form-control {
   padding: 5px 7px;
   border: 1px solid #EDF6FF;
   background: #F9FCFF;
-  height: 87px;
-  margin-bottom: 15px;
+  height: 90px;
+  color: #0E5FAD;
   
   table {
     td {
@@ -452,4 +483,19 @@ input.form-control {
       padding: 3px;
     }
   }
+}
+
+.bootstrap-touchspin-up, .bootstrap-touchspin-down {
+  margin: 0px !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 -2px 0 #0E5FAD inset !important;
+}
+
+#ajax-co2 {
+  font-size: 9px;
+  margin-bottom: 15px;
+  color: #169CC5;
+  text-align: right;
 }

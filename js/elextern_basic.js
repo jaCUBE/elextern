@@ -86,7 +86,7 @@ function ajax_co2(){
     url: 'ajax.php?action=co2',
     data: $('#elextern-form').serialize(),
     success: function(data, textStatus, xhr) {
-      $('.ajax-co2').html(data);
+      $('#ajax-co2').html(data);
     }
   });
 }
@@ -209,7 +209,7 @@ function load_form_checkbox(form_checkbox){
 }
 
 
-function default_form(){
+function form_default_value(){
   $('.elextern-storage').each(function(){
     if($(this).attr('type') == 'text'){
       $(this).val($(this).data('default'));
