@@ -19,5 +19,9 @@ if(@$_POST['ex_form'] == 'login' OR !empty($_COOKIE['email'])){
   $user_form->loginUser();
 }
 
+if($_EX->isLogged() AND $file_current != 'ajax.php'){
+  $_EX->logged->lastVisitPing();
+}
+
 
 ?>

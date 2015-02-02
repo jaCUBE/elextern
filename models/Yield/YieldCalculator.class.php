@@ -52,10 +52,10 @@ class YieldCalculator {
   
   
   
- /**
-  * @brief Fetches all yield records from database and saves it into property of this class.
-  * @return void
-  */
+  /**
+   * @brief Fetches all yield records from database and saves it into property of this class.
+   * @return void
+   */
   
   public function fetchYield(){
     global $_DB;
@@ -78,13 +78,13 @@ class YieldCalculator {
   
   
   
- /**
-  * @brief Main method for interpolation of yield.
-  * @param float $value Value of load factor to interpolate
-  * @param string $time Optional: select "day" or "year" to interpolate
-  * @param string $high Optional: select "highest" or "lowest" of prices to interpolate 
-  * @return float Interpolated value for the first parameter
-  */
+  /**
+   * @brief Main method for interpolation of yield.
+   * @param float $value Value of load factor to interpolate
+   * @param string $time Optional: select "day" or "year" to interpolate
+   * @param string $high Optional: select "highest" or "lowest" of prices to interpolate 
+   * @return float Interpolated value for the first parameter
+   */
   
   public function interpolationYield($value, $time = 'year', $high = 'highest'){
     if($value < 100){

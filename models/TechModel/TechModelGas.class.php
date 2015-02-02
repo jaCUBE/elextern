@@ -38,6 +38,9 @@ class TechModelGas extends TechModel {
   }
   
   
+  
+  
+  
   /**
    * @brief Overriden calculation of average CO2 emissions per MWh due to fossil fuel burning and construction works
    * @return float Average CO2 gas emission

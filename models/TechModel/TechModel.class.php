@@ -173,8 +173,7 @@ class TechModel {
    * @param integer $technology_id Necessary, is called from children with concrete technology ID number
    * @param integer $country_code Optional: code for country/region, default one is "cz" (Czech Republic)
    * @return void
-   */
-  
+   */  
   
   public function __construct() {        
     $this->opex /= 100;
@@ -182,6 +181,25 @@ class TechModel {
     $this->eco_foreign_purchases /= 100;
     $this->eco_efficiency /= 100;
     $this->load_factor /= 100;
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Method checks if this concrete technology is disabled for current view.
+   * @return boolean Is this technology disabled?
+   */
+
+  public function isDisabled(){
+    global $_EX;
+    
+    if($_COOKIE[$this->cssName()] == 'disabled'){ // If there is disabling cookies for this technology...
+      return true; // ...it is diabled then
+    }
+
+    return false; // In all other cases this technology is not disabled
   }
   
   
@@ -245,11 +263,6 @@ class TechModel {
     $result = $this->opex * $this->capex * 1000 / (8760 * $this->load_factor); // Calculation of result by formula
     
     return $result; // Returning result
-  }
-  
-  
-  public function opexOfCapex(){
-    return $this->opex * 100;
   }
 
   
@@ -360,6 +373,7 @@ class TechModel {
   
   
   
+  
   /**
    * @brief Calculating of all economic impacts together.
    * @return float Cost of all economic impacts [€/MWh]
@@ -367,7 +381,7 @@ class TechModel {
   
   public function impactEconomic(){
     if(!SHOW_IMPACT_ECONOMIC){ // Check if economic impact shouldn't be calculated...
-      return 0.0; // ...if not, retuning 0.
+      return 0.0; // ...if not, retruning 0.
     }
     
     $result = $this->decomissioningActual(); // Costs for decomissiong
@@ -402,7 +416,7 @@ class TechModel {
   
   public function impactSocial(){
     if(!SHOW_IMPACT_SOCIAL){ // Check if social impact shouldn't be calculated...
-      return 0.0; // ...if not, retuning 0.
+      return 0.0; // ...if not, returning 0.
     }
     
     $result = $this->impactSocialSickLeave(); // Costs for sick leaves multiplied by input value
@@ -415,31 +429,68 @@ class TechModel {
   
   
   
-  public function impactSocialSickLeave(){
-    return SOC_SICK_LEAVE * $this->soc_sick_leave;
-  }
-  
-  public function impactSocialRespiratoryDisease(){
-    return SOC_RESPIRATORY * $this->soc_respiratory;
-  }
-  
-  public function impactSocialCancer(){
-    return SOC_CANCER * $this->soc_cancer;
-  }
-  
-  public function impactSocialMortality(){
-    return SOC_MORTALITY * $this->soc_mortality;
-  }
   
   
   /**
-   * @brief Calculating of all ENVIRONMental impacts together.
-   * @return float Cost of all ENVIRONMental impacts [€/MWh]
+   * @brief Calculating of part of social impact costs: costs of sick leaves.
+   * @return float Costs of sickleaves for this technology [€/MWh]
+   */
+  
+  public function impactSocialSickLeave(){
+    return SOC_SICK_LEAVE * $this->soc_sick_leave; // Costs of sick leave based on database stored value and user input
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of part of social impact costs: costs of respiratory diseases.
+   * @return float Costs of respiratory diseases for this technology [€/MWh]
+   */
+  
+  public function impactSocialRespiratoryDisease(){
+    return SOC_RESPIRATORY * $this->soc_respiratory; // Costs of respiratory diseases based on database stored value and user input
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of part of social impact costs: costs of cancer healtcare.
+   * @return float Costs of cancer for this technology [€/MWh]
+   */
+  
+  public function impactSocialCancer(){
+    return SOC_CANCER * $this->soc_cancer; // Costs of cancer based on database stored value and user input
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of part of social impact costs: costs of death (soooo morbid).
+   * @return float Costs of death for this technology [€/MWh]
+   */
+  
+  public function impactSocialMortality(){
+    return SOC_MORTALITY * $this->soc_mortality; // Costs of death based on database stored value and user input
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of all environmenental impacts together.
+   * @return float Cost of all environmental impacts [€/MWh]
    */
   
   public function impactEnvironment(){
     if(!SHOW_IMPACT_ENVIRONMENT){ // Check if ENVIRONMental impact shouldn't be calculated...
-      return 0.0; // ...if not, retuning 0.
+      return 0.0; // ...if not, returning 0.
     }
     
     $result = $this->impactEnvironmentLandUse(); // Costs for extended land use multiplied by input value
@@ -452,14 +503,29 @@ class TechModel {
   
   
   
+  /**
+   * @brief Calculating of part of environmental impact costs: costs of extended land user.
+   * @return float Costs of death for this technology [€/MWh]
+   */
+  
   public function impactEnvironmentLandUse(){
-    return ENV_LAND_CONFLICT * $this->extendedLandUse();
+    return ENV_LAND_CONFLICT * $this->extendedLandUse(); // Costs of extended land use based on calculated value and user input
   }
   
+  
+  
+  
+  
+  /**
+   * @brief Calculating of part of environmental impact costs: costs of displaced people
+   * @return float Costs of displaced people for this technology [€/MWh]
+   */
   
   public function impactEnvironmentDisplacedPeople(){
-    return ENV_COMPENSATION * $this->displacedPeople();
+    return ENV_COMPENSATION * $this->displacedPeople(); // Costs of displaced people based on calculated value and user input
   }
+  
+  
   
   
   
@@ -470,7 +536,7 @@ class TechModel {
   
   public function impactLongterm(){
     if(!SHOW_IMPACT_LONGTERM){ // Check if longterm impact shouldn't be calculated...
-      return 0.0; // ...if not, retuning 0.
+      return 0.0; // ...if not, returning 0.
     }
     
     $result = $this->impactLongtermCO2();
@@ -482,8 +548,15 @@ class TechModel {
   
   
   
+  
+  
+  /**
+   * @brief Calculating of part of longterm impact costs: costs of CO2 emissions
+   * @return float Costs of displaced people for this technology [€/MWh]
+   */
+  
   public function impactLongtermCO2(){
-    return LT_CO2_EMISSION * $this->co2Emission(); // Costs for CO2 emissions multiplied by input value
+    return LT_CO2_EMISSION * $this->co2Emission(); // Costs for CO2 emissions multiplied by user input value
   }
   
   
@@ -497,17 +570,17 @@ class TechModel {
    * @return float Cost of externalities [€/MWh]
    */
   
-  public function costExternality(){
+  public function impactTotal(){
     if(!SHOW_COST_EXTERNALITY){ // Check if externalities cost shouldn't be calculated... 
-      return 0.0; // ...if not, retuning 0.
+      return 0.0; // ...if not, returning 0.
     }
     
-    $result = $this->impactENVIRONMent(); // Result is costs of ENVIRONMental impacts...
+    $result = $this->impactEnvironment(); // Result is costs of environmental impacts...
     $result += $this->impactEconomic(); // ...added economic impacts...
     $result += $this->impactSocial(); // ...added social impacts...
     $result += $this->impactLongterm(); // ...added longterm impacts.
 
-    return $result; // Returning result
+    return $result; // Returning result (costs of all impacts together)
   }
   
   
@@ -521,7 +594,7 @@ class TechModel {
   
   public function costReference(){
     $result = $this->costNet(); // Result is net cost...
-    $result += $this->costExternality(); // ...plus externalities costs.
+    $result += $this->impactTotal(); // ...plus externalities (impacts) costs.
     
     return $result; // Returning result
   }
@@ -655,15 +728,6 @@ class TechModel {
     return false;
   }
   
-  
-  public function impactTotal(){
-    return $this->impactEnvironment() + $this->impactEconomic() + $this->impactSocial() + $this->impactLongterm();
-  }
-  
-  public function externalitiesCosts(){
-    return $this->impactTotal();
-  }
-  
   public function netCost(){
     global $_YIELD_CALC;
     
@@ -675,24 +739,6 @@ class TechModel {
   }
   
   
-  public function isDisabled(){
-    global $_EX;
-    
-    if(!$_EX->isLogged() AND $this->show_demo){
-      return false;
-    }
-    
-
-    if(!isset($_COOKIE[$this->cssName()])){
-      return false;
-    }
-
-    if($_COOKIE[$this->cssName()] == 'disabled'){
-      return true;
-    }
-
-    return false;
-  }
   
   
   public function cssName(){
