@@ -1,16 +1,16 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    TechModel 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
+ * 
+ * @class TechModelSolarLand
+ * @brief Class for photovoltaic (PV) solar energy source located on land.
  */
 
-/**
- * Description of TechModelSolarLand
- *
- * @author jaCUBE
- */
 class TechModelSolarLand extends TechModelSolar {
 
   /**
@@ -23,8 +23,16 @@ class TechModelSolarLand extends TechModelSolar {
   } 
   
   
+  
+  
+  
+  /**
+   * @brief Overriden method. Extended land use for the installations and upstream activities (mining) leading to loss of biodiversity and the free services offered by nature. Will be override by children classes since every source has different formula. 
+   * @return float Costs of extended land use for solar land
+   */
+  
   public function extendedLandUse() {
-    $result = 1000 / (LOCAL_DENSITY_SOLAR * $this->load_factor);
+    $result = 1000 / (LOCAL_DENSITY_SOLAR * $this->load_factor); // Formula calculating extended land use for solar land
     
     return $result;
   }

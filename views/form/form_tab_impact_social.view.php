@@ -8,11 +8,11 @@
       <label for="soc-sick-leave">Lost working days cost:</label>
     </td>
     
-    <td style="width: 160px;">
+    <td style="width: 125px;">
       <input type="text" name="soc_sick_leave" id="soc-sick-leave" class="elextern-storage right" value="<?php echo SOC_SICK_LEAVE; ?>" data-default="<?php echo SOC_SICK_LEAVE; ?>">
     </td>
     
-    <td style="width: 80px;">
+    <td style="width: 50px;">
       
     </td>
     
@@ -20,7 +20,7 @@
       <label for="soc-cancer">Irradiation cost:</label>
     </td>
     
-    <td style="width: 160px;">
+    <td style="width: 140px;">
       <input type="text" name="soc_cancer" id="soc-cancer" class="elextern-storage right" value="<?php echo SOC_CANCER; ?>" data-default="<?php echo SOC_CANCER; ?>">
     </td>
     
@@ -35,11 +35,11 @@
       <label for="soc-respiratory">Air pollution cost:</label>
     </td>
     
-    <td style="width: 150px;">
+    <td>
       <input type="text" name="soc_respiratory" id="soc-respiratory" class="elextern-storage right" value="<?php echo SOC_RESPIRATORY; ?>" data-default="<?php echo SOC_RESPIRATORY; ?>">
     </td>
     
-    <td style="width: 80px;">
+    <td>
       
     </td>
     

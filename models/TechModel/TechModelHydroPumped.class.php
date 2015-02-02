@@ -5,7 +5,7 @@
  * @subpackage    TechModel 
  * 
  * @author Jakub Rychecký <jakub@rychecky.cz>
- * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
  * 
  * @class TechModelHydroPumped
  * @brief Class for pumped hydro type of energy sources.

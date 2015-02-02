@@ -1,17 +1,22 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @package       Elextern
+ * @subpackage    TechModel 
+ * 
+ * @author Jakub Rychecký <jakub@rychecky.cz>
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
+ * 
+ * @class TechModelWind
+ * @brief Class for all technologies based on wind energy source.
  */
 
-/**
- * Description of TechModelWind
- *
- * @author jaCUBE
- */
 class TechModelWind extends TechModel {
+
+  /**
+   * @brief Constructor calls parent's constructor.
+   * @return void
+   */
   
   public function __construct() {
     parent::__construct();

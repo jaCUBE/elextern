@@ -17,15 +17,12 @@ class TechManager {
   public $tech_all = Array();
   
   public function __construct() {
-    
     $this->prepareTech();
-   
   }
   
   
   private function prepareTech(){
     $this->fetchTechManager();
-    
     $this->checkVisibility();
   }
   
@@ -49,7 +46,6 @@ class TechManager {
       $this->tech_all[] = $energy;
       $this->tech[] = $energy;
     }
-    
   }
   
   
@@ -65,7 +61,6 @@ class TechManager {
       if(!$_EX->isLogged() AND $tech->show_demo == 0){
         unset($this->tech[$index]);
       }
-      
       
     }
   }

@@ -5,7 +5,7 @@
  * @subpackage    TechModel 
  * 
  * @author Jakub Rychecký <jakub@rychecky.cz>
- * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
  * 
  * @class TechModelLigniteCCS
  * @brief Class for lignite CCS type of energy sources.

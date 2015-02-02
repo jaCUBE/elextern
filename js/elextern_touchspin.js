@@ -240,4 +240,45 @@ function initialize_touchspin(){
   });
   
   
+
+  $('#world-gdp').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 1,
+    max: 500000,
+    step: 5000,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: 'G€'
+  });  
+  
+  
+  $('#inhabitable-surface').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 1,
+    max: 500,
+    step: 1,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: 'MKm<sup>2</sup>'
+  }); 
+  
+  $('#carbon-budget').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 1,
+    max: 10000,
+    step: 50,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: 'GtCO<sub>2</sub>'
+  });   
+  
   };

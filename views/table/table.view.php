@@ -3,6 +3,18 @@
   
   <tbody>
 
+    <tr class="country" data-placement="bottom" data-original-title="Country" data-content="Indicates which country are technology data.">
+      <td class="attribute">
+        Data for Country
+      </td>
+      <?php foreach($data->tech as $tech){ ?>
+      <td class="center">
+        <img src="<?php echo $tech->urlFlag(); ?>" />
+      </td>
+      <?php } ?>
+    </tr>
+
+    
     <?php
     
     if($_POST['table_type'] == 'social'){

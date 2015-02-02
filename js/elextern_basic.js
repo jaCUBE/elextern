@@ -17,16 +17,16 @@ $(function() {
   $('#table-wrap input').keyup(ajax_table);  // TABLE: every key up redraws table
   $('#table-wrap input').change(ajax_table); // TABLE: every change of input redraws table
   
-  $('.energy-item').click(toggle_energy_item);
+  $('.energy-item').click(toggle_energy_item); // Toggle enable/disable energy technology
 
-  $('#signup-form input').change(ajax_signup_check);
-  $('#signup-form input').keyup(ajax_signup_check);
-  $('#signup-form').ready(ajax_signup_check);
+  $('#signup-form input').change(ajax_signup_check); // SIGNUP: every change of input checks signup status
+  $('#signup-form input').keyup(ajax_signup_check); // SIGNUP: every keyup checks signup status
+  $('#signup-form').ready(ajax_signup_check); // SIGNUP: initializing check signup status
 
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
   
-  demo_limitation();
+  demo_limitation(); // Execution of all demo limitations
 });
 
 

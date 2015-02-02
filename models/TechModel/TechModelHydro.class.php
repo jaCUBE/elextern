@@ -5,7 +5,7 @@
  * @subpackage    TechModel 
  * 
  * @author Jakub Rychecký <jakub@rychecky.cz>
- * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
  * 
  * @class TechModelHydro
  * @brief Shared parent for all hydro types of energy sources.

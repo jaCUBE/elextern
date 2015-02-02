@@ -5,7 +5,7 @@
  * @subpackage    TechModel 
  * 
  * @author Jakub Rychecký <jakub@rychecky.cz>
- * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
  * 
  * @class TechModel
  * @brief Basic class for all types of energy source. Contains shared data and shared methods. Children classes just overrides its method when it is necessary.
@@ -134,12 +134,29 @@ class TechModel {
   public $load_factor;
   
   /**
+   * @brief Reference capacity [MW]
+   * @var float $capacity_reference
+   */
+  public $capacity_reference;
+  
+  /**
+   * @brief Installed capacity [MW]
+   * @var float $capacity_installed
+   */
+  public $capacity_installed;
+  
+  /**
+   * @brief Learning/potential exponent
+   * @var float $learning_potential
+   */
+  public $learning_potential;
+  
+  /**
    * @brief Name of the data source.
    * @var string $source
    */
   public $source;
-  
-  
+
   /**
    * @brief Is this record visible?
    * @var boolean $visible
@@ -184,6 +201,57 @@ class TechModel {
   }
   
   
+  
+  
+  
+  /**
+   * @brief Generate CSS-like name of this technology (is used for cookies name).
+   * @return string CSS-like name of this technology source
+   */
+  
+  public function cssName(){
+    global $_EX;
+    
+    return $_EX->makeCssName($this->technology); // Returns CSS-like name of this technology (no special chars, no spaces...)
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Method generates all CSS classes of this technology source.
+   * @return string CSS classes of this technology
+   */
+  
+  public function cssClass(){
+    $class = Array(); // Initiation of empty array for classes
+    
+    if($this->eco_fossil_fuel){ // Does this source use fossil fuels?
+      $class[] = 'fossil'; // Class for fossil fueled technologies
+    }else{
+      $class[] = 'no-fossil'; // Class for renewable technologies
+    }
+    
+    return implode(' ', $class); // Returning of array of classes with space between them
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Checks if this technology is actually filled with data.
+   * @return boolean Is this technology filled?
+   */
+  
+  public function isFull(){
+    if(!empty($this->row_id)){ // If this instance of object contents UID of row from db...
+      return true; // ...everything is fine
+    }
+    
+    return false; // In other cases this is empty property
+  }
   
   
   
@@ -617,13 +685,13 @@ class TechModel {
       $value = $this->$name; // ...value is property
     }
     
-    if($value <= 0.0001 AND $value > 0){
-      return '<span title="'.$value.'">'.$this->scientificNotation($value).'</span>';
+    if($value <= 0.0001 AND $value > 0){ // For very tiny values, let's do scientific notation...
+      return '<span title="'.$value.'">'.$this->scientificNotation($value).'</span>'; // ...scientific notation HTML with full value on mouse over
     }
     
     
-    if($this->isPercentage($name)){
-      $value *= 100;
+    if($this->isPercentage($name)){ // If value is in percentage ones...
+      $value *= 100; // ...multiply by 100
     }
     
     $value = number_format($value, 2, ',', ' '); // Returning formatted number; rounded and with decimal comma instead of point
@@ -632,17 +700,38 @@ class TechModel {
   }
   
   
+  
+  
+  
+  /**
+   * @brief Checks if property name in parameter is in percentage.
+   * @param string $name Property name
+   * @return boolean Is this property percentage?
+   */
+  
   public function isPercentage($name){
-    $percentage_list = Array('eco_efficiency', 'eco_foreign_purchases', 'eco_decomissionning');
+    $percentage_list = Array('eco_efficiency', 'eco_foreign_purchases', 'eco_decomissionning'); // The list of percentage properties
             
-    return in_array($name, $percentage_list);
+    return in_array($name, $percentage_list); // Is parameter name in list of percentage properties?
   }
   
+  
+  
+  
+  
+  /**
+   * @brief Makes scientific notation of value in parameter.
+   * @param float $val Value for scientific notation
+   * @return string Scientific notation of value
+   */
   
   public function scientificNotation($val){
-    $exp = floor(log($val, 10));
-    return sprintf('%.2fE%+03d', $val/pow(10,$exp), $exp);
+    $exp = floor(log($val, 10)); // Rounding value
+    
+    return sprintf('%.2fE%+03d', $val/pow(10,$exp), $exp); // Generating string for scientific notation
   }
+  
+  
   
   
   
@@ -683,6 +772,8 @@ class TechModel {
   
   
   
+  
+  
   /**
    * @brief In % of fuel pre-treatment per year. Indeed post treatment of nuclear wastes will require day-to-day cares similar to initial fuel processing for more than centuries. Will be override by children classes since every source has different formula.
    * @return float Nuclear fuel post-treatment
@@ -720,44 +811,84 @@ class TechModel {
   
   
   
-  public function isFull(){
-    if(!empty($this->row_id)){
-      return true;
-    }
-    
-    return false;
-  }
+  
+  
+  /**
+   * @brief Calculating of share of CAPEX costs that are due every year for maintenance (fixed costs even without production)
+   * @return float Share of CAPEX costs
+   */
+  
+  public function opexOfCapex(){
+    return $this->opex * 100;
+  }  
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of net cost (LCOE + yield flexibility).
+   * @return float Net cost of this technology
+   */
   
   public function netCost(){
     global $_YIELD_CALC;
     
-    return $this->lcoe() + $this->yieldFlexibility();
+    return $this->lcoe() + $this->yieldFlexibility(); // Returns addition of both
   }
+  
+  
+  
+  
+  
+  /**
+   * @brief Calculating of reference cost (externalities + net cost).
+   * @return float Reference cost of this technology
+   */
   
   public function referenceCosts(){
-    return $this->impactTotal() + $this->netCost();
+    return $this->impactTotal() + $this->netCost(); //
   }
   
   
   
   
-  public function cssName(){
-    global $_EX;
-    
-    return $_EX->makeCssName($this->technology); 
+  
+  /**
+   * @brief Calculating of real produced energy (load factor and installed capacity).
+   * @return float Energy produced by this technology [MW*year]
+   */
+
+  public function producedEnergy(){
+    return $this->load_factor * $this->capacity_installed;
   }
   
   
-  public function cssClass(){
-    $class = Array();
+  
+  
+  
+  /**
+   * @brief Calculating of marginal costs of this technology.
+   * @return float Marginal costs for this technology [MWh]
+   */  
+  
+  public function marginalCosts(){
+    return $this->referenceCosts() * pow($this->capacity_installed * $this->capacity_reference, $this->learning_potential); // Formula based on produced energy and learning/potential exponen from database
+  }
+  
+  
+  
+  
+  
+  /**
+   * @brief Generating URL for flag based on country code from database data.
+   * @return string Flag URL
+   */
+  
+  public function urlFlag(){
+    $country_code = strtolower($this->country_code); // Country code to lower
     
-    if($this->eco_fossil_fuel){
-      $class[] = 'fossil';
-    }else{
-      $class[] = 'no-fossil';
-    }
-    
-    return implode(' ', $class);
+    return URL.'/images/flags/'.$country_code.'.png'; // Flag URL
   }
   
 }

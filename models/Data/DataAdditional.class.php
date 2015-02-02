@@ -22,6 +22,19 @@ class DataAdditional extends Data {
   public $loc_surface_lignite;
   public $loc_solar_density;
   
+  public function getInput(){    
+    $this->checkInput('world_gdp');
+    $this->checkInput('inhabitable_surface');
+    $this->checkInput('carbon_budget');
+    $this->checkInput('nuclear_exclusion');
+    $this->checkInput('nuclear_accident');
+    
+    $this->checkInput('loc_population');
+    $this->checkInput('loc_surface_lignite');
+    $this->checkInput('loc_solar_density');
+  }
+  
+  
   public function defineConstant(){
     define('WORLD_GDP', $this->world_gdp);
     define('INHABITABLE_SURFACE', $this->inhabitable_surface);

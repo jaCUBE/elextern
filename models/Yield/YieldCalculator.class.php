@@ -5,7 +5,7 @@
  * @subpackage    Yield   
  * 
  * @author Jakub Rychecký <jakub@rychecky.cz>
- * @copyright Centrum výzkumu Řež s.r.o., © 2014
+ * @copyright Centrum výzkumu Řež s.r.o., © 2015
  * 
  * @class YieldCalculator
  * @brief Class for interpolation of yield. It has ability to interpolate day/year, highest/lowest prices.
