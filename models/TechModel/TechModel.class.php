@@ -263,6 +263,10 @@ class TechModel {
   public function isDisabled(){
     global $_EX;
     
+    if(!isset($_COOKIE[$this->cssName()])){
+      return false;
+    }
+    
     if($_COOKIE[$this->cssName()] == 'disabled'){ // If there is disabling cookies for this technology...
       return true; // ...it is diabled then
     }

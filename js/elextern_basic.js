@@ -45,7 +45,7 @@ $(function() {
  */
 
 function reinitialize(){
-  $('#table-sources tr, #legend span').popover({ // Initializing popovers for every related elements
+  $('#table tr, #legend span').popover({ // Initializing popovers for every related elements
     trigger: 'hover' // Shows popover on hover (not click by default)
   });
 }

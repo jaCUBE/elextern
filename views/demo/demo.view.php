@@ -28,13 +28,15 @@
         fossil fuel depletion, dependency to fuel or technology imports, CO<sub>2</sub> emissions, environmental footprint,
         health impact, and long-term liabilities.</p>
 
-      <p class="right">
-        <a href="#" class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
+      <div class="right">
+        <div class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
           I have an account, log me in
-        </a>
+        </div>
         
-        <a href="#" class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">Sign up for free! &raquo;</a>
-      </p>
+        <div class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">
+          Sign up for free! &raquo;
+        </div>
+      </div>
       
       <?php echo $this->view('demo_login'); ?>
       <?php echo $this->view('demo_signup'); ?>
@@ -97,7 +99,7 @@
       </div>
       <div class="modal-body">
         <div class="alert alert-warning">
-          So far, for testing purposes only. Just press <strong>Log Me In</strong> button or <a href="#" class="btn btn-xs btn-warning" onclick="login();">this button</a>. It will log you in testing account.
+          So far, for testing purposes only. Just press <strong>Log Me In</strong> button or <a href="" class="btn btn-xs btn-warning" onclick="login();">this button</a>. It will log you in testing account.
         </div>
         <?php require 'login_form.php'; ?>
       </div>
