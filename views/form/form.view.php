@@ -3,24 +3,24 @@
 
     <ul class="nav nav-tabs" role="tablist">
       <li class="active"><a href="#main" data-toggle="tab" id="tab-main">Main</a></li>
-      <li><a href="#impact-economic" data-toggle="tab" id="tab-economic">Economic Impact</a></li>
       <li><a href="#impact-social" data-toggle="tab" id="tab-economic">Social Impact</a></li>
       <li><a href="#impact-environment" data-toggle="tab" id="tab-economic">Environmental Impact</a></li>
       <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic">Long-term Impact</a></li>
       <li><a href="#fuel" data-toggle="tab" id="tab-economic">Fuel</a></li>
       <li><a href="#technology" data-toggle="tab" id="tab-economic">Technologies</a></li>
+      <li><a href="#advanced" data-toggle="tab" id="tab-advanced">Advanced</a></li>
       <li><a href="#misc" data-toggle="tab" id="tab-economic">Miscellaneous</a></li>
     </ul>
 
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="main"><?php $this->view('form_tab_main', $data); ?></div>
-      <div role="tabpanel" class="tab-pane" id="impact-economic"><?php $this->view('form_tab_impact_economic', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="impact-social"><?php $this->view('form_tab_impact_social', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="impact-environment"><?php $this->view('form_tab_impact_environment', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="impact-longterm"><?php $this->view('form_tab_impact_longterm', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="fuel"><?php $this->view('form_tab_fuel', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="technology"><?php $this->view('form_tab_technology', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="misc"><?php $this->view('form_tab_misc', $data); ?></div>
+      <div role="tabpanel" class="tab-pane" id="advanced"><?php $this->view('form_tab_advanced', $data); ?></div>
     </div>
 
   </div>

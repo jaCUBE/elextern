@@ -43,8 +43,7 @@
 
     </script>
     
-    <link rel="stylesheet/less" type="text/css" href="<?php echo URL; ?>/less/elextern.less?v=<?php echo time(); ?>" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.3.0/less.min.js" type="text/javascript"></script>
+    <link  rel="stylesheet" type="text/css" href="<?php echo URL; ?>/css/elextern.css?v=<?php echo time(); ?>" />
 
   </head>
   

@@ -1,0 +1,332 @@
+* {
+  font-family: 'Ubuntu';
+  font-size: 11px;
+}
+input {
+  font-size: 11px !important;
+}
+a {
+  outline: 0 !important;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.full-width {
+  width: 100%;
+}
+label {
+  font-weight: normal;
+  color: #0E5FAD;
+}
+label:hover {
+  cursor: pointer;
+}
+h2 {
+  font-size: 14pt;
+}
+.help:hover {
+  cursor: help;
+}
+.hand:hover {
+  cursor: pointer;
+}
+body {
+  background: #EDF6FF !important;
+}
+body #container {
+  width: 1040px;
+  margin: auto;
+  background: #FFFFFF;
+  padding: 10px 20px;
+  border-left: 1px solid #87A0B7;
+  border-right: 1px solid #87A0B7;
+  border-bottom: 1px solid #87A0B7;
+  -webkit-box-shadow: 1px 1px 5px 4px #D2E3F4;
+  -moz-box-shadow: 1px 1px 5px 4px #D2E3F4;
+  box-shadow: 1px 1px 5px 4px #D2E3F4;
+  border-radius: 0px 0px 10px 10px;
+}
+body #container #header {
+  width: 100%;
+  margin-bottom: 18px;
+}
+body #container #header td {
+  vertical-align: middle;
+  text-align: center;
+}
+body #container .elextern {
+  color: #0054A4;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.alert {
+  color: #5B5B5B;
+  padding: 8px;
+}
+.well {
+  background: #EFFBFF !important;
+  margin-bottom: 30px !important;
+  border-color: #CBE5ED !important;
+}
+#footer {
+  width: 1000px;
+  height: 80px;
+  font-weight: bold;
+  font-size: 15pt;
+  margin-top: 40px;
+  background: url('../images/footer.png') no-repeat;
+  border-top: 1px solid #8ACDE2;
+}
+#footer h2 {
+  margin: 5px;
+}
+#footer h3 {
+  font-size: 8pt;
+  text-align: center;
+  margin: 0px;
+  color: #0E5FAD;
+}
+#footer .copy {
+  color: #169CC5;
+  font-size: 8pt;
+  text-align: center;
+}
+input.form-control {
+  width: fit-content;
+  padding: 1px;
+  height: 35px !important;
+}
+.navbar {
+  margin: 10px 0px !important;
+}
+.navbar .btn {
+  margin-top: 7px;
+}
+.btn {
+  text-transform: none;
+  margin: 3px;
+}
+.btn.btn-default:hover,
+.btn.btn-default:focus {
+  background: #E6E6E6;
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background: #0D87E9;
+}
+.btn.btn-info:hover,
+.btn.btn-info:focus {
+  background: #771D79;
+}
+.btn.btn-success:hover,
+.btn.btn-success:focus {
+  background: #3D8B40;
+}
+.btn.btn-danger:hover,
+.btn.btn-danger:focus {
+  background: #B9151B;
+}
+.btn.btn-warning:hover,
+.btn.btn-warning:focus {
+  background: #EA9000;
+}
+#tech-table {
+  font-size: 10pt;
+  width: 100%;
+}
+#tech-table td,
+#tech-table th {
+  border: 1px solid #BBBBBB;
+  padding: 2px 4px;
+  font-size: 9pt;
+}
+#tech-table th {
+  text-align: center;
+  background: #0E5FAD;
+  color: #FFFFFF;
+}
+#tech-table .parent {
+  font-weight: bold;
+}
+#tech-table .child .attribute {
+  padding-left: 15px;
+}
+#tech-table .attribute {
+  width: 250px;
+  background: #DDDDDD;
+}
+#tech-table .value {
+  width: 83px;
+}
+#tech-table .unit {
+  font-size: 7pt;
+  color: #888888;
+}
+#tech-table #environmental td {
+  background: #B8F2D2;
+}
+#tech-table .child-environmental td {
+  background: #D9F7E6;
+}
+#tech-table #economic td {
+  background: #EFDAB8;
+}
+#tech-table .child-economic td {
+  background: #F4E4D7;
+}
+#tech-table #lcoe td {
+  background: #BCDEF2;
+}
+#tech-table .child-lcoe td {
+  background: #D7E8F2;
+}
+#tech-table #social td {
+  background: #EEADFF;
+}
+#tech-table .child-social td {
+  background: #F7DBFF;
+}
+#tech-table #longterm td {
+  background: #FCB3B3;
+}
+#tech-table .child-longterm td {
+  background: #FFE0E0;
+}
+#tech-table .total td {
+  background: #ADCEED;
+  font-weight: bold;
+}
+#legend span {
+  margin: 5px 8px;
+  font-size: 10px;
+}
+#legend .disabled-legend {
+  background: #666666 !important;
+}
+#legend .fuel {
+  background: #103E68;
+}
+#legend .capex-actual {
+  background: #009AC7;
+}
+#legend .opex-actual {
+  background: #0054A4;
+}
+#legend .environmental {
+  background: #57A87A;
+}
+#legend .economic {
+  background: #EA9000;
+}
+#legend .social {
+  background: #864B96;
+}
+#legend .longterm {
+  background: #C10300;
+}
+.navbar-default {
+  background-image: linear-gradient(to bottom, #ffffff 0px, #edf6ff 100%) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075) !important;
+}
+#source ul {
+  list-style: none;
+}
+#source .source {
+  margin: 12px;
+  padding-left: 10px;
+  border-left: 3px solid #0E5FAD;
+}
+#source .source .name {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #0E5FAD;
+}
+#source .source .magazine {
+  font-weight: bold;
+  color: #169CC5;
+}
+#comment .comment {
+  margin: 20px 3px;
+  background-image: linear-gradient(to bottom, #ffffff 0px, #edf6ff 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 5px rgba(0, 0, 0, 0.075);
+  border: 1px solid #DCE8F4;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+#comment .comment .meta {
+  font-size: 8pt;
+  color: #169CC5;
+}
+#comment .comment .text {
+  font-size: 10pt;
+}
+#energy-selection {
+  padding: 10px 20px;
+}
+#energy-selection .col-md-4 {
+  text-align: center;
+}
+#energy-selection .energy-item {
+  margin: 5px;
+}
+#demo .jumbotron {
+  word-break: keep-all;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+#demo .jumbotron #login-form td,
+#demo .jumbotron #signup-form td {
+  padding: 5px 10px;
+  vertical-align: middle;
+}
+.nav-tabs > li * {
+  border: none !important;
+}
+.nav-tabs > li.active > a {
+  box-shadow: 0 -2px 0 #0e5fad inset !important;
+  color: #0E5FAD !important;
+}
+.input-group-addon {
+  padding: 0px 10px;
+  font-size: 11px;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background: #0E5FAD;
+}
+.nav.nav-pills {
+  margin-top: 17px;
+}
+.tab-pane {
+  padding: 5px 7px;
+  border: 1px solid #EDF6FF;
+  background: #F9FCFF;
+  height: 100px;
+  color: #0E5FAD;
+}
+.tab-pane table td {
+  vertical-align: middle;
+  padding: 3px;
+}
+.bootstrap-touchspin-up,
+.bootstrap-touchspin-down {
+  margin: 0px !important;
+}
+.form-control:focus {
+  box-shadow: 0 -2px 0 #0e5fad inset !important;
+}
+#ajax-co2 {
+  font-size: 9px;
+  margin-bottom: 10px;
+  color: #169CC5;
+  text-align: right;
+}
+/*# sourceMappingURL=elextern.css.map */

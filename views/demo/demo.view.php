@@ -1,24 +1,10 @@
 <div class="row">
   
+   
   
   
   
-  
-  <div class="col-md-5">
-    <?php $this->view('chart', $data); ?>
-    
-    <img src="<?php echo URL; ?>/images/demo_chart1.png" />
-    
-    <br /><br /><br />
-    
-    <img src="<?php echo URL; ?>/images/demo_chart2.png" />
-  </div>
-  
-  
-  
-  
-  
-  <div class="col-md-7">
+  <div class="col-md-6">
     <div class="jumbotron">      
       <p>ELEXTERN is a tool that computes the real costs of electricity making, including externalities.
         It clearly distinguishes physical impacts from social parameters that are scenario-dependent, to be chosen by the user.
@@ -28,13 +14,13 @@
         fossil fuel depletion, dependency to fuel or technology imports, CO<sub>2</sub> emissions, environmental footprint,
         health impact, and long-term liabilities.</p>
 
-      <p class="right">
-        <a href="#" class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
+      <div class="right">
+        <div class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
           I have an account, log me in
-        </a>
+        </div>
         
-        <a href="#" class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">Sign up for free! &raquo;</a>
-      </p>
+        <div class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">Do you want more? Sign up. &raquo;</div>
+      </div>
       
       <?php echo $this->view('demo_login'); ?>
       <?php echo $this->view('demo_signup'); ?>
@@ -83,28 +69,38 @@
 
   </div>
   
-</div>
+  
+  
+  
+  <div class="col-md-6">
+    <h2 class="elextern">
+      Demo version
+    </h2>
+    
+    
+    <?php $this->view('chart', $data); ?>
+    
+    <div class="alert alert-info">
+      This is limited version only. Please, sign up and log in for more features and information, it's free.
+    </div>
+    
+    <br /><br /><br />
+    
+    
+  
+    <h2 class="elextern">
+      ELEXTERN Comparison
+    </h2>
+    
+    
+    <div class="center">
+      <img src="<?php echo URL; ?>/images/demo_chart1.png" />
 
+      <br /><br /><br />
 
-
-
-<div class="modal fade" id="elextern-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">ELEXTERN Login</h4>
-      </div>
-      <div class="modal-body">
-        <div class="alert alert-warning">
-          So far, for testing purposes only. Just press <strong>Log Me In</strong> button or <a href="#" class="btn btn-xs btn-warning" onclick="login();">this button</a>. It will log you in testing account.
-        </div>
-        <?php require 'login_form.php'; ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+      <img src="<?php echo URL; ?>/images/demo_chart2.png" />
     </div>
   </div>
-</div>
   
+  
+</div>
