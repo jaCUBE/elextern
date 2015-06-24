@@ -276,6 +276,14 @@ input.form-control {
 #energy-selection .energy-item {
   margin: 5px;
 }
+#demo .top-menu,
+#demo #ajax-co2 {
+  display: none;
+}
+#demo .tab-pane {
+  height: 60px;
+  margin-bottom: 12px;
+}
 #demo .jumbotron {
   word-break: keep-all;
   border-radius: 10px;

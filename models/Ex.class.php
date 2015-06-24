@@ -144,5 +144,14 @@ class Ex {
     
     return false;
   }  
+  
+  
+  public function checkAdvanced(){
+    if(@$_COOKIE['advanced'] == 'true'){
+      define('ADVANCED', true);
+    }else{
+      define('ADVANCED', false);
+    }
+  }
     
 }

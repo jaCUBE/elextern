@@ -1,3 +1,33 @@
+<div class="right top-menu"> 
+  
+  
+  <?php if(!ADVANCED){ // If advaned mode is not on... ?>
+    <span class="btn btn-xs  btn-primary" onclick="set_advanced_cookie('true');">
+      Switch to advanced mode
+    </span>
+  <?php }else{ // ...button visible in advanced mode... ?>
+    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');">
+      Switch to basic mode
+    </span>
+  <?php } ?>
+  
+  
+  <span class="btn btn-xs btn-info" onclick="form_default_value();">
+    <i class="fa fa-undo"></i> Default values
+  </span>
+  
+  
+  <span class="btn btn-xs btn-danger" onclick="logout();">
+    <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
+  </span>
+  
+  
+</div>
+
+
+
+
+
 <form action="" method="post" id="elextern-form">
   <div role="tabpanel">
 
@@ -7,11 +37,13 @@
       <li><a href="#impact-environment" data-toggle="tab" id="tab-economic">Environmental Impact</a></li>
       <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic">Long-term Impact</a></li>
       <li><a href="#fuel" data-toggle="tab" id="tab-economic">Fuel</a></li>
-      <li><a href="#technology" data-toggle="tab" id="tab-economic">Technologies</a></li>
-      <li><a href="#advanced" data-toggle="tab" id="tab-advanced">Advanced</a></li>
-      <li><a href="#misc" data-toggle="tab" id="tab-economic">Miscellaneous</a></li>
+      <?php if(ADVANCED){ // If advaned mode is not on... ?>
+        <li><a href="#technology" data-toggle="tab" id="tab-economic">Technologies</a></li>
+        <li><a href="#advanced" data-toggle="tab" id="tab-advanced">Advanced</a></li>
+      <?php } ?>
     </ul>
 
+    
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="main"><?php $this->view('form_tab_main', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="impact-social"><?php $this->view('form_tab_impact_social', $data); ?></div>
@@ -19,11 +51,13 @@
       <div role="tabpanel" class="tab-pane" id="impact-longterm"><?php $this->view('form_tab_impact_longterm', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="fuel"><?php $this->view('form_tab_fuel', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="technology"><?php $this->view('form_tab_technology', $data); ?></div>
-      <div role="tabpanel" class="tab-pane" id="misc"><?php $this->view('form_tab_misc', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="advanced"><?php $this->view('form_tab_advanced', $data); ?></div>
     </div>
 
   </div>
+  
+  
+  
   
   
   <div style="display: none;">
@@ -36,6 +70,10 @@
     <input type="checkbox" name="show_opex" class="elextern-storage" id="show-opex" value="true" checked="checked" />
     <input type="checkbox" name="show_fuel" class="elextern-storage" id="show-fuel" value="true" checked="checked" />
   </div>
+  
+  
+  
+  
   
   <?php if(!empty($_GET['type'])){ ?>
     <input type="hidden" name="table_type" value="<?php echo $_GET['type']; ?>" />

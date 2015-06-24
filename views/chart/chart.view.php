@@ -23,7 +23,7 @@ $this->view('form', $data);
     <i class="fa fa-eye"></i>  Economic Impact
   </span>
   
-    <br class="demo-only" />
+  <br class="demo-only" />
   
   <span class="label hand toggle-checkbox social" data-checkbox="#show-impact-social" data-placement="bottom" data-original-title="Social Impact" data-content="Computes all kind of health impacts (diseases and deaths) induced by air-pollution or radiations. As these problems are managed by health insurance systems and not by the primary polluter, these costs must appear clearly">
     <i class="fa fa-eye"></i> Social Impact

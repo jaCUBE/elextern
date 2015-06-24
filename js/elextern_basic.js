@@ -286,6 +286,16 @@ function toggle_energy_item(){
   }
 }
 
+
+
+function set_advanced_cookie(state){
+  setCookie('advanced', state, '/', 20); // Set cookie with advanced status from function parameter
+  window.location = window.location.href; // Redirecting on same page (no form re-submit)
+}
+
+
+
+
 function logout(){
   setCookie('email', '', '/', 20);
   setCookie('password', '', '/', 20);

@@ -12,6 +12,8 @@ global $_YIELD_CALC;
 
 $_EX = new Ex(); // Instance of main class of elextern
 $_EX->databaseConnect(); // Connecting to database via main class
+$_EX->checkAdvanced();
+
 $_YIELD_CALC = new YieldCalculator();
 
 
