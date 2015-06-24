@@ -281,4 +281,34 @@ function initialize_touchspin(){
     postfix: 'GtCO<sub>2</sub>'
   });   
   
+  
+
+  
+  $('#explicit-land-price').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 0.01,
+    max: 100,
+    step: 0.05,
+    decimals: 2,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: '€/m<sup>2</sup>&times;yr'
+  }); 
+  
+  $('#explicit-co2-price').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 1,
+    max: 1000,
+    step: 2,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: '€/t'
+  }); 
+  
+  
   };

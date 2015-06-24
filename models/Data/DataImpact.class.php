@@ -28,7 +28,8 @@ class DataImpact extends Data {
   public $lt_climate_start;
   public $lt_climate_cost;
 
-  
+  public $explicit_land_price = 0.5;
+  public $explicit_co2_price = 80;
   
   
   
@@ -78,15 +79,25 @@ class DataImpact extends Data {
     define('LT_CLIMATE_COST', $this->lt_climate_cost);
     define('LT_CO2_EMISSION', $this->co2Emission());
     define('LT_CO2_COST_YEARLY', $this->co2CostYearly());
+    
+    define('EXPLICIT_LAND_PRICE', $this->explicit_land_price);
+    define('EXPLICIT_CO2_PRICE', $this->explicit_co2_price);
   }
    
   
   
   public function landConflict(){
+    if(!ADVANCED){
+      return @$_POST['explicit_land_price'];
+    }
+    
     $result = WORLD_GDP / INHABITABLE_SURFACE / 1000;
     
     return $result;    
   }
+  
+  
+  
   
   public function co2CostYearly(){
     $result = WORLD_GDP / CARBON_BUDGET * LT_CLIMATE_COST;
@@ -95,7 +106,14 @@ class DataImpact extends Data {
   }
   
   
+  
+  
+  
   public function co2Emission(){
+    if(!ADVANCED){
+      return @$_POST['explicit_co2_price'];
+    }
+    
     $result_one = 1 - pow(1 + DISCOUNT_RATE, LT_CLIMATE_START - TIME_HORIZON);
     $result = $this->co2CostYearly() * $result_one / DISCOUNT_RATE;
 

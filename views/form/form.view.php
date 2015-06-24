@@ -27,8 +27,10 @@
 
 
 
-
 <form action="" method="post" id="elextern-form">
+  
+  <input type="hidden" name="mode" id="mode" value="<?php if(ADVANCED){ echo 'advanced'; }else{ echo 'basic'; } ?>" />
+  
   <div role="tabpanel">
 
     <ul class="nav nav-tabs" role="tablist">
@@ -80,5 +82,9 @@
   <?php } ?>
 </form>
 
-<div id="ajax-co2">
-</div>
+
+
+<?php if(ADVANCED){ // AJAX implicit prices for advanced mode only...  ?>
+  <div id="ajax-implicit-price">
+  </div>
+<?php } ?>

@@ -1,1 +1,0 @@
-Implicit CO<sub>2</sub> price is <?php echo round(LT_CO2_EMISSION, 2); ?> €/tCO<sub>2</sub>.

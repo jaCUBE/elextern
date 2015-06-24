@@ -1,7 +1,7 @@
 google.load("visualization", "1", {packages:["corechart"]});
 
 function elextern_chart() {
-  ajax_co2();
+  ajax_implicit_price(); // AJAX for getting implicit CO2, land and nuclear waste prices
 
   $.ajax({
     type: "POST",

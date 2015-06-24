@@ -27,6 +27,8 @@ $(function() {
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
   
   demo_limitation(); // Execution of all demo limitations
+  
+  mode_initialize();
 });
 
 
@@ -61,7 +63,7 @@ function reinitialize(){
  */
 
 function ajax_table(){
-  ajax_co2(); // AJAX for getting CO2 costs
+  ajax_implicit_price(); // AJAX for getting implicit CO2, land and nuclear waste prices
   
   $.ajax({
     type: 'POST',
@@ -79,15 +81,21 @@ function ajax_table(){
 
 
 
-function ajax_co2(){
+function ajax_implicit_price(){
+  if($('#ajax-implicit-price').length == 0){
+    return false;
+  }
+  
   $.ajax({
     type: "POST",
-    url: 'ajax.php?action=co2',
+    url: 'ajax.php?action=implicit_price',
     data: $('#elextern-form').serialize(),
     success: function(data, textStatus, xhr) {
-      $('#ajax-co2').html(data);
+      $('#ajax-implicit-price').html(data);
     }
   });
+  
+  return true;
 }
 
 
@@ -289,6 +297,8 @@ function toggle_energy_item(){
 
 
 function set_advanced_cookie(state){
+  form_default_value();
+  
   setCookie('advanced', state, '/', 20); // Set cookie with advanced status from function parameter
   window.location = window.location.href; // Redirecting on same page (no form re-submit)
 }
@@ -304,4 +314,14 @@ function logout(){
   setCookie('password', '', '/elextern/', 20);
   
   self.location= 'index.php';
+}
+
+function mode_initialize(){
+  var mode = $('#mode').val();
+  
+  if(mode == 'basic'){
+    $('.advanced-only').hide();
+  }else{
+    $('.basic-only').hide();
+  }
 }
