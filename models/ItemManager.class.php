@@ -7,12 +7,13 @@
  */
 
 /**
- * Description of Item
+ * Description of ItemManager
  *
  * @author jaCUBE
  */
-class Item {
-  
+
+class ItemManager {
+  public $item_list = Array();
   
   
 }

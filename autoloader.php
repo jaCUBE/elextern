@@ -17,7 +17,6 @@ function exAutoload($class_name) {
   $folders = Array(
     'Comment',
     'Data',
-    'Item',
     'Source',
     'TechModel',
     'Tech',

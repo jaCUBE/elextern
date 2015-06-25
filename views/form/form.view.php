@@ -1,28 +1,41 @@
-<div class="right top-menu"> 
+<div class="row top-menu">
   
   
-  <?php if(!ADVANCED){ // If advaned mode is not on... ?>
-    <span class="btn btn-xs  btn-primary" onclick="set_advanced_cookie('true');">
-      Switch to advanced mode
-    </span>
-  <?php }else{ // ...button visible in advanced mode... ?>
+  
+  <div class="col-md-6">
+    <?php if(!ADVANCED){ // If advaned mode is not on... ?>
+      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');">
+        <i class="fa fa-cubes"></i> <span class="text">Switch to advanced mode</span>
+      </span>
+    <?php }else{ // ...button visible in advanced mode... ?>
     <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');">
-      Switch to basic mode
+        <i class="fa fa-cube"></i> <span class="text">Switch to basic mode</span>
+      </span>
+    <?php } ?>
+    
+      
+    <span class="btn btn-xs btn-default" onclick="form_default_value();">
+      <i class="fa fa-undo"></i> Default
+    </span> 
+  </div>
+  
+  
+  
+  <div class="col-md-6 right">
+    <span class="btn btn-xs btn-primary" onclick="logout();">
+      <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
     </span>
-  <?php } ?>
-  
-  
-  <span class="btn btn-xs btn-info" onclick="form_default_value();">
-    <i class="fa fa-undo"></i> Default values
-  </span>
-  
-  
-  <span class="btn btn-xs btn-danger" onclick="logout();">
-    <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
-  </span>
+  </div>
   
   
 </div>
+
+
+
+
+
+
+
 
 
 
@@ -34,15 +47,12 @@
   <div role="tabpanel">
 
     <ul class="nav nav-tabs" role="tablist">
-      <li class="active"><a href="#main" data-toggle="tab" id="tab-main">Main</a></li>
-      <li><a href="#impact-social" data-toggle="tab" id="tab-economic">Social Impact</a></li>
-      <li><a href="#impact-environment" data-toggle="tab" id="tab-economic">Environmental Impact</a></li>
-      <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic">Long-term Impact</a></li>
-      <li><a href="#fuel" data-toggle="tab" id="tab-economic">Fuel</a></li>
-      <?php if(ADVANCED){ // If advaned mode is not on... ?>
-        <li><a href="#technology" data-toggle="tab" id="tab-economic">Technologies</a></li>
-        <li><a href="#advanced" data-toggle="tab" id="tab-advanced">Advanced</a></li>
-      <?php } ?>
+      <li class="active"><a href="#main" data-toggle="tab" id="tab-main"><i class="fa fa-sliders"></i> Main</a></li>
+      <li><a href="#impact-social" data-toggle="tab" id="tab-economic"><i class="fa fa-users"></i> Social Impact</a></li>
+      <li><a href="#impact-environment" data-toggle="tab" id="tab-economic"><i class="fa fa-tree"></i> Environmental Impact</a></li>
+      <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic"><i class="fa fa-clock-o"></i> Long-term Impact</a></li>
+      <li><a href="#fuel" data-toggle="tab" id="tab-economic"><i class="fa fa-fire"></i> Fuel</a></li>
+      <li><a href="#technology" data-toggle="tab" id="tab-economic"><i class="fa fa-filter"></i> Technologies</a></li>
     </ul>
 
     
@@ -53,7 +63,6 @@
       <div role="tabpanel" class="tab-pane" id="impact-longterm"><?php $this->view('form_tab_impact_longterm', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="fuel"><?php $this->view('form_tab_fuel', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="technology"><?php $this->view('form_tab_technology', $data); ?></div>
-      <div role="tabpanel" class="tab-pane" id="advanced"><?php $this->view('form_tab_advanced', $data); ?></div>
     </div>
 
   </div>
@@ -81,10 +90,3 @@
     <input type="hidden" name="table_type" value="<?php echo $_GET['type']; ?>" />
   <?php } ?>
 </form>
-
-
-
-<?php if(ADVANCED){ // AJAX implicit prices for advanced mode only...  ?>
-  <div id="ajax-implicit-price">
-  </div>
-<?php } ?>

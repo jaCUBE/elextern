@@ -32,7 +32,11 @@ class TechModelNuclear extends TechModel {
    */
   
   public function fuel(){
-    return 7 * 0.68;
+    if(!ADVANCED){ // If advanced mode is on...
+      return @$_POST['explicit_nuclear_fuel_price']; // Returns explicit nuclear fuel (front-end) price from form
+    }
+    
+    return 7 * 0.68; // Some constant from Frederic's GDrive (??)
   }
   
   
@@ -59,7 +63,7 @@ class TechModelNuclear extends TechModel {
    * @return float Costs of displaced people
    */
   
-  public function displacedPeople() {
+  public function displacedPeople(){
     $result = pow(NUCLEAR_EXCLUSION, 2) * pi() / NUCLEAR_ACCIDENT * LOCAL_DENSITY_POPULATION / 1000000; // Formula based on population density and nuclear accidents
 
     return $result;    
@@ -74,7 +78,11 @@ class TechModelNuclear extends TechModel {
    * @return float Costs of nuclear waste treatment [%/pre-treatment]
    */
 
-  public function impactLongtermNuclearWasteTreatment() {    
+  public function impactLongtermNuclearWasteTreatment() {   
+    if(!ADVANCED){ // If advanced mode is on...
+      return @$_POST['explicit_nuclear_waste_price']; // Returns explicit nuclear waste (back-end) price from form
+    }
+    
     $result_one = $this->fuel() * LT_NUCLEAR_WASTE_TREATMENT;
     $result_two = 1 - pow(1 + DISCOUNT_RATE, -TIME_HORIZON);
     $result = $result_one * $result_two / DISCOUNT_RATE; // Formula for calculating nuclear waste treatment

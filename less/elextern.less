@@ -1,3 +1,9 @@
+@col-ex-light: #179BC4;
+@col-ex-dark: #115FAB; 
+
+
+
+
 * {
   font-family: 'Ubuntu';
   font-size: 11px;
@@ -438,7 +444,7 @@ input.form-control {
 }
 
 #demo {  
-  .top-menu, #ajax-implicit-price {
+  .top-menu, .ajax-implicit {
     display: none;
   }
   
@@ -465,6 +471,7 @@ input.form-control {
 
 .nav-tabs > li * {
   border: none !important;
+  font-size: 12px;
 }
 
 .nav-tabs > li.active > a {
@@ -489,7 +496,6 @@ input.form-control {
   padding: 5px 7px;
   border: 1px solid #EDF6FF;
   background: #F9FCFF;
-  height: 100px;
   color: #0E5FAD;
   
   table {
@@ -508,9 +514,44 @@ input.form-control {
   box-shadow: 0 -2px 0 #0E5FAD inset !important;
 }
 
-#ajax-implicit-price {
-  font-size: 10px;
-  margin-bottom: 10px;
-  color: #169CC5;
-  text-align: center;
+.ajax-implicit {
+  * {
+    font-size: 10px;
+    color: #169CC5;
+  }
+}
+
+
+.top-menu {
+  margin: 8px 0px;
+  
+  .btn-xs {
+    font-size: 11px;
+    opacity: 0.6;
+    
+    i {
+      font-size: 12px;
+    }
+    
+    &:hover {
+      opacity: 1.0;
+    }
+  }
+  
+  .col-md-6 {
+    padding: 0px;
+  }
+}
+
+.btn-group {
+  .btn {
+    margin-right: 0px;
+  }
+}
+
+
+
+
+#form {
+  margin-bottom: 20px;
 }

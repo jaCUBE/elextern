@@ -310,5 +310,32 @@ function initialize_touchspin(){
     postfix: '€/t'
   }); 
   
+  $('#explicit-nuclear-fuel-price').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 0.5,
+    max: 100,
+    step: 1,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: '€/MWh'
+  });
+  
+  
+  $('#explicit-nuclear-waste-price').TouchSpin({
+    verticalbuttons: true,
+    verticalupclass: 'glyphicon glyphicon-plus',
+    verticaldownclass: 'glyphicon glyphicon-minus',
+    min: 0.5,
+    max: 100,
+    step: 1,
+    decimals: 0,
+    boostat: 5,
+    maxboostedstep: 10,
+    postfix: '€/MWh'
+  });
+  
   
   };

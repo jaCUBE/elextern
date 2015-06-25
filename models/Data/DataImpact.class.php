@@ -30,6 +30,8 @@ class DataImpact extends Data {
 
   public $explicit_land_price = 0.5;
   public $explicit_co2_price = 80;
+  public $explicit_nuclear_fuel_price = 4.76;
+  public $explicit_nuclear_waste_price = 4.76;
   
   
   
@@ -82,6 +84,8 @@ class DataImpact extends Data {
     
     define('EXPLICIT_LAND_PRICE', $this->explicit_land_price);
     define('EXPLICIT_CO2_PRICE', $this->explicit_co2_price);
+    define('EXPLICIT_NUCLEAR_FUEL_PRICE', $this->explicit_nuclear_fuel_price);
+    define('EXPLICIT_NUCLEAR_WASTE_PRICE', $this->explicit_nuclear_waste_price);
   }
    
   

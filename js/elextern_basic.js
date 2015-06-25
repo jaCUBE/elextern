@@ -47,7 +47,7 @@ $(function() {
  */
 
 function reinitialize(){
-  $('#table tr, #legend span').popover({ // Initializing popovers for every related elements
+  $('#table tr, #legend span, .popover-hover').popover({ // Initializing popovers for every related elements
     trigger: 'hover' // Shows popover on hover (not click by default)
   });
 }
@@ -82,7 +82,7 @@ function ajax_table(){
 
 
 function ajax_implicit_price(){
-  if($('#ajax-implicit-price').length == 0){
+  if($('#ajax-implicit-co2-price').length == 0){
     return false;
   }
   
@@ -90,8 +90,13 @@ function ajax_implicit_price(){
     type: "POST",
     url: 'ajax.php?action=implicit_price',
     data: $('#elextern-form').serialize(),
-    success: function(data, textStatus, xhr) {
-      $('#ajax-implicit-price').html(data);
+    success: function(data, textStatus, xhr){
+      var result = $.parseJSON(data);
+      
+      $('#ajax-implicit-co2-price').html(result.implicit_co2_price);
+      $('#ajax-implicit-land-price').html(result.implicit_land_price);
+      $('#ajax-implicit-nuclear-fuel-price').html(result.implicit_nuclear_fuel_price);
+      $('#ajax-implicit-nuclear-waste-price').html(result.implicit_nuclear_waste_price);
     }
   });
   
