@@ -77,7 +77,6 @@
         <li class="<?php if(basename($_SERVER["SCRIPT_NAME"]) == 'contact.php') echo 'active'; ?>">
           <a href="contact.php"><i class="fa fa-envelope-o"></i> Contact</a>
         </li>
-        
 
   
       </ul>

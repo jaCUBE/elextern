@@ -55,7 +55,6 @@
     
     
     <td class="ajax-implicit advanced-only" colspan="2">
-      <div id="ajax-implicit-co2-price" class="advanced-only"></div>
       <div id="ajax-implicit-land-price" class="advanced-only"></div>
     </td>
     

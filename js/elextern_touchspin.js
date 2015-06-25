@@ -176,11 +176,11 @@ function initialize_touchspin(){
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 0,
     max: 100,
-    step: 1,
-    decimals: 0,
+    step: 0.5,
+    decimals: 1,
     boostat: 5,
     maxboostedstep: 10,
-    postfix: '%/year pre-treatment'
+    postfix: '%/year front-end costs'
   });
 
   
@@ -255,18 +255,24 @@ function initialize_touchspin(){
   });  
   
   
+  
+  
+  
   $('#inhabitable-surface').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 1,
     max: 500,
-    step: 1,
+    step: 5,
     decimals: 0,
     boostat: 5,
     maxboostedstep: 10,
     postfix: 'MKm<sup>2</sup>'
   }); 
+  
+  
+  
   
   $('#carbon-budget').TouchSpin({
     verticalbuttons: true,
@@ -294,8 +300,10 @@ function initialize_touchspin(){
     decimals: 2,
     boostat: 5,
     maxboostedstep: 10,
-    postfix: '€/m<sup>2</sup>&times;yr'
+    postfix: '€/m<sup>2</sup>/yr'
   }); 
+  
+  
   
   $('#explicit-co2-price').TouchSpin({
     verticalbuttons: true,
@@ -310,18 +318,22 @@ function initialize_touchspin(){
     postfix: '€/t'
   }); 
   
+  
+  
   $('#explicit-nuclear-fuel-price').TouchSpin({
     verticalbuttons: true,
     verticalupclass: 'glyphicon glyphicon-plus',
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 0.5,
     max: 100,
-    step: 1,
-    decimals: 0,
+    step: 0.5,
+    decimals: 1,
     boostat: 5,
     maxboostedstep: 10,
     postfix: '€/MWh'
   });
+  
+  
   
   
   $('#explicit-nuclear-waste-price').TouchSpin({
@@ -330,12 +342,14 @@ function initialize_touchspin(){
     verticaldownclass: 'glyphicon glyphicon-minus',
     min: 0.5,
     max: 100,
-    step: 1,
-    decimals: 0,
+    step: 0.5,
+    decimals: 1,
     boostat: 5,
     maxboostedstep: 10,
     postfix: '€/MWh'
   });
   
   
-  };
+  
+ 
+};

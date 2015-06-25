@@ -57,6 +57,7 @@
     
     <td class="ajax-implicit advanced-only" colspan="2">
       <div id="ajax-implicit-nuclear-waste-price" class="advanced-only"></div>
+      <div id="ajax-implicit-co2-price" class="advanced-only"></div>
     </td>
 
   </tr>
@@ -94,9 +95,3 @@
   
   
 </table>
-
-
-
-<div class="right ajax-implicit">
-  <div id="ajax-implicit-nuclear-waste-price" class="advanced-only"></div>
-</div>

@@ -153,5 +153,14 @@ class Ex {
       define('ADVANCED', false);
     }
   }
+  
+  
+  public function isLoggedAdmin(){
+    if(strpos($this->logged->email, 'rychecky') OR strpos($this->logged->email, 'wertz')){
+      return true;
+    }
+    
+    return false;
+  }
     
 }

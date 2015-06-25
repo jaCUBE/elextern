@@ -4,17 +4,17 @@
   
   <div class="col-md-6">
     <?php if(!ADVANCED){ // If advaned mode is not on... ?>
-      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');">
+      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');" title="Would you like to have some more options? Try advanced mode.">
         <i class="fa fa-cubes"></i> <span class="text">Switch to advanced mode</span>
       </span>
     <?php }else{ // ...button visible in advanced mode... ?>
-    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');">
+    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');" title="Do you consider this mode too confusing? It's fine, you can switch to basic mode.">
         <i class="fa fa-cube"></i> <span class="text">Switch to basic mode</span>
       </span>
     <?php } ?>
     
       
-    <span class="btn btn-xs btn-default" onclick="form_default_value();">
+    <span class="btn btn-xs btn-default" onclick="form_default_value();" title="When your values become mess, this resets all of them to default ones.">
       <i class="fa fa-undo"></i> Default
     </span> 
   </div>
@@ -22,7 +22,13 @@
   
   
   <div class="col-md-6 right">
-    <span class="btn btn-xs btn-primary" onclick="logout();">
+    <?php if($this->isLoggedAdmin()){ ?>
+      <a href="https://docs.google.com/spreadsheet/ccc?key=0AkPtLOpX596HdHhYeW5ieVNwOHF0U3I2WVVnc2hKVGc&usp=sharing_eil#gid=6" target="_blank" class="btn btn-default btn-xs" title="Don't worry, admin only :)">
+        <i class="fa fa-google"></i> ELEXTERN GDrive
+      </a>
+    <?php } ?>
+    
+    <span class="btn btn-xs btn-primary" onclick="logout();" title="Oh, okay... bye.">
       <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
     </span>
   </div>

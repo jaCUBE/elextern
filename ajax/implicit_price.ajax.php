@@ -13,7 +13,7 @@ foreach($main->tech_all as $tech){
 }
 
 $output['implicit_co2_price'] = 'Implicit CO<sub>2</sub> price: '.round(LT_CO2_EMISSION, 2).' €/tCO<sub>2</sub>.';
-$output['implicit_land_price'] = 'Implicit land price: '.round(ENV_LAND_CONFLICT, 1).' €/tCO<sub>2</sub>.';
+$output['implicit_land_price'] = 'Implicit land price: '.round(ENV_LAND_CONFLICT, 1).' €/m<sup>2</sup>/yr.';
 
 
 
