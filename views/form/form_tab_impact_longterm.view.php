@@ -5,7 +5,7 @@
   <tr class="basic-only">
 
 
-    <td style="width: 100px;">
+    <td style="width: 100px;" <?php $_ITEM->html('impact_longterm_co2'); ?>>
       <label for="explicit-co2-price">CO<sub>2</sub> price:</label>
     </td>   
     <td style="width: 200px;">
@@ -16,7 +16,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td>
+    <td <?php $_ITEM->html('explicit_nuclear_waste_price'); ?>>
       <label for="explicit-nuclear-waste-price">Nuclear waste price:</label>
     </td>
     <td style="width: 120px;">
@@ -33,7 +33,7 @@
   <tr class="advanced-only">
 
     
-    <td style="width: 100px;">
+    <td style="width: 100px;" <?php $_ITEM->html('impact_longterm_nuclear_waste'); ?>>
       <label for="lt-nuclear-waste-treatment">Post-treatment and storage cost:</label>
     </td>    
     <td style="width: 200px;">
@@ -44,7 +44,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td>
+    <td <?php $_ITEM->html('impact_longterm_climate_change'); ?>>
       <label for="lt-climate-start">Climate change effects start:</label>
     </td>
     <td style="width: 120px;">
@@ -56,8 +56,8 @@
     
     
     <td class="ajax-implicit advanced-only" colspan="2">
-      <div id="ajax-implicit-nuclear-waste-price" class="advanced-only"></div>
-      <div id="ajax-implicit-co2-price" class="advanced-only"></div>
+      <div id="ajax-implicit-nuclear-waste-price" class="advanced-only" <?php $_ITEM->html('implicit_nuclear_waste_price'); ?>></div>
+      <div id="ajax-implicit-co2-price" class="advanced-only" <?php $_ITEM->html('implicit_co2_price'); ?>></div>
     </td>
 
   </tr>
@@ -69,7 +69,7 @@
   <tr class="advanced-only">
     
     
-    <td>
+    <td <?php $_ITEM->html('impact_longterm_adaptation'); ?>>
       <label for="lt-climate-cost">Yearly adaptation cost:</label>
     </td>
     <td>
@@ -80,7 +80,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td style="width: 120px; vertical-align: middle;" class="advanced-only">
+    <td style="width: 120px; vertical-align: middle;" <?php $_ITEM->html('impact_longterm_carbon_budget'); ?>>
       <label for="carbon-budget">Carbon Budget:</label>
     </td>
     <td style="width: 120px;"  class="advanced-only">

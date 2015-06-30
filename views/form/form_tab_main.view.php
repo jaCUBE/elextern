@@ -5,7 +5,7 @@
   
   <tr>
     
-    <td style="width: 100px; vertical-align: middle;">
+    <td style="width: 100px; vertical-align: middle;" <?php $_ITEM->html('discount_rate'); ?>>
       <label for="discount-rate">Discount rate:</label>
     </td>
     
@@ -17,7 +17,7 @@
       
     </td>
         
-    <td  style="width: 120px;">
+    <td  style="width: 120px;" <?php $_ITEM->html('time_horizon'); ?>>
       <label for="time-horizon"> Time horizon:</label>
     </td>
     

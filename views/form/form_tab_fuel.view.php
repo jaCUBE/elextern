@@ -5,7 +5,7 @@
   <tr>
     
     
-    <td>
+    <td <?php $_ITEM->html('fuel_lignite_price'); ?>>
       <label for="lignite-price">Lignite price:</label>
     </td>
     <td style="width: 160px;">
@@ -16,7 +16,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td>
+    <td <?php $_ITEM->html('fuel_coal_price'); ?>>
       <label for="coal-price">Coal price:</label>
     </td>
     <td style="width: 140px;">
@@ -27,7 +27,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td class="basic-only">
+    <td class="basic-only" <?php $_ITEM->html('explicit_nuclear_fuel_price'); ?>>
       <label for="explicit-nuclear-fuel-price">Nuclear fuel price:</label>
     </td>
     <td style="width: 120px;" class="basic-only">
@@ -48,7 +48,7 @@
   
   <tr>
     
-    <td>
+    <td <?php $_ITEM->html('fuel_gas_price'); ?>>
       <label for="gas-price">Gas price:</label>
     </td>
     <td>
@@ -59,7 +59,7 @@
     <td style="width: 80px;"></td>
     
     
-    <td>
+    <td <?php $_ITEM->html('fuel_oil_price'); ?>>
       <label for="oil-price">Oil price:</label>
     </td>
     <td>

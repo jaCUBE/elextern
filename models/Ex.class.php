@@ -16,6 +16,8 @@ class Ex {
   
   public $logged = null;
   
+  public $item_manager;
+  
     public function databaseConnect(){
       global $_DB;
 
@@ -102,6 +104,8 @@ class Ex {
   
   
   public function view($view_name, $data = false, $data2 = false, $data3 = false){
+    global $_ITEM;
+    
     $path = 'views/'; // Základní cesta
 
     $view_folder = Array(

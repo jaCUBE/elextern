@@ -1,7 +1,5 @@
-<tr class="impact-economic parent" id="economic" data-placement="bottom" data-original-title="Economic Impact" data-content="Computes all kind of monetary losses for the local economy: Technology and/or fuel imports from abroad since they don't benefit local population (no jobs). Also fossil fuel depletion is a loss, and future decomissionning costs are a burden for future generations.">
-  <td class="attribute">
-    Economic Impact
-  </td>
+<tr class="impact-economic parent" id="economic">
+  <td class="attribute" <?php $_ITEM->html('impact_economic'); ?>><i class="fa fa-usd"></i> Economic Impact</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEconomic', true); ?>
@@ -12,8 +10,8 @@
 
 
 
-<tr class="decomissioning-actual child child-economic" data-placement="bottom" data-original-title="Actual Decomissioning Costs" data-content="Net to present value of costs required to dismantle the plant after operation.">
-  <td class="attribute"><i class="fa fa-level-up"></i> Decomissioning Costs</td>
+<tr class="decomissioning-actual child child-economic">
+  <td class="attribute" <?php $_ITEM->html('impact_economic_decomissioning'); ?>><i class="fa fa-level-up"></i> Decomissioning Costs</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('decomissioningActual', true); ?>
@@ -23,8 +21,8 @@
 
 
 
-<tr class="tech-import child child-economic" data-placement="bottom" data-original-title="Tech Import" data-content="Share of imports that don't benefit the local economy. Less than 100% in case of a strong mutually beneficiary relationship with a foreign country.">
-  <td class="attribute"><i class="fa fa-level-up"></i> Tech Imports</td>
+<tr class="tech-import child child-economic">
+  <td class="attribute" <?php $_ITEM->html('impact_economic_technology'); ?>><i class="fa fa-level-up"></i> Tech Imports</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEconomicTechImport', true); ?>
@@ -33,8 +31,8 @@
 </tr> 
 
 
-<tr class="fuel child child-economic" data-placement="bottom" data-original-title="Fuel" data-content="Cost of fuel used in the power plant for producing electricity (variable cost during production only).">
-  <td class="attribute"><i class="fa fa-level-up"></i> Fossil Fuel Depletion</td>
+<tr class="fuel child child-economic">
+  <td class="attribute" <?php $_ITEM->html('impact_economic_fossil'); ?>><i class="fa fa-level-up"></i> Fossil Fuel Depletion</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('impactEconomicFossilFuel', true); ?>
@@ -43,8 +41,8 @@
 </tr> 
 
 
-<tr class="flexibility-yield child child-economic" data-placement="bottom" data-original-title="Flexibility Yield" data-content="Interpolated according to ELIX index (Electricity spot price for France-Germany-Austria-Switzerland market)">
-  <td class="attribute"><i class="fa fa-level-up"></i> Flexiblity Yield</td>
+<tr class="flexibility-yield child child-economic">
+  <td class="attribute" <?php $_ITEM->html('impact_economic_flexibility_yield'); ?>><i class="fa fa-level-up"></i> Flexiblity Yield</td>
   <?php foreach($data->tech as $tech){ ?>
   <td class="right">
     <?php echo $tech->makeHtml('yieldFlexibility', true); ?>

@@ -3,8 +3,8 @@
   
   <tbody>
 
-    <tr class="country" data-placement="bottom" data-original-title="Country" data-content="Indicates which country are technology data.">
-      <td class="attribute">
+    <tr class="country" data-original-title="Country" data-content="Indicates which country are technology data.">
+      <td class="attribute" <?php $_ITEM->html('country_data'); ?>>
         Data for Country
       </td>
       <?php foreach($data->tech as $tech){ ?>

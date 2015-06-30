@@ -8,7 +8,7 @@ date_default_timezone_set('Europe/Prague'); // Current time is current time
 global $_EX; // Global: main class with helping methods and connecting to db
 global $_DB; // Global: variable stores PDO connection to db
 global $_YIELD_CALC;
-
+global $_ITEM;
 
 $_EX = new Ex(); // Instance of main class of elextern
 $_EX->databaseConnect(); // Connecting to database via main class
@@ -16,6 +16,8 @@ $_EX->checkAdvanced();
 
 $_YIELD_CALC = new YieldCalculator();
 
+$_ITEM = new ItemManager();
+$_ITEM->fetchItemList();
 
 $data = new DataManager();
 $data->fetchDefaultValue();

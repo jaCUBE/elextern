@@ -4,17 +4,17 @@
   
   <div class="col-md-6">
     <?php if(!ADVANCED){ // If advaned mode is not on... ?>
-      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');" title="Would you like to have some more options? Try advanced mode.">
+      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');" <?php $_ITEM->html('btn_advanced'); ?>>
         <i class="fa fa-cubes"></i> <span class="text">Switch to advanced mode</span>
       </span>
     <?php }else{ // ...button visible in advanced mode... ?>
-    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');" title="Do you consider this mode too confusing? It's fine, you can switch to basic mode.">
+    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');" <?php $_ITEM->html('btn_basic'); ?>>
         <i class="fa fa-cube"></i> <span class="text">Switch to basic mode</span>
       </span>
     <?php } ?>
     
       
-    <span class="btn btn-xs btn-default" onclick="form_default_value();" title="When your values become mess, this resets all of them to default ones.">
+    <span class="btn btn-xs btn-default" onclick="form_default_value();" <?php $_ITEM->html('btn_default_value'); ?>">
       <i class="fa fa-undo"></i> Default
     </span> 
   </div>
@@ -23,12 +23,12 @@
   
   <div class="col-md-6 right">
     <?php if($this->isLoggedAdmin()){ ?>
-      <a href="https://docs.google.com/spreadsheet/ccc?key=0AkPtLOpX596HdHhYeW5ieVNwOHF0U3I2WVVnc2hKVGc&usp=sharing_eil#gid=6" target="_blank" class="btn btn-default btn-xs" title="Don't worry, admin only :)">
+      <a href="https://docs.google.com/spreadsheet/ccc?key=0AkPtLOpX596HdHhYeW5ieVNwOHF0U3I2WVVnc2hKVGc&usp=sharing_eil#gid=6" target="_blank" class="btn btn-default btn-xs" <?php $_ITEM->html('btn_gdrive'); ?>>
         <i class="fa fa-google"></i> ELEXTERN GDrive
       </a>
     <?php } ?>
     
-    <span class="btn btn-xs btn-primary" onclick="logout();" title="Oh, okay... bye.">
+    <span class="btn btn-xs btn-primary" onclick="logout();" <?php $_ITEM->html('btn_logout'); ?>>
       <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
     </span>
   </div>
@@ -53,12 +53,12 @@
   <div role="tabpanel">
 
     <ul class="nav nav-tabs" role="tablist">
-      <li class="active"><a href="#main" data-toggle="tab" id="tab-main"><i class="fa fa-sliders"></i> Main</a></li>
-      <li><a href="#impact-social" data-toggle="tab" id="tab-economic"><i class="fa fa-users"></i> Social Impact</a></li>
-      <li><a href="#impact-environment" data-toggle="tab" id="tab-economic"><i class="fa fa-tree"></i> Environmental Impact</a></li>
-      <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic"><i class="fa fa-clock-o"></i> Long-term Impact</a></li>
-      <li><a href="#fuel" data-toggle="tab" id="tab-economic"><i class="fa fa-fire"></i> Fuel</a></li>
-      <li><a href="#technology" data-toggle="tab" id="tab-economic"><i class="fa fa-filter"></i> Technologies</a></li>
+      <li class="active"><a href="#main" data-toggle="tab" id="tab-main" <?php $_ITEM->html('tab_main'); ?>><i class="fa fa-sliders"></i> Main</a></li>
+      <li><a href="#impact-social" data-toggle="tab" id="tab-economic" <?php $_ITEM->html('impact_social'); ?>> <i class="fa fa-users"></i> Social Impact</a></li>
+      <li><a href="#impact-environment" data-toggle="tab" id="tab-economic" <?php $_ITEM->html('impact_environment'); ?>><i class="fa fa-tree"></i> Environmental Impact</a></li>
+      <li><a href="#impact-longterm" data-toggle="tab" id="tab-economic" <?php $_ITEM->html('impact_longterm'); ?>><i class="fa fa-clock-o"></i> Long-term Impact</a></li>
+      <li><a href="#fuel" data-toggle="tab" id="tab-economic" <?php $_ITEM->html('fuel'); ?>><i class="fa fa-fire"></i> Fuel</a></li>
+      <li><a href="#technology" data-toggle="tab" id="tab-technology" <?php $_ITEM->html('tab_technology'); ?>><i class="fa fa-filter"></i> Technologies</a></li>
     </ul>
 
     

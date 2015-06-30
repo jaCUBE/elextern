@@ -47,7 +47,7 @@ $(function() {
  */
 
 function reinitialize(){
-  $('#table tr, #legend span, .popover-hover').popover({ // Initializing popovers for every related elements
+  $('* [data-placement="bottom"], * [data-placement="left"], * [data-placement="right"], * [data-placement="top"]').popover({ // Initializing popovers for every related elements
     trigger: 'hover' // Shows popover on hover (not click by default)
   });
 }
