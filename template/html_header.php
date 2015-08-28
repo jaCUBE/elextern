@@ -18,7 +18,7 @@
     
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     
     <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
