@@ -27,10 +27,10 @@
     
     <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
     
-    <script src="<?php echo URL; ?>/js/elextern_cookies.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_basic.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_touchspin.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_chart.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_cookies.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_basic.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_touchspin.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?php echo URL; ?>/js/elextern_chart.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

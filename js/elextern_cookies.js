@@ -19,7 +19,7 @@ function setCookie (name,value,path,expires,theDomain,secure) {
    document.cookie = theCookie;
 } 
 
-function getCookie(Name) { 
+function getCookie(Name) {  
    var search = Name + "=" 
    if (document.cookie.length > 0) { // if there are any cookies 
       var offset = document.cookie.indexOf(search) 

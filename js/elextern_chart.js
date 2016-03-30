@@ -19,7 +19,7 @@ function elextern_chart() {
         vAxis: {title: 'Costs', showTextEvery: 4, format: '# €/MWh', 
           viewWindow: {min: 0, max: 'auto'}
         },
-        legend: { position: 'none', maxLines: 3 },
+        legend: { position: 'none', maxLines: 3 }, 
 	bar: { groupWidth: '50%' },
         backgroundColor: { fill:'transparent' },
         chartArea: {
