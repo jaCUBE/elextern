@@ -9,5 +9,3 @@ $main = new ChartController();
 
 require 'template/footer.php';
 require 'template/html_footer.php';
-
-?>

@@ -9,24 +9,16 @@ $(function() {
 
   $('.toggle-checkbox').click(toggle_checkbox); // Click on chart legend makes change in hidden checkboxes
 
-  $('#chart input, #demo input').keyup(elextern_chart); // CHART: every key up redraws chart
-  $('#chart input, #demo input').change(elextern_chart); // CHART: every change of input redraws chart
+  $('#chart input').bind('keyup change', elextern_chart); // CHART: every key up/change redraws chart
   $('#chart #legend span').click(save_form); // CHART: every click on legend saves form state
   
 
-  $('#table-wrap input').keyup(ajax_table);  // TABLE: every key up redraws table
-  $('#table-wrap input').change(ajax_table); // TABLE: every change of input redraws table
+  $('#table-wrap input').bind('keyup change', ajax_table);  // TABLE: every key up/change redraws table
   
   $('.energy-item').click(toggle_energy_item); // Toggle enable/disable energy technology
 
-  $('#signup-form input').change(ajax_signup_check); // SIGNUP: every change of input checks signup status
-  $('#signup-form input').keyup(ajax_signup_check); // SIGNUP: every keyup checks signup status
-  $('#signup-form').ready(ajax_signup_check); // SIGNUP: initializing check signup status
-
   reinitialize(); // Initializing rest of things which need to be initialized with every AJAX
   initialize_touchspin(); // Initializing touchspin UI from jQuery plug-in
-  
-  demo_limitation(); // Execution of all demo limitations
   
   mode_initialize();
 });
@@ -105,22 +97,6 @@ function ajax_implicit_price(){
 
 
 
-function ajax_signup_check(){
-  $.ajax({
-    type: "POST",
-    url: 'ajax.php?action=signup_check',
-    data: {
-      'email': $('#signup-form #email').val(),
-      'name': $('#signup-form #name').val(),
-      'password': $('#signup-form #password').val()
-    },
-    success: function(data, textStatus, xhr) {
-      $('#signup-button').html(data);
-    }
-  });
-}
-
-
 
 
 function toggle_checkbox(){
@@ -139,19 +115,6 @@ function toggle_checkbox(){
   
   $(this).find('.fa').toggleClass('fa-eye-slash');
   $(this).find('.fa').toggleClass('fa-eye');
-}
-
-
-
-function demo_limitation(){  
-  $('.demo-only').hide(); // Hides all elements with demo-only class everywhere
-
-  if($('#demo').length > 0){ // On demo page...
-  $('.registered-only').hide();
-    
-    $('.demo-only').show(); // Shows up all demo-only elements
-    $('#demo .nav-tabs').html(''); // Deleting tabs from demo form
-  }
 }
 
 
@@ -310,16 +273,6 @@ function set_advanced_cookie(state){
 
 
 
-
-function logout(){
-  setCookie('email', '', '/', 20);
-  setCookie('password', '', '/', 20);
-  
-  setCookie('email', '', '/elextern/', 20);
-  setCookie('password', '', '/elextern/', 20);
-  
-  self.location= 'index.php';
-}
 
 function mode_initialize(){
   var mode = $('#mode').val();

@@ -61,6 +61,4 @@ $table = Array();
 $table['cols'] = $cols;
 $table['rows'] = $rows;
 
-echo json_encode($table, JSON_NUMERIC_CHECK); 
-
-?>
+echo json_encode($table, JSON_NUMERIC_CHECK);

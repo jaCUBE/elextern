@@ -9,5 +9,3 @@ $main = new SourceController();
 
 require 'template/footer.php';
 require 'template/html_footer.php';
-
-?>

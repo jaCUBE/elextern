@@ -14,7 +14,6 @@
 class Ex {
   
   
-  public $logged = null;
   
   public $item_manager;
   
@@ -90,17 +89,7 @@ class Ex {
     $string = strtolower($string);
     
     return $string;   
-  }  
-  
-  
-  public function isLogged(){
-    if(is_a($this->logged, 'User')){
-      return true;
-    }
-    
-    return false;
-  }
-  
+  } 
   
   
   public function view($view_name, $data = false, $data2 = false, $data3 = false){
@@ -156,15 +145,6 @@ class Ex {
     }else{
       define('ADVANCED', false);
     }
-  }
-  
-  
-  public function isLoggedAdmin(){
-    if(strpos($this->logged->email, 'rychecky') OR strpos($this->logged->email, 'wertz')){
-      return true;
-    }
-    
-    return false;
   }
     
 }

@@ -20,17 +20,17 @@
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <script src="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?php echo URL; ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+    <script src="<?= URL ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="<?= URL ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
     
     <link href="//fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
     
-    <script src="<?php echo URL; ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
+    <script src="<?= URL ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
     
-    <script src="<?php echo URL; ?>/js/elextern_cookies.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_basic.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_touchspin.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?php echo URL; ?>/js/elextern_chart.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_cookies.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_basic.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_touchspin.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_chart.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,7 +43,7 @@
 
     </script>
     
-    <link  rel="stylesheet" type="text/css" href="<?php echo URL; ?>/css/elextern.css?v=<?php echo time(); ?>" />
+    <link  rel="stylesheet" type="text/css" href="<?= URL ?>/css/elextern.css?v=<?php echo time(); ?>" />
 
   </head>
   

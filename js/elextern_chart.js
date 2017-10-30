@@ -16,7 +16,7 @@ function elextern_chart() {
         height: '450',
         colors: ['#009AC7', '#0054A4', '#103E68', '#EA9000', '#864B96', '#57A87A', '#C10300'],
         hAxis: {showTextEvery: 1, slantedText:true,  slantedTextAngle:45, title: 'Electricity Technologies'},
-        vAxis: {title: 'Costs', showTextEvery: 4, format: '# €/MWh', 
+        vAxis: {title: 'Costs', showTextEvery: 4, format: '# eur/MWh', 
           viewWindow: {min: 0, max: 'auto'}
         },
         legend: { position: 'none', maxLines: 3 }, 

@@ -1,22 +1,18 @@
 <div class="row">
-  
-  
-  
-  
   <div class="col-md-7">
     <h2 class="elextern">
       Comments
     </h2>
     
     <?php foreach($data->comment_list as $comment){ ?>
-    <div class="comment">
-      <div class="meta">
-        <strong><?php echo $comment->author_name; ?></strong> | <?php echo $comment->added; ?>
+      <div class="comment">
+        <div class="meta">
+          <strong><?= $comment->author_name ?></strong> | <?= $comment->added ?>
+        </div>
+        <div class="text">
+          <?= $comment->comment_text ?>
+        </div>
       </div>
-      <div class="text">
-        <?php echo $comment->comment_text; ?>
-      </div>
-    </div>
     <?php } ?>
   </div>
   
@@ -46,6 +42,4 @@
       </div>
     </form>
   </div>
-  
-  
 </div>

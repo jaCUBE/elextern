@@ -1,12 +1,8 @@
-<?php 
-
-$this->view('form', $data);
-
-?>
+<?php $this->view('form', $data); ?>
 
 
 
-<div id="legend">
+<div id="legend" style="clear: both;">
   <span class="label hand toggle-checkbox capex-actual"  data-checkbox="#show-capex" <?php $_ITEM->html('capex'); ?>>
     <i class="fa fa-eye"></i> CAPEX
   </span>
@@ -18,14 +14,11 @@ $this->view('form', $data);
   <span class="label hand toggle-checkbox fuel" data-checkbox="#show-fuel" <?php $_ITEM->html('fuel'); ?>>
     <i class="fa fa-eye"></i> Fuel
   </span>
-
   
   
   <span class="label hand toggle-checkbox economic" data-checkbox="#show-impact-economic" <?php $_ITEM->html('impact_economic'); ?>>
     <i class="fa fa-eye"></i>  Economic Impact
-  </span>
-  
-  <br class="demo-only" />
+  </span>  
   
   <span class="label hand toggle-checkbox social" data-checkbox="#show-impact-social" <?php $_ITEM->html('impact_social'); ?>>
     <i class="fa fa-eye"></i> Social Impact

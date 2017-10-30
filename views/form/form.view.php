@@ -1,39 +1,17 @@
-<div class="row top-menu">
-  
-  
-  
-  <div class="col-md-6">
-    <?php if(!ADVANCED){ // If advaned mode is not on... ?>
-      <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');" <?php $_ITEM->html('btn_advanced'); ?>>
-        <i class="fa fa-cubes"></i> <span class="text">Switch to advanced mode</span>
-      </span>
-    <?php }else{ // ...button visible in advanced mode... ?>
-    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');" <?php $_ITEM->html('btn_basic'); ?>>
-        <i class="fa fa-cube"></i> <span class="text">Switch to basic mode</span>
-      </span>
-    <?php } ?>
-    
-      
-    <span class="btn btn-xs btn-default" onclick="form_default_value();" <?php $_ITEM->html('btn_default_value'); ?>">
-      <i class="fa fa-undo"></i> Default
-    </span> 
-  </div>
-  
-  
-  
-  <div class="col-md-6 right">
-    <?php if($this->isLoggedAdmin()){ ?>
-      <a href="https://docs.google.com/spreadsheet/ccc?key=0AkPtLOpX596HdHhYeW5ieVNwOHF0U3I2WVVnc2hKVGc&usp=sharing_eil#gid=6" target="_blank" class="btn btn-default btn-xs" <?php $_ITEM->html('btn_gdrive'); ?>>
-        <i class="fa fa-google"></i> ELEXTERN GDrive
-      </a>
-    <?php } ?>
-    
-    <span class="btn btn-xs btn-primary" onclick="logout();" <?php $_ITEM->html('btn_logout'); ?>>
-      <i class="fa fa-sign-out"></i> Logout <?php echo $this->logged->email; ?>
+<div class="row right">  
+  <span class="btn btn-xs btn-default" onclick="form_default_value();" <?php $_ITEM->html('btn_default_value'); ?>">
+    <i class="fa fa-undo"></i> Default values
+  </span>
+
+  <?php if(!ADVANCED){ // If advaned mode is not on... ?>
+    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('true');" <?php $_ITEM->html('btn_advanced'); ?>>
+      <i class="fa fa-cubes"></i> <span class="text">Switch to advanced mode</span>
     </span>
-  </div>
-  
-  
+  <?php }else{ // ...button visible in advanced mode... ?>
+    <span class="btn btn-xs btn-primary" onclick="set_advanced_cookie('false');" <?php $_ITEM->html('btn_basic'); ?>>
+      <i class="fa fa-cube"></i> <span class="text">Switch to basic mode</span>
+    </span>
+  <?php } ?>
 </div>
 
 
@@ -42,16 +20,10 @@
 
 
 
-
-
-
-
 <form action="" method="post" id="elextern-form">
-  
   <input type="hidden" name="mode" id="mode" value="<?php if(ADVANCED){ echo 'advanced'; }else{ echo 'basic'; } ?>" />
   
   <div role="tabpanel">
-
     <ul class="nav nav-tabs" role="tablist">
       <li class="active"><a href="#main" data-toggle="tab" id="tab-main" <?php $_ITEM->html('tab_main'); ?>><i class="fa fa-sliders"></i> Main</a></li>
       <li><a href="#impact-social" data-toggle="tab" id="tab-economic" <?php $_ITEM->html('impact_social'); ?>> <i class="fa fa-users"></i> Social Impact</a></li>
@@ -70,12 +42,9 @@
       <div role="tabpanel" class="tab-pane" id="fuel"><?php $this->view('form_tab_fuel', $data); ?></div>
       <div role="tabpanel" class="tab-pane" id="technology"><?php $this->view('form_tab_technology', $data); ?></div>
     </div>
-
   </div>
   
-  
-  
-  
+   
   
   <div style="display: none;">
     <input type="checkbox" name="impact_environment" class="elextern-storage" id="show-impact-environment" value="true" checked="checked" />
@@ -93,6 +62,6 @@
   
   
   <?php if(!empty($_GET['type'])){ ?>
-    <input type="hidden" name="table_type" value="<?php echo $_GET['type']; ?>" />
+    <input type="hidden" name="table_type" value="<?= $_GET['type'] ?>" />
   <?php } ?>
 </form>

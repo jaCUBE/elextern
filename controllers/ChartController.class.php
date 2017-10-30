@@ -25,10 +25,6 @@ class ChartController extends ExController {
     
     $this->data = new TechManager();
     
-    if($_EX->isLogged()){
-      $_EX->view('chart', $this->data);
-    }else{
-      $_EX->view('demo', $this->data);
-    }
+    $_EX->view('chart', $this->data);
   }
 }

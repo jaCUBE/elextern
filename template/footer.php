@@ -3,6 +3,6 @@
   <h3>Electricity Externalities for Better Planning</h3>
   
   <div class="copy">
-    &copy; 2015
+    &copy; 2015–<?= date('Y', time()) ?>
   </div>
 </div>

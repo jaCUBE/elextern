@@ -9,5 +9,3 @@ $main = new TableController();
 
 require 'template/footer.php';
 require 'template/html_footer.php';
-
-?>

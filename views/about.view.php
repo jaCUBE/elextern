@@ -1,33 +1,13 @@
-<div class="row">
-  
-   
-  
-  
-  
+<div class="row more" style="display: none;">
   <div class="col-md-6">
-    <div class="jumbotron">      
-      <p>ELEXTERN is a tool that computes the real costs of electricity making, including externalities.
-        It clearly distinguishes physical impacts from social parameters that are scenario-dependent, to be chosen by the user.
-        <br /><br />
-        It considers electricity variable value
-        (peak/low demand) and relative costs of each technology as well as following externalities:
-        fossil fuel depletion, dependency to fuel or technology imports, CO<sub>2</sub> emissions, environmental footprint,
-        health impact, and long-term liabilities.</p>
+    <p>
+      ELEXTERN considers electricity variable value (peak/low demand) and relative costs
+      of each technology as well as following externalities:
+      fossil fuel depletion, dependency to fuel or technology imports,
+      CO<sub>2</sub> emissions, environmental footprint,
+      health impact, and long-term liabilities.
+    </p>
 
-      <div class="right">
-        <div class="btn btn-success" onclick="$('#login-form').slideDown(); $('#signup-form').slideUp();" style="margin-top: 10px;">
-          I have an account, log me in
-        </div>
-        
-        <div class="btn btn-primary btn-lg" onclick="$('#signup-form').slideDown(); $('#login-form').slideUp();">Do you want more? Sign up. &raquo;</div>
-      </div>
-      
-      <?php echo $this->view('demo_login'); ?>
-      <?php echo $this->view('demo_signup'); ?>
-      
-    </div>    
-
-    
     <p>
       To reduce CO2 emissions and fossil fuel dependency, Europe is engaged to switch
       from mainly coal-based to low-carbon technologies for electricity generation.
@@ -35,7 +15,7 @@
       belongs to scientists and specialists, valuing them on a unique scale is of societal matter.
     </p>
 
- 
+     
     <p>
       ELEXTERN considers the different stages where economic, social and environmental expenses or
       impacts occur in the life cycle of a power plant: Construction, Operation, Decommissioning,
@@ -45,8 +25,8 @@
       a Load Factor LF is used to account for the variation of use of the plant compared to its nominal
       capacity. LF is then important for the computation of Levelized Cost Of Electricity (LCOE)<sup>[1]</sup>.
     </p>
-    
-    
+
+
     <p>
       Economic, social and environmental impact valuation depends on how much we value our dependency
       to foreign technologies and resources, our health and life, our biodiversity and our capacity
@@ -57,7 +37,7 @@
       impacts valuation. That is why it is important to let the user adjusting its own social values of
       different life events. 
     </p>
-    
+
     <hr />
 
     <p style="font-size: 8pt;">
@@ -66,41 +46,21 @@
       <br /><br />
       [2] Máca V, Melichar J, Ščasný M; Internalization of External Costs of Energy Generation in Central and Eastern European Countries; Journal of Environment & Development; 21(2):181-197; June 2012 <a href="http://dx.doi.org/10.1177/1070496512442504" class="btn btn-xs btn-default">Web</a>
     </p>
-
   </div>
-  
-  
   
   
   <div class="col-md-6">
     <h2 class="elextern">
-      Demo version
-    </h2>
-    
-    
-    <?php $this->view('chart', $data); ?>
-    
-    <div class="alert alert-info">
-      This is limited version only. Please, sign up and log in for more features and information, it's free.
-    </div>
-    
-    <br /><br /><br />
-    
-    
-  
-    <h2 class="elextern">
       ELEXTERN Comparison
     </h2>
-    
-    
+
+
     <div class="center">
-      <img src="<?php echo URL; ?>/images/demo_chart1.png" />
+      <img src="<?= URL ?>/images/demo_chart1.png" />
 
       <br /><br /><br />
 
-      <img src="<?php echo URL; ?>/images/demo_chart2.png" />
+      <img src="<?= URL ?>/images/demo_chart2.png" />
     </div>
   </div>
-  
-  
 </div>
