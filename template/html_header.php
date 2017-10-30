@@ -10,27 +10,33 @@
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
-    <script src="<?= URL ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="<?= URL ?>/libraries/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/3.1.2/jquery.bootstrap-touchspin.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-touchspin/3.1.2/jquery.bootstrap-touchspin.min.css">
     
-    <link href="//fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500italic,500,700italic,700" rel="stylesheet" type="text/css">
     
-    <script src="<?= URL ?>/libraries/jquery-form/jquery.form.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" type="text/javascript"></script>
     
-    <script src="<?= URL ?>/js/elextern_cookies.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?= URL ?>/js/elextern_basic.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?= URL ?>/js/elextern_touchspin.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
-    <script src="<?= URL ?>/js/elextern_chart.min.js?v=<?php echo time(); ?>" type="text/javascript"></script>
+    
+    
+    <link  rel="stylesheet" type="text/css" href="<?= URL ?>/css/elextern.css?v=<?php echo time(); ?>" />
+    
+    <script src="<?= URL ?>/js/elextern_cookies.min.js?v=<?= time() ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_basic.min.js?v=<?= time() ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_touchspin.min.js?v=<?= time() ?>" type="text/javascript"></script>
+    <script src="<?= URL ?>/js/elextern_chart.min.js?v=<?= time() ?>" type="text/javascript"></script>
+    
+    
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -40,12 +46,11 @@
 
       ga('create', 'UA-75331098-1', 'auto');
       ga('send', 'pageview');
-
     </script>
-    
-    <link  rel="stylesheet" type="text/css" href="<?= URL ?>/css/elextern.css?v=<?php echo time(); ?>" />
-
   </head>
+  
+  
+  
   
   <body>
     <div id="container">
